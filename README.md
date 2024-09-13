@@ -60,7 +60,12 @@ This will bring up a prompt.
 To interpret/process your .txt files into html you have several options at the program input line:
  - type the name of your file (without .txt extension).  Any file matching that name in source folder will be found and processed into HTML.
  - if you just hit enter it will assume you want to reprocess the last file you processed.
- - type the name of one of your subfolders in the source folder.  This will process all the .txt files in that subfolder.
+ - type 'folder:' followed by the name of one of your subfolders in the source folder.  This will process all the .txt files in that subfolder. e.g.
+
+ ```
+ folder:Plays
+ ```
+ 
  - type 'all' to process the entire project (all source folder and subfolders).  Only if you select 'all' in this way will the SiteMap, ArticlesIndex and DateIndex be rebuilt.  The last two indexes are able to be accessed via sitemap.
 
 General configuration options are available in the config.py file.  Other semantic labelling options are in semantics.py but this is currently being worked on.

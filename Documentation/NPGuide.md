@@ -161,10 +161,15 @@ MyImageName.png
 A:This ithe author name
 C:This is the caption
 T:This is the title (alt text).
+Medium
 d-
 ```
 
 There are some prefixes (as shown above) that will enable the subsequent processing of the data to understand what you want to do with it.  You do not need a prefix for the image name.  Both jpg and png are recognised.  mp4 is also recognised, but it may not show in all browsers.
+
+Any line which has one of the recognised image sizes (see config.py if you wish to change these, but this must be matched by the same options being available in the default .css file).  Both npmake.py and other modules will refer to imagelister.py for general image functions.
+
+The present options for image sizes, as per config.py, are: ["small","medium","medlge","fullwidth","large"].
 
 The image will not appear until you enter a line in your text file like this, with :
 

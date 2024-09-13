@@ -7,6 +7,10 @@ A:Craig Duncan
 
 D:12 September 2024
 
+# Licence
+
+See [Licence](LICENCE.md)
+
 # Shakespeare and MessengerHTML
 
 The entire toolchain, written in Python (&lt; 200kB) produces HTML output for browsers that is also compatible with the usual word-processing environments, and requiring no third party file converters (simply open as HTML and styles are imported as well as semantic categories as style names).  Other toolchains, including those using pandocs, often do not do this.  

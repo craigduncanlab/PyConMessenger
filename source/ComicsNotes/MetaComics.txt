@@ -1,7 +1,7 @@
-T:Illustrated journeyman
+T:Metacomics as genre
 A:Craig Duncan
 D:30 July 2024
-C:Some ideas about meta comics
+C:Some ideas about meta comics.  Example of a blog page.
 
 # Intro
 

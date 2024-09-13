@@ -5,6 +5,10 @@ A:Craig Duncan
 
 D:12 September 2024
 
+# Licence
+
+See [Licence](LICENCE.md)
+
 # Messenger HTML 
 
 The purpose of this article is to raise awareness of how we can repurpose HTML as not merely a web page layout language, but as a digital communication and messaging tool for writing and storing literature.  Using HTML, writers would be free to choose the semantic categories they wish to record and work with, in any software or computer program, in the HTML document.  This would expand the ability of HTML to operate as a general purpose data format beyond visual display and printing alone.   Further, the specific way in which HTML would be repurposed allows it to be interoperable with word processors, a feat that other semantic formats like general XML and LegalXML are not capable of.  The presenter has described this way of using HTML to carry the semantic message of the author (and not some central standard) as a "Messenger HTML".

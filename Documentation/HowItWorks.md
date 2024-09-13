@@ -4,7 +4,7 @@ D:12 September 2024
 
 # Licence
 
-See [Licence](LICENCE.MD)
+See [Licence](LICENCE.md)
 
 # Background and Introduction
 

@@ -18,12 +18,12 @@ Through the evolution of the project, a basic text-streaming model has been empl
 
 This document contains the basic install and setup information.  As it is a large project with an academic research project behind it, there are several supplementary documents to this one:
 
--  [Licence](LICENCE.md)
-- [How It Works](HowItWorks.md)
-- [NP Writing Guide](NPGuide.md)
-- [ComparativeDigitalDocAnalysis](ComparativeDigitalDocAnalysis.md) - a theoretical examination of digital documents
-- [MessengerHTML](MessengerHTML.md)
-- [ShakespeareAndMessengerHTML](ShakespeareAndMessengerHTML.md)
+-  [Licence](Documentation/LICENCE.md)
+- [How It Works](Documentation/HowItWorks.md)
+- [NP Writing Guide](Documentation/NPGuide.md)
+- [ComparativeDigitalDocAnalysis](Documentation/ComparativeDigitalDocAnalysis.md) - a theoretical examination of digital documents
+- [MessengerHTML](Documentation/MessengerHTML.md)
+- [ShakespeareAndMessengerHTML](Documentation/ShakespeareAndMessengerHTML.md)
 
 # To setup NP (to produce MessengerHTML web sites)
 

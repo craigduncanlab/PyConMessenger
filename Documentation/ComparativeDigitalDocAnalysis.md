@@ -7,7 +7,7 @@ D:12 September 2024
 
 # Licence
 
-See [Licence](LICENCE.MD)
+See [Licence](LICENCE.md)
 
 # An introduction to Comparative Digital Document Analysis
 

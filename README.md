@@ -29,17 +29,17 @@ This document contains the basic install and setup information.  As it is a larg
 
 You will need:
 
-- access to the command line on your computer (e.g. a terminal application, or unix system default), rather than a graphic-basic interface; 
+- access to the command line on your computer (e.g. a terminal application, or unix system default); 
 - the Python language installed (Python3), so that you can run python programs from the command line; and   
 - any basic text editor (not a Word Processor) to edit and save .txt files into the <i>source</i> folder in your project.
 
-If you can download this project to your computer you will have all the folders you need to being work, already setup, as well as some examples of both .txt source and .html output for your to peruse.  This is clarified below.
+If you can download this project to your computer you will have all the folders you need to begin work, as well as some examples of both .txt source and .html output for your to peruse.  This is clarified below.
 
-You should also have a browser, obviously, if you want to open and view HTML files easily on your computer.
+You should also have a browser (!) to open and view the resulting HTML files easily on your computer.
 
 # To setup NP (to produce MessengerHTML web sites)
 
-Download or copy the np folder, html folder and source folders into the same director as run.py
+Download or copy the repository, including the np folder, html folder and source folders.  The main program is run.py and it relies on the python code in the 'np' folder.
 
 The project has a few example documents including literature and cricket scoring (still in development).
 

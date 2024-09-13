@@ -3,7 +3,7 @@ Comparative Digital Document Analysis
 
 A:Craig Duncan
 
-D:12 September 2024
+D:13 September 2024
 
 # Licence
 
@@ -21,19 +21,17 @@ Sometimes this blurring of the digital/analogue boundary can be broken or rewoun
 
 The notion of rewinding digitally-produced analogue representations back to the last preceding digital representations is intimately bound with the need for humans to be offered another analogue representation, in each case, to make sense of that process.
 
-How far back we decide to rewind the process of computation is arbitrary.  We do not need to roll back to the preceding digital forms, if we can imagine multiple intermediate stages in the process of computation.  For example, a computer programmer usually wants access to visible text in the form of 'code' because it is considered convenient for manual viewing and updating low-level instructions for the computer.  You can even write code to produce HTML, so the code that does this might be regarded as 'preceding' the HTML source, which in turn, precedes the analogue representation of that code in a browser, in a form that a human can read.
+How far back we decide to rewind the process of computation in computational time is arbitrary.  We do not need to roll back to the penultimate digital forms, if we can imagine multiple intermediate stages in the process of computation.  For example, a computer programmer usually wants access to visible text in the form of 'code' because it is considered convenient for manual viewing and updating low-level instructions for the computer.  You can even write code to produce HTML, so the code that does this might be regarded as 'preceding' the HTML source, which in turn, precedes the analogue representation of that code in a browser, in a form that a human can read.
 
 Using our linear model of digital computing, however, we can also appreciate that programmers work with digital documents that are important for preparing software, but which may ultimately become invisible.  The opportunity to see some documents as digital texts, because an analogue representation is made available, is conditional on that being useful for some human goal.   
 
 # A concept of input-output time for analysing digital/analogue forms of documents
 
-How do we explain the difference between the text in these programmer documents and the text that may be in the ultimate analogue output of a word processor or some other program?  One way of doing this is to find a method of measuring time and events on a computing model, in which there is input and output which can be interrupted to perform tasks at a human level of interaction, such as the creation of new programs.   In order for this to be done, intermediate analogue representations of information are created, which we could easily call digital documents.  However, programmers tend to think of these documents as 'programs' or 'scripts'.    We can deliberately create new opportunities to interrrupt and expand the opportunities for any writer of digital documents to interact with the computer before some arbitrary end point where the digital computation ceases, and is replaced by a terminating analogue representation of the document, or some terminating analogue representation that no longer involves a computer programmer. 
+How do we explain the difference between the text in these programmer documents and the text that may be in the ultimate analogue output of a word processor or some other program?  One way of doing this is to find a method of measuring time and events on a computing model, in which there is input and output which can be interrupted to perform tasks at a human level of interaction, such as the creation of new programs.   In order for this to be done, intermediate analogue representations of information are created, which we could easily call digital documents.  However, programmers tend to think of these documents as 'programs' or 'scripts'.    We can deliberately create new opportunities to interrupt and expand the opportunities for any writer of digital documents to interact with the computer before some arbitrary end point where the digital computation ceases, and is replaced by a terminating analogue representation of the document, or some terminating analogue representation that no longer involves a computer programmer. 
 
 In general, it is possible to interrupt a process of computation to :
 - create a digital document in the sense that it captures something that might be of importance to humans using the computer; and
 - prepare an analogue form (or different analogue forms) by creating different programs for interpretation.
-
-# The consequences of deliberateness in preparing digital documents
 
 Knowing that we can create intermediate points between writing and analogue output, we can consider these things:
 
@@ -41,37 +39,34 @@ Knowing that we can create intermediate points between writing and analogue outp
 - analysis of the efficiency of encoding the writer's message as encoded digitally, and 'noise';
 - the extent to which interim semantic or computable information is progressively retained and captured in the penultimate computational form.  
 
-Having a clear sense of where digital computation ends, and where in the input-output timeline the digital format is actually visible, helps us focus our programming efforts by pinpointing where we should be seeing the consequences of preceding digital computing. The HTML source code, for example, is a penultimate form of digital information that can be configured by preceding text editing process and deliberate methods for retaining semantic information.
-
 # Subtle reframings of time and sequence in graphical editing software
 
 What I have just discussed is a linear, sequential model of computing that focusses on an entire process of data-orientated input-output as a way of modelling digital computing events.  This is convenient and useful for the analysis of the process of creating digital documents, by placing them in that context.  It is also useful for understanding the way in which graphical text editing software uses a different model to describe events, because those events occur in the analogue frame of reference (which assumes that those events occur after digital computation has ceased). 
 
-In my view, this distinction between analogue event time (or 'human perception of time') and input-output time (or 'computational sequences') is extremely useful to distinguishing between events that we might have control over as pseudo-programmers, or programmers of computers, and the users of software products that create analogue output as part of the user experience.   It seems to me that a writer of digital documents, including literature, is still capable of operating with respect to 'computational sequence' time, in that through their writing, they can influence a sequence of events which will occur in the medium of the computer.  It is completely separate to the order of key-presses, or changes in state of the analogue representation, or any other mechanical process that they record in human perceptual time.
+In my view, this distinction between analogue event time (or 'human perception of time') and input-output time (or 'computational sequences') is extremely useful to distinguishing between:
+
+-  events that we might have control over as pseudo-programmers, or programmers of computers; and 
+- the users of software products that create analogue output as part of the user experience.   
+
+It seems to me that a writer of digital documents, including literature, is still capable of operating with respect to 'computational sequence' time, in that through their writing, they can produce a text that can influence a sequence of events which will occur in computational processes (computational time).  It is completely separate to the order of key-presses, or changes in state of the analogue representation, or any other mechanical process that they record in human perceptual time.
 
 These two models of interaction with a computer are not entirely independent: any model of events in 'computational sequence' time can be made to affect analogue representations.  It may even replace them, more efficiently.
 
-A graphical software program for text editing might not give the user any sense of this input-output computing time.  The analogue interface that represents the image of a document only models the user interface as an ever-refreshing 'present'.  To the extent there are events that can be used to give a sense of time, we can observe that from what is recorded in 'undo' or 'redo' buttons.  These are events that exist in the 'analogue representation time', rather than any lower-level computing model that takes digital input and, by sequence of programmed events in some 'computational time', moves steadily from digital input to the final analogue output.
-
-When we think about the idea of 'rewinding' from the perspective of computational time, we can think of everything prior to the point of analogue representation. For example, by looking for some preceding computational step immediately before pixels are updated in a graphical text editor or web browser, we might be drawn to look at some recognised form of data format that is independent of the pixels on screen.  One way of getting access to something like this is to look at the file format stored on the disk, and inspect the more explicit digital formats like OOXML.  
-
-As it turns out, examining OOXML file format is a fairly analogous process to inspecting HTML source code in a browser.  In both cases, what we are doing is looking for the place where digital computing might end, and analogue representation begins. 
-
-Looking at digital file formats through the lens of 'computing time' rather than analogue representation time is one way we can start to unpack what kinds of pre-graphical information we might want to include in an HTML file that is being imported into a program that will use something like an OOXML format.
-
-# E-readers
+A graphical software program for text editing might not give the user any sense of this computational time.  The analogue interface that represents the image of a document only models the user interface as an ever-refreshing 'present'.  To the extent there are events that can be used to give a sense of time, we can observe that from what is recorded in 'undo' or 'redo' buttons.  These are events that exist in the 'analogue representation time', rather than any lower-level computing model.
 
 In the case of digital documents that only have the expectation of producing analogue output for human consumption, there is no real expectation of rewinding, in computational time, to the digital/analogue boundary (i.e. they don't offer the ability to view HTML source, for example).  A mobile phone with a broswer application is also likely to be indifferent to offering HTML source inspections.
 
-# Comparative digital analysis is based on a general computing model for information
+When we think about the idea of 'rewinding' from the perspective of computational time, we can think of everything prior to the point of analogue representation. For example, by looking for some preceding computational step immediately before pixels are updated in a graphical text editor or web browser, we might be drawn to look at some recognised form of data format that is independent of the pixels on screen.  One way of getting access to something like this is to look at the file format stored on the disk, and inspect the more explicit digital formats like OOXML.  As it turns out, examining OOXML file format is a fairly analogous process to inspecting HTML source code in a browser.  In both cases, what we are doing is looking for the place where digital computing might end, and analogue representation begins. 
 
-Comparative digital analysis is based on paying attention to sequential computing processes, and being aware of the digital/analogue discontinuity in computing.  It is not based on an economic model referring mainly to analogue outputs in commercial software production.
+Looking at digital file formats through the lens of 'computing time' rather than analogue representation time is one way we can start to unpack what kinds of pre-graphical information we might want to include in an HTML file that is being imported into a program that will use something like an OOXML format.
+
+# Comparative digital analysis is based on a general computing model 
 
 Comparative digital analysis uses the idea of computational event analysis to compare and contrast digital formats, rather than analogue representational events.  We can consider multiple ways in which a digital document becomes relevant to the computer, in any process prior to analogue representations.  This might include it being repurposed as a kind of program, even one that will operate on itself.
 
 All of what I said at the beginning about how a human being might be invited to visually inspect earlier parts of the computing process still apply: to the extent we can imagine a digital document within the computing process is capable of containing instructions, or programs too, we can then offer an analogue version so that a human can not only see, but interact with that earlier stage of the computing model.   In my view, this is what allows us to think about reframing and interpreting digital text documents as both documents intended for analogue representation, as well as something that can be considered a program, even one that operates on itself.
 
-Once we have a broader awareness of what is possible, we can better perceive the limited choices or missed opportunities associated with the form of digital documents that only work backwards from analogue output to determine the form of the intermediate, computable forms.  This paves the way for comparative digital document analysis that is conducted within a framework of comparing the structure and function of digital documents throughout their entire history of preparation and use, and not merely by the output.
+Once we have a broader awareness of what is possible, we can better perceive the limited choices or missed opportunities associated with the form of digital documents that only work backwards from analogue output to determine the form of the intermediate, computable forms.  
 
 # What parameters are important in this analysis?
 
@@ -84,12 +79,6 @@ Our analysis of any digital document format can include these questions:
 
 If information other than the writer's own semantic content is incorporated into the document merely through the publication process, then the end result is often a noisy document and inconvenient structures for re-acquiring the information down stream.  However, informed data standards for HTML preparation may make that task easier.  For example, implementing MessengerHTML should make it easier to scrape data from the HTML with something like Beautiful Soup, than HTML prepared in ignorance of downstream uses.  
 With Messenger HTML, if you turn off CSS you will still have something that contains the same data in its HTML, and is probably very clean and simple in your browser as well.  Your code should, in its HTML form, be clean and readable without too many nested tags or distractions.
-
-# Writing syntaxes designed for analogue-focussed digital output
-
-Even though writing in a digital computer may seem like 'digital' input, if the main focus of the software output is analogue presentation (to a human reader), and it lacks attention to data, then it is likely that it remains analogue-focussed digital software from input to output.  This analytical description helps us become more aware of the fact that the computable functions in software that interprets or transforms using this as the principal syntax will tend not to offer the writer any intermediate computing functions that do not relate to analogue output.
-
-For example, Markdown syntax (John Gruber) is capable of being analysed as a shorthand version of HTML, in that its primary focus is to help the writer provide instructions for analogue layout, but disguising that function by making the text look like it is a set of detective's notes written in an old mechanical typewriter.  This has little interest in making it easier to record the text for data transmission purposes.  However, it has created or perpetuated the culture of focussing on analogue representations as if they defined what a digital document is.  This now extends to analogue-representation converters like pandoc.  The reason that YAML formats are supplementary data sections within Markdown and pandoc Markdown is largely because the analogue-focussed digital format is supplemented with data only where it is deemed necessary, but not because data is a first-level concern of the computing process.
 
 # Informed upstream processing
 

@@ -7,67 +7,11 @@ This Guide (c) Craig Duncan 2024.
 
 See [Licence](LICENCE.md)
 
-# Basic approach to writing .txt files
-
-The program assumes that general metadata for an article, essay or simply a blog page will appear in the first 10 lines.  You do not need to follow YAML.  Instead use this convention for prefixes (order is not important), including prefixes for high level navigation.
-
-```
-T:Title
-A:Author
-D:24 March 2024. Last update or revised 1 June 2024.
-C:Concept, abstract or general description.
-R:PageNames
-B:BackTo
-F:ForwardTo
-```
-
-You can include some explanatory text in the date line (as above), so long as there is a long form date that can be detected somewhere.  The right-most date is chosen as the latest date, and it will use this for document indexing (it doesn't check the date sequence only that it is the last).
-
-If there is no date, the document is not included in Date or Article indexes, so use as you feel like.
-
-R: is an optional link to another page in your project, as are B: and F: options (back and forward respectively).  Follow the convention that you need to use the same filename as your source .txt file, but without the .txt suffix (this forms the basis of htmlpages page names).  So if you want to go back to 'MySoftwareProject', enter:
-
-```
-B:MySoftwareProject
-```
-
-The difference between R and B,F options is that R can include several page names, separated by commas.
-
-A link to SiteMap will be included at the end of automatically generated page links, as well as at the bottom of each page.
-
-# Syntax
-
-The 'intro' paragraph type is indicated by a hash (#) like this:
-
-```
-# This is a heading or 'intro' paragraph
-```
-
-# Commands availale (data processing functions and HTML output)
-
-Default paragraphs in your text file are always processed to HTML output.  You do not need any markup for them.
-
-If you wish to add data, a command, or call a function basaed on a variable defined in a data block, you then use any of the commands provided by the NP software.
-
-The full list of commands is in commands.py and they are broadly grouped as follows:
-
-- AutoTag 
-- Table
-- Image
-- Code
-- Data
-- ParagraphOptions
-- Math
-- Cricket (for fanatics only)
-- Print
-
-some variation of a 'print()' command (see below) can be used to output a datablock to HTML, but there are also block shortcuts that enable you to define a block of text which is both a data block (usually defined by d+ and d- end codes) and an instruction to send it to HTML in a particular form.  See 'Shortcut Blocks' below.
-
 # All you need to start writing
 
 *Default paragraphs*
 
-Any text that is not in a data block, or uses a command or reserved prefix is treated as the default paragraph style/code (np).  The text will be processed into HTML with the np class, and this np class is in the default CSS file with the project.
+Any text that is not in a data block, and does not use a command or a reserved prefix, is treated as the default paragraph style/code (np).  The text will be processed into HTML with the np class, and this np class is in the default CSS file with the project.
 
 Default paragraphs are in an essay style by default.  You can change the default potions to make literature style indentation, or paragraph numbering.  
 
@@ -115,6 +59,42 @@ The essay option will indent the first few characters of every default paragraph
 This is a portion of MessengerHTML generated for the play 'Macbeth', showing both paragraph numbers and semantic categories within the p tags:
 
 ![Macbeth_Messenger](Macbeth_Messenger.png)
+
+# Essay or blog metadata and reserved header prefixes
+
+The program assumes that general metadata for an article, essay or simply a blog page will appear in the first 10 lines.  You do not need to follow YAML.  Instead use this convention for prefixes (order is not important), including prefixes for high level navigation.
+
+```
+T:Title
+A:Author
+D:24 March 2024. Last update or revised 1 June 2024.
+C:Concept, abstract or general description.
+R:PageNames
+B:BackTo
+F:ForwardTo
+```
+
+You can include some explanatory text in the date line (as above), so long as there is a long form date that can be detected somewhere.  The right-most date is chosen as the latest date, and it will use this for document indexing (it doesn't check the date sequence only that it is the last).
+
+If there is no date, the document is not included in Date or Article indexes, so use as you feel like.
+
+R: is an optional link to another page in your project, as are B: and F: options (back and forward respectively).  Follow the convention that you need to use the same filename as your source .txt file, but without the .txt suffix (this forms the basis of htmlpages page names).  So if you want to go back to 'MySoftwareProject', enter:
+
+```
+B:MySoftwareProject
+```
+
+The difference between R and B,F options is that R can include several page names, separated by commas.
+
+A link to SiteMap will be included at the end of automatically generated page links, as well as at the bottom of each page.
+
+# Syntax for basic navigation level headings
+
+The 'intro' paragraph type is indicated by a hash (#) like this:
+
+```
+# This is a heading or 'intro' paragraph
+```
 
 # Links
 
@@ -200,6 +180,8 @@ The program will use as much or as little information as you give.  It recognise
 
 Using data block variables means that you can reuse data in different ways without having to re-type it.  You can also postpone using it until you are ready.
 
+In general, some variation of a 'print()' command (see below) can be used to output a datablock to HTML at the point in the file where you want to see it as HTML output.  These also allow you to customise how it appears in the HTML, without having to use markup in the text supplied as raw data.  
+
 The variable name can be used in available functions.  A few of these are:
 
 - lprint(arg)  = print as a list
@@ -240,6 +222,8 @@ qprint(MyList)
 
 Some of these shortcut the process of taking in raw data and then splitting it for table purposes.  For example, tprint() is a basic table maker that looks for the delimiter and then just puts numbers for row and columns, and doesn't wait for you to specify a heading.  There are some examples of this in the MathTest.txt file in the source folder.
 
+In addition to the above commands, there is also a block shortcut syntax that enables you to define a block of text which is both a data block (usually defined by d+ and d- end codes) and an instruction to send it to HTML in a particular form.  See 'Shortcut Blocks' below.
+
 # Shortcut blocks
 
 I am experimenting with the utility of shortcut blocks.  The idea is that they combine the convenience of a data block with the call of one of the print functions immediately (i.e. no delay in HTML output).
@@ -258,20 +242,20 @@ The advantage of this over markdown is that you only have to cap the top and bot
 
 Similarly, there are shortcut blocks roughly corresponding to the print functions above, namely:
 
+- q+/q- = quote block
 - c+/c- = code block
 - e+/e- = example block
 - n+/n- = numbered list block.
-- i+/i- = image block (see below)
 
 # Tables
 
-Unlike Markdown, tables are data objects.  This means you can create one using the shortcut functions (above) or by using a data block.  If you use a datablock, you can do this by:
+Unlike Markdown, tables are initially defined as data objects.  This means you can create one using the shortcut functions (above) or by using a data block.  If you use a datablock, you can do this by:
 - setup a data block with your raw data 
+- set your headings (i.e. column labels and variable names for each column) using header()
 - process the block into column vectors (rip or split function)
-- set your headings
-- choose which column vectors you want to print by putting the column heading names into the tablecols(arg1,arg2,...) function
+- choose which column vectors you want to print by putting the column heading names into the tablecol(arg1,arg2,...) function
 
-There are some quick and dirty ways to make tables, including the tprint() command, but you can be quite specific about the data in 'column vectors' that you combine to make tables.
+There are some quick and dirty ways to make tables, including the tprint() command, but if you follow the more detailed process just described, you can be quite specific about the data in 'column vectors' that you combine to make tables.
 
 If you have some complicated raw data you want to include in your text file, and then still manipulate that raw data into tables without having to manually 'draw' the table, as in Markdown, see the next section.
 
@@ -319,6 +303,24 @@ The keyword 'all' added to any of these key word options will allow any number o
 
 dlim(comma all)
 ```
+
+# Commands availale (data processing functions and HTML output)
+
+Default paragraphs in your text file are always processed to HTML output.  You do not need any markup for them.
+
+There are several functions that help you to process a datablock, or set up some other text streaming function that might be useful for the processing the subsequent text in your file.   If you wish to add data, a command, or call a function based on a variable defined in a data block, you can use any of the commands provided by the NP software.  If functions require a variable name as an argument, then you need to ensure that there is a datablock that defines the name first (or that you have created a new variable by splitting the data with a rip() or splits() command).
+
+The full list of commands is in commands.py and they are grouped into these types of functions:
+
+- AutoTag 
+- Table
+- Image
+- Code
+- Data
+- ParagraphOptions
+- Math
+- Cricket (for fanatics only)
+- Print
 
 # Example of commands used to process Literature
 

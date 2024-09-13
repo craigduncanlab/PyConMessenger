@@ -25,6 +25,18 @@ This document contains the basic install and setup information.  As it is a larg
 - [MessengerHTML](Documentation/MessengerHTML.md)
 - [ShakespeareAndMessengerHTML](Documentation/ShakespeareAndMessengerHTML.md)
 
+# Pre-requisites
+
+You will need:
+
+- access to the command line on your computer (e.g. a terminal application, or unix system default), rather than a graphic-basic interface; 
+- the Python language installed (Python3), so that you can run python programs from the command line; and   
+- any basic text editor (not a Word Processor) to edit and save .txt files into the <i>source</i> folder in your project.
+
+If you can download this project to your computer you will have all the folders you need to being work, already setup, as well as some examples of both .txt source and .html output for your to peruse.  This is clarified below.
+
+You should also have a browser, obviously, if you want to open and view HTML files easily on your computer.
+
 # To setup NP (to produce MessengerHTML web sites)
 
 Download or copy the np folder, html folder and source folders into the same director as run.py
@@ -65,7 +77,7 @@ To interpret/process your .txt files into html you have several options at the p
  ```
  folder:Plays
  ```
- 
+
  - type 'all' to process the entire project (all source folder and subfolders).  Only if you select 'all' in this way will the SiteMap, ArticlesIndex and DateIndex be rebuilt.  The last two indexes are able to be accessed via sitemap.
 
 General configuration options are available in the config.py file.  Other semantic labelling options are in semantics.py but this is currently being worked on.
@@ -87,3 +99,8 @@ Once you have fixed your text file error, you then need to start it back up with
 Part of the reason for this process is that it refreshes the file system and your run.py process will be using the most up to date file information.
 
 If you have a problematic file, don't just keep running 'all', think about running the interpreter over just the subfolder it is in, or just type the file name (without .txt) to process that file until you are happy with it.
+
+# Server uploads of your website
+
+You can use any FTP or other method to upload your files to a server.  The np folder is where the Python files for this package reside.  There is an FTP program that is included there (ftpaccess.py) that would enable you to upload your programs to a server.  It requires a login.py program to run, which I have not uploaded at this stage, but I may be able to do so with dummy information if there is a demand for it.
+

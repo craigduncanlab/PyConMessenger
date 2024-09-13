@@ -1,5 +1,8 @@
 How it Works (New Processor and MessengerHTML)
+--------
+
 A:Craig Duncan
+
 D:12 September 2024
 
 # Licence

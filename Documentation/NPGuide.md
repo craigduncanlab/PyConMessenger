@@ -31,7 +31,7 @@ R: is an optional link to another page in your project, as are B: and F: options
 B:MySoftwareProject
 ```
 
-The difference between R and B,F options is that B can include several page names, separated by commas.
+The difference between R and B,F options is that R can include several page names, separated by commas.
 
 A link to SiteMap will be included at the end of automatically generated page links, as well as at the bottom of each page.
 

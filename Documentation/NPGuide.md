@@ -63,9 +63,11 @@ The full list of commands is in commands.py and they are broadly grouped as foll
 
 some variation of a 'print()' command (see below) can be used to output a datablock to HTML, but there are also block shortcuts that enable you to define a block of text which is both a data block (usually defined by d+ and d- end codes) and an instruction to send it to HTML in a particular form.  See 'Shortcut Blocks' below.
 
+# All you need to start writing
+
 *Default paragraphs*
 
-Any text that is not in a data block, or uses a command or reserved prefix is treated as the default paragraph style/code (np).  
+Any text that is not in a data block, or uses a command or reserved prefix is treated as the default paragraph style/code (np).  The text will be processed into HTML with the np class, and this np class is in the default CSS file with the project.
 
 Default paragraphs are in an essay style by default.  You can change the default potions to make literature style indentation, or paragraph numbering.  
 
@@ -92,9 +94,23 @@ These options are some of the reasons why I now prefer working in NP in preferen
 
 *Paragraph numbering*
 
-All paragraphs are numbered in the HTML, even if the paragraph numbers are not shown on screen.
+All paragraphs are numbered with sequential IDs in the HTML files, even if the paragraph numbers are not shown on screen.
 
-If paragraph numbering is on, default paragraphs will be display hard-coded numbers. (see config.py or use the pagenumbers() command in your file)
+If paragraph numbering is on, default paragraphs will be display hard-coded numbers. 
+
+You can setup paragraph numbering options using either config.py (general option) or use the paragraph() command in your file. (see overrides.py)
+
+The paragraph command has three basic options:
+
+```
+paragraph(default)
+paragraph(essay)
+paragraph(number)
+```
+
+Visible (hard-coded) numbering for default paragraphs is turned on by the third option, and off for the first two.
+
+The essay option will indent the first few characters of every default paragraph.
 
 This is a portion of MessengerHTML generated for the play 'Macbeth', showing both paragraph numbers and semantic categories within the p tags:
 
@@ -102,14 +118,7 @@ This is a portion of MessengerHTML generated for the play 'Macbeth', showing bot
 
 # Links
 
-
-*Intra page links for navigation*
-
-By default pagelines that act as a table of contents appear at the top of each html page, based on the 'intro' paragraphs (# entries).  However, if you want to change this to some other semantic category, like 'scene' paragraphs, use:
-
-```
-pagelinks(scene)
-```
+The objective of this syntax is to make it very easy to refer to pages that are .txt files in the same project (source) by just using angled slashes to enclose the name of the source file (with no suffix).
 
 *Project HTML Page Links*
 
@@ -265,6 +274,16 @@ Unlike Markdown, tables are data objects.  This means you can create one using t
 There are some quick and dirty ways to make tables, including the tprint() command, but you can be quite specific about the data in 'column vectors' that you combine to make tables.
 
 If you have some complicated raw data you want to include in your text file, and then still manipulate that raw data into tables without having to manually 'draw' the table, as in Markdown, see the next section.
+
+# Page headers for navigation
+
+*Intra page links for navigation*
+
+By default pagelines that act as a table of contents appear at the top of each html page, based on the 'intro' paragraphs.  This means that any of the '# ' prefixed lines will act as a form of navigation without anything needing to be done.  However, if you want to change this to some other semantic category, like 'scene' paragraphs in a play, use:
+
+```
+pagelinks(scene)
+```
 
 # Raw text data manipulation 
 

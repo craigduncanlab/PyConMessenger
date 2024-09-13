@@ -11,29 +11,6 @@ D:12 September 2024
 
 See [Licence](LICENCE.md)
 
-# Shakespeare and MessengerHTML
-
-The entire toolchain, written in Python (&lt; 200kB) produces HTML output for browsers that is also compatible with the usual word-processing environments, and requiring no third party file converters (simply open as HTML and styles are imported as well as semantic categories as style names).  Other toolchains, including those using pandocs, often do not do this.  
-
-By needing to balance the author's semantic categories, on one side, and the demands of word processors, on the other, the toolchain required a holistic design and a cleaner, semantically-orientated HTML.   The author has used R Studio and similar applications to build markdown based HTML, but at over 1 GB those applications are far bigger than necessary for the task at hand, and not as focussed on semantics.
-
-The software design specifications for producing MessengerHTML as standard output include : 
-
-- making the text file both a raw data and scripting environment to automate HTML table creation and image annotation (unlike notebooks which are themselves HTML formats);
-- adopting word processing conventions like automatic paragraph numbering for HTML output, as well as enabling paragraphs to be link targets;
-- automating index creation by date and article, and creating a Site Map that inherits the structure of the source folders, for flexible modification;
-- ensuring the resultant HTML is ready to be opened in native word processors like LibreOffice or MS Word, without loss of semantic or style information (i.e. styles are semantics);
-- ensuring HTML is clean, javascript free and can be read independently of its CSS file if required; and
-- making the application modular, and as small as possible.
-
-The application is easily processing over 800 source notes and essays into an integrated, indexed static web site.  It has also been used to prepare a small travel diary website, with annotated images that are automatically resized using the Python scripts.  
-
-# Resources
-
-I have included a diagram that summarises the conceptual layers I use for the Messenger HTML model here:
-
-![DigitalSignalLayers](ShakespeareMessengerHTML.png)
-
 # The diversity of digital formats in published e-literature
 
 When HTML formats for e-readers, which are focussed on analogue outputs, are relied upon, we see a great amout of diversity in the conventions used for encoding the HTML.  The way in which semantic information is encoded is either overlooked, or not prepared comprehensively and consistently for sharing with other data-orientated applications.  For example, you might have text, HTML, XML, doc/x or PDF forms of documents, in which none of them are easily interoperable because there is no agreed standard by which the digital information is to be used, independently of the analogue representation. On the other hand, if we had encoded a document, like a play, into semantic tags like 'dialogue', 'speech', 'stage direction', then it would still be possible to apply different styles and layout to each of those tag categories, but we would retain the ability to process that information as data. 

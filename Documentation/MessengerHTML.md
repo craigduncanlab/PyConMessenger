@@ -19,7 +19,7 @@ The theoretical potential of Messenger HTML, and an entire workflow from a marku
 
 # General description
 
-The repurposing of HTML to allow it to carry the semantic encoding that authors are interested in is inspired by ideas from information and communications theory.  For ease of reference, I am calling this protocal a 'Messenger HTML'.  In other words, the proposal is to treat HTML as a carrier wave, and the message is both the text and the semantic packages in which it is bundled.  Unlike the proposals for a strict ontology for the semantic web, I would leave it up to writers to determine what semantic schemes that they use and encode in an HTML document, or the humanities can arrive at their own flexible conventions.   
+The repurposing of HTML to allow it to carry the semantic encoding that authors are interested in is inspired by ideas from information and communications theory.  For ease of reference, I am calling this protocol a 'Messenger HTML'.  In other words, the proposal is to treat HTML as a carrier wave, and the message is both the text and the semantic packages in which it is bundled.  Unlike the proposals for a strict ontology for the semantic web, I would leave it up to writers to determine what semantic schemes that they use and encode in an HTML document, or the humanities can arrive at their own flexible conventions.   
 
 For example, a Shakespearan play could be partitioned within HTML into categories of data like character, dialogue, stage directions, teacher's notes, rather than merely as headings, paragraphs and so on.  An individual teacher might like to come up with their own scheme for their own classes.  Using HTML achieves the same benefits as XML, but with HTML providing the internet carrier stream, the ability to display it in browser (which also display source), and to pass it downstream to text editors or word processors if required.
 
@@ -29,7 +29,7 @@ To put this into context, I have also devised a quadrant poster which distinguis
 
 The use of HTML will not detract from the layout if the protocols in this presentation are followed, and yet would be a semantically richer form that that offered by Project Gutenberg and Folger Shakespeare Library.  On the other hand, it will allow downstream interoperability with word processors, and applications can be written that can then process the file as a data format.  If we consider the preprocessing of a markup file with the same categories into HTML, then the prior recognition of these semantic categories means we can produce filtered HTML (for example, one version of a page with a teacher's notes, and one without).   
 
-See also [ShakespeareAndMessengerHTML](ShakespeareAndMessengerHTML.md)
+In this essay, the topics are illustrated with reference to the format of a Shakespearean play, Macbeth.  For specific comparisons with how this play is elsewhere published in HTML and other formats by different organisations, see [ShakespeareAndMessengerHTML](ShakespeareAndMessengerHTML.md)
 
 # The use of HTML as a messaging system
 
@@ -85,6 +85,14 @@ In summary, for a user-defined semantic encoding of HTML to be successful we nee
 - Secondly, we need to consistently implement the writer's semantic scheme within the attribute tags of the p tags in HTML.
 - appropriate CSS file information must be available when opening HTML files to assist with default HTML import procedures in LibreOffice and MS Word (for example).
 
+# Auto-tagging
+
+There are still opportunities for customising the way in which semantic information is pre-processed into HTML, and for automating the build of static web sites that follow the semantic guidelines.  
+
+For example, by taking a Project Gutenberg document, such as Macbeth, and adopting some of the functions I have created for the New Processor, it is possible to achieve the styling illustrated above using a rule-based, pattern-matching approach, rather than having to encode each line.   This achieves the goals of Markdown but does so using a simple programming language approach, which can easily be integrated into a file, or by using the <i>import()</i> command.
+
+In this way, the advantages of this system for individual literary documents can be extended to blog-style writing, research, or even to a wiki-style encyclopaedia of information.  This has already been implemented successfully in Python.
+
 # Practical pipelines
 
 This increased interoperability provides new opportunities for semantic encoding, but it also places demands on workflows to preprocess HTML into an appropriate, restrained form where semantic categories are explicitly tied to tag attributes.  This preprocessing of HTML step occurs anyway when people use markdown for writing, so we don't need any substantive changes to the steps in our writing workflow; we merely need to make intelligent HTML parsers that will turn markdown into semantic categories.  
@@ -95,13 +103,26 @@ Implementing these ideas is where Python comes in.  I have used Python to write 
 - a means by which the labels attached to class attributes can be labelled to reflect whatever semantic scheme that is important to the author
 completion of the HTML preprocessing system by writing the author's custom classes into the subclasses of p tags, so that the layout layer styles are seamlessly integrated with the semantic scheme.
 
-# Auto-tagging
+The entire toolchain, written in Python (&lt; 200kB) produces HTML output for browsers that is also compatible with the usual word-processing environments, and requiring no third party file converters (simply open as HTML and styles are imported as well as semantic categories as style names).  Other toolchains, including those using pandocs, often do not do this.  
 
-There are still opportunities for customising the way in which semantic information is pre-processed into HTML, and for automating the build of static web sites that follow the semantic guidelines.  
+By needing to balance the author's semantic categories, on one side, and the demands of word processors, on the other, the toolchain required a holistic design and a cleaner, semantically-orientated HTML.   The author has used R Studio and similar applications to build markdown based HTML, but at over 1 GB those applications are far bigger than necessary for the task at hand, and not as focussed on semantics.
 
-For example, by taking a Project Gutenberg document, such as Macbeth, and adopting some of the functions I have created for the New Processor, it is possible to achieve the styling illustrated above using a rule-based, pattern-matching approach, rather than having to encode each line.   This achieves the goals of Markdown but does so using a simple programming language approach, which can easily be integrated into a file, or by using the <i>import()</i> command.
+The software design specifications for producing MessengerHTML as standard output include : 
 
-In this way, the advantages of this system for individual literary documents can be extended to blog-style writing, research, or even to a wiki-style encyclopaedia of information.  This has already been implemented successfully in Python.
+- making the text file both a raw data and scripting environment to automate HTML table creation and image annotation (unlike notebooks which are themselves HTML formats);
+- adopting word processing conventions like automatic paragraph numbering for HTML output, as well as enabling paragraphs to be link targets;
+- automating index creation by date and article, and creating a Site Map that inherits the structure of the source folders, for flexible modification;
+- ensuring the resultant HTML is ready to be opened in native word processors like LibreOffice or MS Word, without loss of semantic or style information (i.e. styles are semantics);
+- ensuring HTML is clean, javascript free and can be read independently of its CSS file if required; and
+- making the application modular, and as small as possible.
+
+The application is easily processing over 800 source notes and essays into an integrated, indexed static web site.  It has also been used to prepare a small travel diary website, with annotated images that are automatically resized using the Python scripts.  
+
+# Resources
+
+I have included a diagram that summarises the conceptual layers I use for the Messenger HTML model here:
+
+![DigitalSignalLayers](ShakespeareMessengerHTML.png)
 
 # Conclusion
 

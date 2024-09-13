@@ -59,7 +59,7 @@ When writing new .txt files:
 The output:
 - output html is a flat structure, in the htmlpages folder.
 - all page linking is done to the htmlpages as output (it doesn't care that you have them in different source subfolders, provided they are only one level deep).
-- images are resized to a standard size (memory size, not image size) and copied into the images folder.  When the project is built, no further reliance on the source folders is needed.  You can copy the entire htmlpages folder to you desired project location and view from there.
+- images are resized to a standard size (memory size, not image size) and copied into the images folder.  When the project is built, no further reliance on the source folders is needed.  You can copy the entire htmlpages folder to your desired project location and view from there.
 
 # Processing your .txt files into .html and a website
 

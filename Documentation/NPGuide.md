@@ -100,7 +100,46 @@ This is a portion of MessengerHTML generated for the play 'Macbeth', showing bot
 
 ![Macbeth_Messenger](Macbeth_Messenger.png)
 
-*Data blocks*.
+# Links
+
+
+*Intra page links for navigation*
+
+By default pagelines that act as a table of contents appear at the top of each html page, based on the 'intro' paragraphs (# entries).  However, if you want to change this to some other semantic category, like 'scene' paragraphs, use:
+
+```
+pagelinks(scene)
+```
+
+*Project HTML Page Links*
+
+One of the real practical benefits of making web sites with NP is that you can simple enclose /SomePageName/ with angled brackets and it will create a link to it (regardless of where the .txt file is in source, because all htmlpages are flat links).
+
+*Internal Page Links*
+
+You can extend this to linking to a heading (intro) paragraph in a page with: /SomePageName#IntroHeadingText/
+
+Also, because every paragraph (and heading) has an in-built numbering scheme, you can link to a specific paragraph in any page in the web site like this:
+
+/SomePageName#P12/ where P12 is used for the 12th paragraph.  With paragraph numbering turned on, a reader will already be able to see what paragraph this links to in the browser rendering of the page.  If paragraph numbering is off, it may be necessary to look at HTML source to see it.
+
+*External URL Links*
+
+There are several ways to enter links in the body of the text.
+
+Basic prefix methods for an external link include:
+
+```
+E:LinkText,www.linkaddress.com,23 April 2024
+```
+
+The date is optional but by including it you get words indicating when last accessed.
+
+There is a parsing method that will ignore any additional commas in URL between the first LinkText and the date.  This means links to sites like Google Maps with location information separated by commas will be interpreted correctly.
+
+# Data Blocks
+
+Data blocks are a useful way of storing text data with a variable name to be able to use it in a function later.
 
 Reserve a data block with the d+ and d- tags (see below), and put a variable name in the first row, enclosed in brackets, like this:
 
@@ -120,38 +159,37 @@ The philosophy of data blocks is that they are raw data with no expectations exc
 
 The default use is that you put all your data in a data block into the system using a single variable.  You can then create new variables, if you need to, by splitting the raw data that is already in the row entries.  To do this, you have a range of options for specifying headers and delimiters.  You will need to use the header() function and the rip() function in succession.   The 'NotesOnGutenbergMacbeth.txt' in the source/Plays folder has more detail. 
 
-*Delimiter selection for raw data*
+You may not need to do anything to your data block if it is just a list.  You can use one of the print commands with it immediately.  If you do want to manipulate the data in a data block, then your options include using the functions in the 'Raw text manipulation' section, below. 
 
-Raw data can be comma separated, space separated or even use a completely arbitrary but regular set of symbols for each column.  For example, you might have data separated with a colon (:), then a slash (/) and then a comma.  You can set it up for data splitting to recognise the first instance of these.  This means that any commas before the first colon will be ignored, but those after a slash will be used as a delimiter.
+# Images
 
-The function that will carry out splitting for you is dlim() or splits().  You have these basic options, that can be combined:
-
-- dlim(comma) = split on the first comma
-- dlim(comma,comma) = split on the first two commas etc
-- dlim(comma all) = split on all commas, like CSV format (each line)
-- dlim(comma,colon) = split on the first commas, then on the first colon.
-
-The range of delimiter options is catered for in datafunctions.py.  They are entered using a keyword as argument to dlim(keyword).  These include:
+My preferred approach at present is to take in image data in a data block, like this:
 
 ```
-space
-equals (=)
-bar (|)
-lcurly   = (
-rcurly = )
-lsquare = [
-rsquare = ]
-csv, comma = ,
-colon = :
-dot = .
-semicolon, scolon = ;
-
-The keyword 'all' added to any of these key word options will allow any number of the delimiter in each row to split the data.  e.g.
-
-dlim(comma all)
+d+
+(Image1)
+MyImageName.png
+A:This ithe author name
+C:This is the caption
+T:This is the title (alt text).
+d-
 ```
 
-*Using data block variables*
+There are some prefixes (as shown above) that will enable the subsequent processing of the data to understand what you want to do with it.  You do not need a prefix for the image name.  Both jpg and png are recognised.  mp4 is also recognised, but it may not show in all browsers.
+
+The image will not appear until you enter a line in your text file like this, with :
+
+```
+image(Image1)
+```
+
+You can see an example of this in the 'NotesOnGutenbergMacbeth.txt' file in the source/Plays folder.
+
+The program will use as much or as little information as you give.  It recognises .png and .jpg or .jpeg files (and .mp4 if you use Safari, but not Firefox).
+
+# Using the data print functions
+
+Using data block variables means that you can reuse data in different ways without having to re-type it.  You can also postpone using it until you are ready.
 
 The variable name can be used in available functions.  A few of these are:
 
@@ -193,9 +231,11 @@ qprint(MyList)
 
 Some of these shortcut the process of taking in raw data and then splitting it for table purposes.  For example, tprint() is a basic table maker that looks for the delimiter and then just puts numbers for row and columns, and doesn't wait for you to specify a heading.  There are some examples of this in the MathTest.txt file in the source folder.
 
-*Shortcut blocks*
+# Shortcut blocks
 
-I am experimenting with the utility of shortcut blocks.  So far, they seem very useful but they do not have any memory/buffer use.  For example, you can block in lists with l+ and l- lines like this:
+I am experimenting with the utility of shortcut blocks.  The idea is that they combine the convenience of a data block with the call of one of the print functions immediately (i.e. no delay in HTML output).
+
+So far, they seem very useful but they do not have any memory/buffer use.  For example, you can block in lists with l+ and l- lines like this:
 
 ```
 l+
@@ -214,7 +254,7 @@ Similarly, there are shortcut blocks roughly corresponding to the print function
 - n+/n- = numbered list block.
 - i+/i- = image block (see below)
 
-*Tables*
+# Tables
 
 Unlike Markdown, tables are data objects.  This means you can create one using the shortcut functions (above) or by using a data block.  If you use a datablock, you can do this by:
 - setup a data block with your raw data 
@@ -222,63 +262,44 @@ Unlike Markdown, tables are data objects.  This means you can create one using t
 - set your headings
 - choose which column vectors you want to print by putting the column heading names into the tablecols(arg1,arg2,...) function
 
-*Images*
+There are some quick and dirty ways to make tables, including the tprint() command, but you can be quite specific about the data in 'column vectors' that you combine to make tables.
 
-My preferred approach at present is to take in image data in a data block, like this:
+If you have some complicated raw data you want to include in your text file, and then still manipulate that raw data into tables without having to manually 'draw' the table, as in Markdown, see the next section.
 
-```
-d+
-(Image1)
-MyImageName.png
-A:This ithe author name
-C:This is the caption
-T:This is the title (alt text).
-d-
-```
+# Raw text data manipulation 
 
-The image will not appear until you enter a line in your text file like this, with :
+*Delimiter selection for raw data*
 
-```
-image(Image1)
-```
+You may not need to do anything to your data block if it is just a list.  You can use one of the print commands with it immediately (see below).  However, for some purposes, you may wish to do some splitting of text and then use some of the newly constructed lists (e.g. for tables with parts of the data).  This is made possible by the data splitting commands, used in a sequence.
 
-You can see an example of this in the 'NotesOnGutenbergMacbeth.txt' file in the source/Plays folder.
+Raw data can be comma separated, space separated or even use a completely arbitrary but regular set of symbols for each column.  For example, you might have data separated with a colon (:), then a semi-colon(;) and then a comma(,).  You can set it up for data splitting to recognise the first instance of these.  This means that any commas before the first colon will be ignored, but those after a slash will be used as a delimiter.
 
-The program will use as much or as little information as you give.  It recognises .png and .jpg or .jpeg files (and .mp4 if you use Safari, but not Firefox).
+The function that will carry out splitting for you is dlim() or splits().  You have these basic options, that can be combined:
 
-*Intra page links for navigation*
+- dlim(comma) = split on the first comma
+- dlim(comma,comma) = split on the first two commas etc
+- dlim(comma all) = split on all commas, like CSV format (each line)
+- dlim(comma,colon) = split on the first commas, then on the first colon.
 
-By default pagelines that act as a table of contents appear at the top of each html page, based on the 'intro' paragraphs (# entries).  However, if you want to change this to some other semantic category, like 'scene' paragraphs, use:
+The range of delimiter options is catered for in datafunctions.py.  They are entered using a keyword as argument to dlim(keyword).  These include:
 
 ```
-pagelinks(scene)
+space
+equals (=)
+bar (|)
+lcurly   = (
+rcurly = )
+lsquare = [
+rsquare = ]
+csv, comma = ,
+colon = :
+dot = .
+semicolon, scolon = ;
+
+The keyword 'all' added to any of these key word options will allow any number of the delimiter in each row to split the data.  e.g.
+
+dlim(comma all)
 ```
-
-*Project HTML Page Links*
-
-One of the real practical benefits of making web sites with NP is that you can simple enclose /SomePageName/ with angled brackets and it will create a link to it (regardless of where the .txt file is in source, because all htmlpages are flat links).
-
-*Internal Page Links*
-
-You can extend this to linking to a heading (intro) paragraph in a page with: /SomePageName#IntroHeadingText/
-
-Also, because every paragraph (and heading) has an in-built numbering scheme, you can link to a specific paragraph in any page in the web site like this:
-
-/SomePageName#P12/ where P12 is used for the 12th paragraph.  With paragraph numbering turned on, a reader will already be able to see what paragraph this links to in the browser rendering of the page.  If paragraph numbering is off, it may be necessary to look at HTML source to see it.
-
-*External URL Links*
-
-There are several ways to enter links in the body of the text.
-
-Basic prefix methods for an external link include:
-
-```
-E:LinkText,www.linkaddress.com,23 April 2024
-```
-
-The date is optional but by including it you get words indicating when last accessed.
-
-There is a parsing method that will ignore any additional commas in URL between the first LinkText and the date.  This means links to sites like Google Maps with location information separated by commas will be interpreted correctly.
 
 # Example of commands used to process Literature
 

@@ -173,22 +173,25 @@ Unlike Markdown, tables are data objects.  This means you can create one using t
 
 *Images*
 
-My preferred approach at present is to take in image data in an image block, like this:
+My preferred approach at present is to take in image data in a data block, like this:
 
 ```
-i+
+d+
+(Image1)
 MyImageName.png
 A:This ithe author name
 C:This is the caption
 T:This is the title (alt text).
-i-
+d-
 ```
 
 The image will not appear until you enter a line in your text file like this, with :
 
 ```
-image(arg)
+image(Image1)
 ```
+
+You can see an example of this in the 'NotesOnGutenbergMacbeth.txt' file in the source/Plays folder.
 
 The program will use as much or as little information as you give.  It recognises .png and .jpg or .jpeg files (and .mp4 if you use Safari, but not Firefox).
 

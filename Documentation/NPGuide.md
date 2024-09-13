@@ -304,27 +304,9 @@ The keyword 'all' added to any of these key word options will allow any number o
 dlim(comma all)
 ```
 
-# Commands availale (data processing functions and HTML output)
-
-Default paragraphs in your text file are always processed to HTML output.  You do not need any markup for them.
-
-There are several functions that help you to process a datablock, or set up some other text streaming function that might be useful for the processing the subsequent text in your file.   If you wish to add data, a command, or call a function based on a variable defined in a data block, you can use any of the commands provided by the NP software.  If functions require a variable name as an argument, then you need to ensure that there is a datablock that defines the name first (or that you have created a new variable by splitting the data with a rip() or splits() command).
-
-The full list of commands is in commands.py and they are grouped into these types of functions:
-
-- AutoTag 
-- Table
-- Image
-- Code
-- Data
-- ParagraphOptions
-- Math
-- Cricket (for fanatics only)
-- Print
-
 # Example of commands used to process Literature
 
-This is an example of putting data in (the commas in the data are not initially used when ingesting the data, but will be used to split the data for other purposes)
+This is an example of putting data in (the commas in the data are not initially used when ingesting the data, but will be used to split the data for other purposes).  You will find the full example of this in the Macbeth.ats file in the source/Plays folder in this project.
 
 ```
 d+
@@ -369,6 +351,25 @@ Finally, to make the table appear, you now use whatever column names you want, i
 ```
 tablecol(Character,Description)
 ```
+
+
+# Summary of type of commands/functions for data and HTML output
+
+Default paragraphs in your text file are always processed to HTML output.  You do not need any markup for them.
+
+There are several functions that help you to process a datablock, or set up some other text streaming function that might be useful for the processing the subsequent text in your file.   If you wish to add data, a command, or call a function based on a variable defined in a data block, you can use any of the commands provided by the NP software.  If functions require a variable name as an argument, then you need to ensure that there is a datablock that defines the name first (or that you have created a new variable by splitting the data with a rip() or splits() command).
+
+The full list of commands is in commands.py and they are grouped into these types of functions:
+
+- AutoTag 
+- Table
+- Image
+- Code
+- Data
+- ParagraphOptions
+- Math
+- Cricket (for fanatics only)
+- Print
 
 # Auto-tagging
 

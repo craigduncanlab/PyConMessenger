@@ -89,11 +89,11 @@ One of the issues that is raised here, is whether an organisation that wants to 
 
 We can compare Gutenberg's approach to a well funded site, like the Folger Shakespeare Library, where there are resources for converting manuscripts into XML, and for providing web-based access to Shakespeare's works, in many forms of media, including audio and video (see [Folger](https://www.folger.edu)).  
 
-You can also read the plays, like Macbeth (see [Macbeth_Read](https://www.folger.edu/explore/shakespeares-works/macbeth/read/)), and download a version of the play from there.  The downloaded version of the play is not in a single HTML file with CSS but in a zipped package, design to provide a kind of browser-as-e-reader experience.
+You can also read the plays, like Macbeth (see [Macbeth_Read](https://www.folger.edu/explore/shakespeares-works/macbeth/read/)), and download a version of the play from there.  The downloaded version of the play is not in a single HTML file with CSS but in a zipped package, apparently designed to provide a kind of browser-as-e-reader experience.  The HTML files available for download at the Folger site produce a very aesthetically pleasing 'book form' of Shakespeare, which is clearly focussed on aesthetically pleasing analogue representation.
 
-What is also surprising is that in those downloadable formats there is DOC but not DOCX (the more recent, OOXML based format).  The DOC form is quite outdated and still in a proprietary form.  The additional benefits from that form are minimal, compared to OOXML.  At least in OOXML we have something closer to a human-readable format that exposes the nature of p tags and style information in such a way that we can consider making HTML formats compatible with it.
+What is also surprising is that in those downloadable formats there is DOC but not DOCX (the more recent, OOXML based format).  The DOC form is quite outdated and still in a non-readable proprietary form.  The additional open data benefits from that form are minimal, compared to OOXML.  At least in OOXML we have something closer to a human-readable format that exposes the nature of w:p tags and style information in such a way that we can consider making HTML formats compatible with it.
 
-The HTML files for download at the Folger site produce a very aesthetically pleasing 'book form' of Shakespeare, which is clearly focussed on aesthetically pleasing analogue representation.
+# Evaluation of the Folger HTML format
 
 If you inspect the HTML you will see a very surprising thing: the basic paragraph tag system stops at about line 183, and thereafter it is just span and div tags.  To be clear, in the early part of the HTML, written notes from the Director of Folger Shakespeare, Michael Whitemore, appear in p tags, like this:
 

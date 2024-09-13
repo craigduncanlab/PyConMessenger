@@ -1,0 +1,861 @@
+/* The Style Sheet for the Web Pages of Craig Duncan */
+/* Creative Common Licence Non-Commercial, No-Derivatives (CC BY-NC-ND 4.0) */
+:root{
+
+  /*--white: #faf0e6;*/
+  --white: #ffffff;
+
+  }
+
+/* This indicates this is a custom font, loaded onto the server, and not dependent on 
+fonts on the client machine.  Custom fonts usually not recognised by Word, when Word imports css 
+Source (OTF):  https://www.dafontfree.io/download/norwester/#google_vignette 
+Converted to woff with: https://www.fontsquirrel.com/tools/webfont-generator  */
+
+/* if you put fonts in a subdirectory, add prefix like /assets/fonts/ */
+
+/* Norwester is the bold Boston heading font */
+@font-face {
+  font-family: norwester;
+  src: url(fonts/norwester-webfont.woff);
+}
+
+body {
+  /* background-color: lightblue; */
+  background-color: white; /* var(--white) #FFE5D4; */
+
+  /* For 'layout' compatibility with WP these are some guidelines:  
+
+  1. Set margins at say 10-15%%
+  2. Set page width in fixed pixels of about 600px.
+
+  These are merely guidelines.
+  Think of an unconstrained web page as more of a broadsheet. */
+
+  margin-left :10%;
+  margin-right: 10%; /*If floating bubbles, make 30% - Big enough for the Aside to fit*/
+  /* width:  600px;*/
+  width:85%
+
+  background-image: url("mybackground.jpg");
+  padding-top: 70px;
+  background-position: center top; 
+}
+
+nav{    
+  width: 50px;
+  float: left;
+  display: inline; /*inline-block */
+  margin: 0%;
+  padding: 0;
+  margin-right: 10px;
+}
+
+/*
+#navigation li a, #edu-navigation a {
+    display: inline-block;
+    line-height: 2em;
+    padding: 0 .6em;
+    margin-top:.125em
+}
+*/
+
+ table,th {
+  border: 2px solid black;
+  border-collapse: collapse; /* This is enough to determine the entire table as collapsed borders*/
+   /* This makes the outside perimeter of table grey on screen, invisible on printer
+  border-color: #96D4D4;
+  border-collapse: separate;
+  */
+  margin:0;
+  table-layout: fixed;
+  width:90%
+  /*empty-cells: show;*/
+
+}
+
+td {
+  border: 2px solid black;
+
+  /* This makes the inside of each cell grey on screen, invisible on printer
+  border-color: #96D4D4;
+  border-collapse: separate;
+  */
+}
+
+
+td {
+  font-family: Arial,Arial,Times New Roman;
+  text-align: center;
+  color: black; /* green */
+  font-size: 0.8em; /* 40px/16=2.5em */
+  font-weight: normal;
+  
+  /* this is the background colour of every cell.  Setting background of individual cells requires override in the specific table cell (i.e. HTML not CSS) */
+  /* It can be overriden by the the p.col1 setting for the specific paragraph row, which may or may not fill up the cell */
+  /* background: yellow; */
+  
+}
+
+td.vert{
+  text-align: left;
+}
+
+table.glossary {
+  background-color:  lightgrey;
+  align-self: center;
+  position: relative;
+  left: 20%;
+}
+
+p.pretty {
+    width:100%;
+}
+
+/* This is the colour of each paragraph in a cell, not the cell itself */
+/* background: #F5D4D4; */
+p.col1 {
+  background: lightgrey;
+  
+}
+
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+p.header {
+  text-align: center;
+  font-weight: bold;
+  font-size:  1.0em;
+}
+
+/*It's the paragraph wrapping the anchor that sets alignment */
+p.footer,a.footer,p.caption, p.figcaption {
+  font-weight: bold; /* same as default for a 'string' tag too */
+  font-family: Arial,Times New Roman;
+  line-height: 1.5;
+  font-size: 12px;
+  font-weight: 300;
+  color: red;
+}
+
+p.caption {
+    margin-left: 10px;
+}
+
+p.figcaption {
+    margin-left: 40px;
+}
+
+p.footer {
+  text-align: center;
+}
+
+p.link,a.link {
+  font-weight: bold; /* same as default for a 'string' tag too */
+  font-family: Arial,Times New Roman;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 300;
+  color: blue
+}
+
+a.indexlink {
+  font-family: Arial,Times New Roman;
+  font-size: 15px;
+}
+
+p.Reference, p.WebDateAside, p.HomeLink, p.OutsideLink {
+
+  color: white;
+  border: 2px solid red; /*  border: 3px solid #73AD21;*/
+  border-radius: 5px;
+  background-color:  black;
+   font-size:  0.9em;
+   /*absolute posn detaches it from flow, so it can overlap text in browser */
+  position: absolute; 
+  right: 10%;
+  left: 70%;
+  width: 20%;
+  padding: 10px;
+}
+
+p.Reference {
+  position: relative;
+  right: 15%;
+  left: 40%;
+  width: 45%; /* This should be left-right? */
+  padding: 10px;
+}
+
+p.origin, {
+  color: black;
+  max-width: 70em;
+  padding: 1em 2em; 
+  border: 2px black; /*  border: 3px solid #73AD21;*/
+  border-radius: 20px;
+  background-color:  white;
+  font-style: italic;
+  font-size: 1.2em; /* 40px/16=2.5em */
+  line-height:  1em;
+  margin-left:  10px;
+  right: 70%;
+  left: 10%;
+  width: 80%;
+  padding: 10px;
+}
+
+p.origin {
+  font-style: bold italic;
+  font-size: 2em; /* 40px/16=2.5em */
+}
+
+p.concept {
+    //font-size: 1.1em; /* 40px/16=2.5em */
+    right: 10%;
+    left: 10%;
+    width: 77%;
+    color: black;
+    display: grid;
+    grid-template-columns: 600px auto;
+    column-gap: 20px;
+    margin-bottom: 20px;
+    margin-right: 20%;
+    padding: 20px;
+    border: 1px solid #edf2f5;
+    border-radius: 10px;
+    background-color:#f1f5f7;
+    font-family: Arial,Times New Roman
+}
+
+
+
+/* To modify the anchor link colour in the Aside and BackLink section*/
+p.Aside a, p.OutsideLink a {
+   color:yellow;
+}
+
+/* To modify the anchor link colour in just the Reference classes */
+p.Reference, p.HomeLink a {
+   color:green;
+}
+
+/* Make text darker for ease of printing from browser */
+
+p.Database2 {
+  color: black;
+  max-width: 40em;
+  border: 2px darkkhaki; /*  border: 3px solid #73AD21;*/
+  border-radius: 5px;
+  background-color:  seashell;
+  font-size: 0.8em; /* 40px/16=2.5em */
+  line-height:  1.2em;
+  margin-left:  10px;
+  font-family: Arial,Times New Roman,Garamond, "opensans", Georgia, serif; 
+  font-style: normal;
+}
+
+/*A marginal annotation*/
+
+p.Database {
+
+  color: black;
+  border: 2px solid darkorange; /*  border: 3px solid #73AD21;*/
+  border-radius: 5px;
+  background-color:  lightgrey;
+   font-size:  0.8em;
+   /*absolute posn detaches it from flow, so it can overlap text in browser */
+  /* position: absolute; */
+  position: relative;
+  right: 15%;
+  left: 40%;
+  width: 45%; /* This should be left-right? */
+  padding: 10px;
+}
+
+/* hidden break */
+
+p.divider {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+    /* font size */
+}
+
+/* Text with white background */
+
+p.default,p.playline,p.dialogue, p.np_ss,p.list,p.list_ss,a.list_ss,p.numlist,p.numlist_ss,p.explanation, p.authorref, p.np, p.navlink, p.related, p.image,p.code,a.list, a.listlink, p.revlist, p.comment, p.item, p.note, p.l,p.new,p.old,p.conn,p.engl,p.bates {
+  /*color: black; */
+  color: #222222; /*The old grey was 5E5E5E */
+  /* max-width: 35em; */
+  max-width: 90%;
+  border: 2px darkgrey; /*  border: 3px solid #73AD21;*/
+  border-radius: 3px;
+  background-color: white;/* #FFE5D4 */;
+  /* padding: 1em 2em; /* the difference this makes is to add a bit of white-space around the para blocks */
+  font-size: 1.2em; /* 40px/16=2.5em */
+  
+  margin-left:  10px;
+  /* "robotoslab", */
+  /*non-quoted fonts like Arial, Times are supplied by most Browsers */
+  /*These were delivered by the shopify Liquid documentation pages maybe Safari-biased */
+  /* -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, */
+  /* Arial,Times New Roman is a nice clear in-built font used for the liquid site*/
+  font-family: Arial,Times New Roman;
+  font-size: 16px;
+  line-height: 1.8; /*line-height:  1.3em;*/
+  font-weight: 300;
+  -webkit-text-size-adjust:100%
+
+  /* use this for general :
+  Arial,Times,"montyreg","oxygen3","opensans",Georgia, serif; 
+  */
+  font-style: normal;
+  /* justification requires two elements */
+  text-align: justify;
+  text-justify: inter-word;
+  }
+
+p.np_ss,p.list_ss,a.list_ss {
+  line-height:1;
+}
+
+p.playline {
+  margin:0.2;  
+  line-height:1.1;
+  color:black;
+  font-size:12px;
+}
+
+p.dialogue {
+  color: black;
+  font-size: 1em; /* 40px/16=2.5em */
+  line-height:  0.5em;
+  margin-left:  10px;
+}
+
+p.related {
+  font-size: 0.8em; /* 12px? */
+}
+
+p.image {
+  font-style: italic;
+}
+p.smallnote{
+  font-size: 0.9em; /* 40px/16=2.5em */
+}
+
+p.code, p.example, p.scene {
+    //font-size: 1.1em; /* 40px/16=2.5em */
+    line-height:  1.3em;
+    font-size: 12px;
+    color: black;
+    width: 85%;
+    text-align: left;
+    grid-template-columns: 600px auto;
+    column-gap: 20px;
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #edf2f5;
+    border-radius: 10px;
+    background-color:#f1f5f7;
+    font-family: Monaco,Menlo,monospace
+}
+
+p.example {
+    font-family: Menlo;
+    font-size: 14px;
+}
+
+/* for bullet point style list items */
+p.list,a.list,p.list_ss,a.list_ss,p.numlist,p.numlist_ss {
+  width: 84%;
+  display: list-item; /* This has to be "list-item"  */    
+  list-style-type: disc; /* (default) square */
+  list-style-position: outside; /* (default) or inside ok if single line? */ 
+  margin-left:  28px;
+  padding-left: 1cm;
+  padding-right:1cm;
+}
+
+p.numlist {
+  list-style-type: none; /* (default) square */
+}
+
+/* in HTML ol, ul handle numbers but numbering is preprocessed by browser with no CSS alteration */
+/* We can customise style of HTML lists but not numbering (has to be in ul,ol tags)*/
+/* We could preprocess an ol tag and insert these, or preprocess as a p tag and hardcode numbers*/
+p.revlist {
+  font-family: Monaco,Menlo,monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-left:  60px;
+}
+
+/* a sub-heading of some kind */
+
+p.date,p.file,p.author {
+  color: black; /* green */
+  font-size: 1.2em; /* 40px/16=2.5em */
+  font-weight: bold;
+  font-family: Arial,Times New Roman;
+  margin-left: 10px;
+}
+
+p.intro,p.title {
+  font-weight:  bold; /*900*/ /* same as default for a 'string' tag too */
+  font-family: Arial,Times New Roman;
+  line-height: 1.5;
+  font-weight: 300;
+  color: black;
+}
+
+p.title {
+font-family: "Lato", Arial,Times New Roman;
+font-size: 60px;
+letter-spacing: -.025em;
+margin: 32px 0 32px -1px;
+}
+
+p.authorref {
+  color: green /* black; green */
+  font-size: 1.0em; /* 40px/16=2.5em */
+  font-weight: bold;
+  font-family: Arial,Times New Roman;
+  margin-left: 10px;
+}
+
+p.intro {
+ font-size: 18px;
+}
+
+/*
+p.title {
+  font-size: 1.5em; /* 40px/16=2.5em */
+}
+*/
+
+
+/*
+
+  font-family: 'Playfair Display';
+  font-style: normal;
+  ffont-weight: 400;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v30/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+  */
+/* when you open the HTML in Word, use 'Select All' Aside style paras then apply this instead */
+/* To see this Style in Word, ensure you have the StylePane open with Styles in Current Document. */
+
+/* Centre these list items */
+
+p.item {
+
+  align-self: center;
+  position: relative;
+  left: 5%;
+  margin-right: 15%;
+  font-size: 14px;
+}
+
+p.citation {
+  align-self: centre;
+  position: relative;
+  margin-left:  30px;
+}
+
+
+
+/*
+table {
+  border: 2px solid red; 
+  border-radius: 2px;
+  background-color:  white;
+  font-size:  0.9em;
+}
+*/
+
+
+
+tr.glossterm {
+  align-self: center;
+}
+
+p.term3 {
+
+  color: darkslateblue;
+  border: 2px solid red; /*  border: 3px solid #73AD21;*/
+  border-radius: 5px;
+  background-color:  white;
+  font-size:  0.9em;
+  width: 20%;
+  padding: 10px;
+  margin-left: 10%; 
+  margin-right: 40%;
+  align-self: right;
+  align-content: justified;
+  /* float:  left; */
+    
+}
+
+p.elem, p.term, p.dtran,p.ctran, p.engl,p.w, p.s {
+
+  color: black;
+  background-color:  white;
+  font-size:  1em;
+  align-self: center;
+  align-content: justified;
+  /* float:  left; */ 
+}
+
+p.ctran {
+  background-color:  lightsalmon;
+}
+
+p.term, p.w {
+  font-weight: bolder;
+  font-size: 1.2em;
+  background-color: lightblue;
+}
+
+p.s {
+  font-weight: bolder;
+  font-size: 1.2em;
+  background-color: lightpink;
+}
+
+p.engl {
+
+  background-color:  lightblue;
+  /* float:  left; */  
+}
+
+/* A blue box insert */
+p.poetry {
+
+  color: darkslateblue;
+  border: 2px solid red; /*  border: 3px solid #73AD21;*/
+  border-radius: 5px;
+  background-color:  lightblue;
+  font-size:  0.9em;
+  width: 20%;
+  padding: 10px;
+  margin-left: 40%; 
+  margin-right: 10%;
+  align-self: right;
+  align-content: justified;
+  /* float:  right; */
+    
+}
+
+p.DividerText {
+  color: red;
+  font-size: 1.5em; /* 40px/16=2.5em */
+  margin-left:  10px;
+}
+
+p.DialogueName, H2 {
+  color: green;
+  font-size: 1.2em; /* 40px/16=2.5em */
+  margin-left:  10px;
+  font-variant: small-caps; // to match project gutenberg names
+}
+
+p.DialogueSong {
+  color: black;
+  font-size: 1em; /* 40px/16=2.5em */
+  line-height:  0.5em;
+  margin-left:  30px;
+}
+
+/* compare this to p.intro above */
+p.Introduction {
+  color: black;
+  font-style: italic;
+  font-size: 1em; /* 40px/16=2.5em */
+  line-height:  1.2em;
+  margin-left:  10px;
+}
+
+p.PageUpdate {
+  color: black;
+  font-style: italic;
+  font-size: 0.7em; /* 40px/16=2.5em */
+  line-height:  1.0em;
+  margin-left:  10px;
+  text-align: right;
+}
+
+p.LastCreated,p.URLsource {
+  color: darkblue;
+  font-size: 0.8em; /* 40px/16=2.5em */
+  line-height:  0.5em;
+  margin-left:  10px;
+}
+
+p.PersonalNotes, p.CriticNotes {
+  color: black; /*var(--white);*/
+  display:  none; /* text is not 'shown' but still on page for clipboard*/
+  font-size: 0em; 
+  margin-left:  10px;
+}
+
+
+p.PlayScene {
+  color: green;
+  font-size: 1.5em; /* 40px/16=2.5em */
+  font-weight: bold;
+  margin-left:  10px;
+}
+
+p.Quote {
+  color: black;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  border-radius: 20px;
+  border: 1px solid #edf2f5;
+  padding: 1em 2em; 
+  font-style: italic;
+  font-size: 1em; /* 40px/16=2.5em */
+  line-height:  1.2em;
+  margin-left:  20px;
+}
+
+p.WebTitle {
+  /* 
+     color: black;
+     background-color: #FFE5D4;
+  */
+  color: #FFE5D4;;
+     background-color: black;
+  max-width: 35em;
+ 
+  padding: 1em 2em; 
+  font-family:  Garamond, Calibri, Georgia, "norwester", serif; 
+  font-size: 2em; /* 40px/16=2.5em */
+  margin-left:  10px;
+}
+
+p.Reservation {
+  color: darkblue;
+  max-width: 30em;
+  background-color: #FFE5D4;
+  padding: 1em 2em; /* the difference this makes is to add a bit of white-space around the para blocks */
+  font-style: italic;
+  font-family:  "oxygen3","opensans", Georgia, serif; 
+  font-size: 0.8em; /* 40px/16=2.5em */
+  margin-left:  10px;
+}
+
+p.WebCitation {
+  color: darkblue;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  padding: 1em 2em; /* the difference this makes is to add a bit of white-space around the para blocks */
+  font-style: italic;
+  font-family:  "oxygen3","opensans", Georgia, serif; 
+  font-size: 0.8em; /* 40px/16=2.5em */
+  margin-left:  10px;
+}
+
+p.WebDate {
+  color: black;
+  max-width: 35em;
+  background-color: lightcoral;
+  padding: 1em 2em; 
+  font-family:  "norwester", Georgia, serif; 
+  font-size: 1em; /* 40px/16=2.5em */
+  margin-left:  10px;
+}
+
+p.WebDateAside {
+  color: white;
+  font-family:  "norwester", Georgia, serif; 
+  font-size: 1em; /* 40px/16=2.5em */
+  text-align: center;
+}
+
+p.PlayTitle {
+  color: green;
+  font-family:  Georgia, serif; 
+  font-size: 2em; /* 40px/16=2.5em */
+  margin-left:  10px;
+}
+
+p.StageDirection {
+  color: blue;
+  font-size: 1em; /* 40px/16=2.5em */
+  margin-left:  10px;
+  align-self: left;
+  text-align: right; /*Helpfulfor exits */
+}
+
+p.WebSubtitle {
+  color: black;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  padding: 1em 2em; 
+  font-style: italic;
+  font-size: 1em; /* 40px/16=2.5em */
+  line-height:  1.2em;
+  margin-left:  10px;
+}
+
+/*This will cover all the paragraph styles not caught by above */
+//40px/16=2.5em 
+p {
+  color: black;
+  font-size: 1em; 
+  margin-left:  10px;
+  font-family: Times;
+}
+
+img.intext,img.small {
+  /* style="width:100%;max-width:400px" */
+  width:30%;
+}
+
+img.medium{
+  /* style="width:100%;max-width:400px" */
+  margin-left:  10px;
+  margin-right: auto;
+  width: 60%;
+  border: 1px solid black
+}
+
+img.medlge{
+  /* style="width:100%;max-width:400px" */
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border: 1px solid black
+}
+
+img.fullwidth,img.large {
+  /* style="width:100%;max-width:400px" */
+  width:95%;
+  border: 1px solid black; 
+}
+
+/* supplementary semantic tagging for plays*/
+
+p.example, p.explanation, p.image, p.code, p.authorref, p.comment, p.scene,p.stagedir {
+  color: black;
+  /* max-width: 35em; */
+  max-width: 90%;
+  border: 2px darkgrey; /*  border: 3px solid #73AD21;*/
+  border-radius: 3px;
+  background-color: white;/* #FFE5D4 */;
+  /* padding: 1em 2em; /* the difference this makes is to add a bit of white-space around the para blocks */
+  font-size: 1.0em; /* 40px/16=2.5em */
+  line-height:  1.3em;
+  margin-left:  10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #5E5E5E;
+  -webkit-text-size-adjust:100%
+  font-style: normal;
+  /* justification requires two elements */
+  text-align: justify;
+  text-justify: inter-word;
+  }
+
+p.authorref {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+p.code, p.example, p.scene,p.stagedir,p.stageentry {
+    //font-size: 1.1em; /* 40px/16=2.5em */
+    line-height:  1.3em;
+    font-size: 12px;
+    color: black;
+    width: 85%;
+    text-align: left;
+    grid-template-columns: 600px auto;
+    column-gap: 20px;
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #edf2f5;
+    border-radius: 10px;
+    background-color:#f1f5f7;
+    font-family: Monaco,Menlo,monospace
+}
+
+p.stagedir {
+  font-style: italic;
+  color: black;
+  width: 50%;
+  text-align: left;
+  text-align: right; /*Helpfulfor exits */
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #edf2f5;
+  border-radius: 1px;
+  background-color:#f7f7f7;
+  font-family: Monaco,Menlo,monospace
+}
+
+p.stageentry {
+  font-style: italic;
+  color: black;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #edf2f5;
+  border-radius: 1px;
+  background-color:#f7f7f7;
+  font-family: Monaco,Menlo,monospace
+}
+
+p.scene {
+  width:50%;
+  font-size: 14px;
+  font-style: italic;
+  font-weight:bold;
+  color: black;
+}
+
+p.example {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+/* for bullet point style list items */
+p.list,a.list {
+  display: list-item; /* This has to be "list-item"  */    
+  list-style-type: disc; /* (default) square */
+  list-style-position: outside; /* (default) or inside ok if single line? */ 
+  margin-left:  28px;
+}
+
+p.Quote {
+  color: black;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  border-radius: 20px;
+  border: 1px solid #edf2f5;
+  padding: 1em 2em; 
+  font-style: italic;
+  font-size: 1em; /* 40px/16=2.5em */
+  line-height:  1.2em;
+  margin-left:  20px;
+}
+
+p.intro {
+  font-weight: bold; /* same as default for a 'string' tag too */
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: black;
+  font-size: 18px;
+}

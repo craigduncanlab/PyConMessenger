@@ -140,7 +140,7 @@ nprint (MyList)
 ```
 
 
-Some of these shortcut the process of taking in raw data and then splitting it for table purposes.  For example, tprint() is a basic table maker that looks for the delimiter and then just puts numbers for row and columns, and doesn't wait for you to specify a heading.
+Some of these shortcut the process of taking in raw data and then splitting it for table purposes.  For example, tprint() is a basic table maker that looks for the delimiter and then just puts numbers for row and columns, and doesn't wait for you to specify a heading.  There are some examples of this in the MathTest.txt file in the source folder.
 
 *Shortcut blocks*
 

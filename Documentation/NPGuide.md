@@ -88,7 +88,7 @@ The difference between R and B,F options is that R can include several page name
 
 A link to SiteMap will be included at the end of automatically generated page links, as well as at the bottom of each page.
 
-# Syntax for basic navigation level headings
+# Simple headings and navigation 
 
 The 'intro' paragraph type is indicated by a hash (#) like this:
 
@@ -96,7 +96,15 @@ The 'intro' paragraph type is indicated by a hash (#) like this:
 # This is a heading or 'intro' paragraph
 ```
 
-# Links
+By default any text following a #, on the same line, will be included in the page links at the top of each page.  This will be in the 'intro' style in the default .css.
+
+This means that any of the '# ' prefixed lines will act as a form of navigation without anything further needing to be done.  However, if you want to change this default navigation option to some other semantic category, like 'scene' paragraphs in a play, use this function in your document:
+
+```
+pagelinks(scene)
+```
+
+# Links (internal and external)
 
 *Project HTML Page Links*
 
@@ -119,7 +127,7 @@ There are several ways to enter links in the body of the text.
 Basic prefix methods for an external link include:
 
 ```
-E:LinkText,www.linkaddress.com,23 April 2024
+L:LinkText,www.linkaddress.com,23 April 2024
 ```
 
 The date is optional but by including it you get words indicating when last accessed.
@@ -264,16 +272,6 @@ There are some quick and dirty ways to make tables, including the tprint() comma
 
 If you have some complicated raw data you want to include in your text file, and then still manipulate that raw data into tables without having to manually 'draw' the table, as in Markdown, see the next section.
 
-# Page headers for navigation
-
-*Intra page links for navigation*
-
-By default pagelines that act as a table of contents appear at the top of each html page, based on the 'intro' paragraphs.  This means that any of the '# ' prefixed lines will act as a form of navigation without anything needing to be done.  However, if you want to change this to some other semantic category, like 'scene' paragraphs in a play, use:
-
-```
-pagelinks(scene)
-```
-
 # Raw text data manipulation 
 
 *Delimiter selection for raw data*
@@ -362,7 +360,6 @@ Finally, to make the table appear, you now use whatever column names you want, i
 ```
 tablecol(Character,Description)
 ```
-
 
 # Summary of type of commands/functions for data and HTML output
 

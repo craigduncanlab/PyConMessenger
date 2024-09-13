@@ -95,7 +95,7 @@ What is also surprising is that in those downloadable formats there is DOC but n
 
 # Evaluation of the Folger HTML format
 
-If you inspect the HTML you will see a very surprising thing: the basic paragraph tag system stops at about line 183, and thereafter it is just span and div tags.  To be clear, in the early part of the HTML, written notes from the Director of Folger Shakespeare, Michael Whitemore, appear in p tags, like this:
+If you inspect the HTML you will see a very surprising thing: the basic paragraph tag system stops at about line 183, and thereafter it is just span and div tags.  To be clear, in the early part of the HTML, written notes from the Director of Folger Shakespeare, Michael Witmore, appear in p tags, like this:
 
 ![Witmore_Folger](Witmore_Folger.png)
 

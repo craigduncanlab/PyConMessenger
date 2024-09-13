@@ -270,6 +270,8 @@ Unlike Markdown, tables are initially defined as data objects.  This means you c
 
 There are some quick and dirty ways to make tables, including the tprint() command, but if you follow the more detailed process just described, you can be quite specific about the data in 'column vectors' that you combine to make tables.
 
+An example of table preparation is in the macbeth.ats file in the source/Plays folder.
+
 If you have some complicated raw data you want to include in your text file, and then still manipulate that raw data into tables without having to manually 'draw' the table, as in Markdown, see the next section.
 
 # Raw text data manipulation 
@@ -315,7 +317,7 @@ dlim(colon all)
 
 # Example of commands used to process Literature
 
-This is an example of putting data in (the commas in the data are not initially used when ingesting the data, but will be used to split the data for other purposes).  You will find the full example of this in the Macbeth.ats file in the source/Plays folder in this project.
+This is an example of putting data in (the commas in the data are not initially used when ingesting the data, but will be used to split the data for other purposes).  You will find the full example of this in the macbeth.ats file in the source/Plays folder in this project.
 
 ```
 d+
@@ -411,8 +413,16 @@ The outertag looks for square brackets at the extreme left and extreme right of 
 
 You can put functions in between normal text in a text file, but if you want to bring in the text from another file, you can also the 'import' function.
 
-The import function will import a file with an .ats extension (this can be changed in the config.py file).   This file is just a text file which is otherwise identical to the normal .txt files that are processed by the NP interpreter.
+The import function is used like this:
 
-The text file loaded by an import command may include data blocks, or functions, or additional text.
+```
+import(macbeth)
+```
+
+where macbeth is short for the file macbeth.ats
+
+The program default will try to import a file with an .ats extension rather than a .txt extension (this can be changed in the config.py file).   This file is just a text file which is otherwise identical to the normal .txt files that are processed by the NP interpreter.
+
+The text file loaded by an import command may include anything you would normally include in a .txt file, like data blocks, or functions, or additional text.  It is basically the equivalent of an 'insert this text into the document flow at this point' command.
 
 The import command allows re-use of any data definitions and autotagging commands that have already been prepared.  It is also a way of bringing in data, functions or other text without interrupting the read-through text of the main document. 

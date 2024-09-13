@@ -98,11 +98,11 @@ The 'intro' paragraph type is indicated by a hash (#) like this:
 
 # Links
 
-The objective of this syntax is to make it very easy to refer to pages that are .txt files in the same project (source) by just using angled slashes to enclose the name of the source file (with no suffix).
-
 *Project HTML Page Links*
 
 One of the real practical benefits of making web sites with NP is that you can simple enclose /SomePageName/ with angled brackets and it will create a link to it (regardless of where the .txt file is in source, because all htmlpages are flat links).
+
+The objective of this syntax is to make it very easy to refer to pages that are .txt files in the same project (source) by just using angled slashes to enclose the name of the source file (with no suffix).
 
 *Internal Page Links*
 

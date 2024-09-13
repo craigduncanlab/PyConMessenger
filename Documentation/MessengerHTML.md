@@ -47,45 +47,43 @@ For present purposes, however, what is useful about the class attribute is that 
 
 Both the class slot contents, and the 'styles' names in CSS and in word processing are not important for functionality.   Conveniently, in both the web and word processing, data formats, styles are attached to each base unit of information (e.g. p tags or wp tags), and so style names can be  repurposed as semantic classifiers, without loss of the ability to include style definitions for layout.  
 
-Reversing the relative dependencies of the analogue styles and the semantic data only matters to the extent that we need to be aware that analogue similarity does not need to imply, or require, semantic similarity.  Two documents can appear to be identical in a software reader, yet one of them can reflect a semantic scheme of specific importance to the author.    This was always possible in word processors, by the way in which styles could be named and applied, but its universal application and semantic function is easier to see when a model of the semantic layer is separated from the p or wp tags as the base carrier layer.  To achieve interoperability, div and span tags must be used sparingly, or not at all.
+Based on the above, we can repurpose HTML to carry semantic data in its p tag structure if we use the class slot to carry semantic categories determined by the writer or author (or are appropriate for a recognised genre, like a play).  This approximates what XML definitions and schema do, but it need not be too regulated provided there is an appropriate style mapping.  This implementation of an XML-style semantic encoding in HTML is not present in most digital forms of publishing literature today.
 
-Based on the above, we can repurpose HTML as a classified data format if the semantic categories are customised by treating them as class variables, solely determined by the writer or author (or are appropriate for a recognised genre, like a play).  This approximates what XML definitions and schema do, but it need not be too regulated provided there is an appropriate style mapping.  In this way, we can deliberately include a form of data classification that is not as cleanly encoded or available in most digital forms of publishing literature today.
+Two HTML documents can appear to be identically styled in a software reader, yet one of them can also include richer data structures in its HTML encoding. 
 
-This repurposing of HTML can be very beneficial, in a practical sense, provided that the semantic encodings in the class attributes are retained in word processors as style names, mapped to each of the original HTML file paragraphs.   The actual retention of semantic information in a working pipeline has to be tested against the actual behaviour of word processing software with regard to the HTML as an input format.  I have conducted some experiments, and some of these results are presented below. 
+# The role of Browsers and CSS for both semantic and analogue representations
 
-# The role of Browsers and CSS in analogue representations
-
-Using HTML as a data format means that the information that is passed to and downloaded via a browser is able to be accessed as structured text, even without a custom internet client that is focussed on data transfers.  However, for human readers, these data structures are not visible in the main browser view, they appear in the 'view source'.  This is due to the conventions of browsers.  Even the 'view source' is aimed at the human reader, primarily.
+HTML data structures are not visible in the main browser view, they usually only appear in the 'view source'.  
 
 The connection between semantic encoding and layout in MessengerHTML is based on the use of Cascading Style Sheets, due to the convenience of these being interpreted by the browser (and other programs that recognise these internet conventions).
 
-If no CSS sheet is supplied, or CSS styles are turned off, Messenger HTML will still supply structured data, but in the main view it will look like this in the analogue representation:
+If no CSS sheet is supplied, or CSS styles are turned off, MessengerHTML will still supply structured data to the browser, but it will only look like this in the analogue representation:
 
 ![Macbeth_Safari_NoStyles](Macbeth_Safari_NoStyles.png)
 
-The introduction of a CSS sheet prepared o map to the semantic data categories results in the browser representation being as follows:
+The introduction of a CSS sheet to map to the semantic data categories results in the browser representation being as follows:
 
 ![Macbeth_Safari_Styles](Macbeth_Safari_Styles.png)
 
-# The role of CSS in analogue word processing semantic information and representations
+# Interoperability of MessengerHTML
 
-My experimentation has uncovered that the same CSS file that is referred to in an HTML page is also essential to the native importers in LibreOffice and MS Word recognising and retaining the semantic information in p tag class attributes.  
+Since semantic categories can also be encoded in word processors as style names, we can rely on the importation of suitable formatted HTML to retain semantic/style information in the word processing context. Whether there are any obstacles to implementing this requires practical testing, as detailed below. 
 
-For example, if LibreOffice is asked to import the MacbethTest.html file without the pre-requisite CSS file being present, a simple, readable plain text format is obtained, and it looks almost identical to the MessengerHTML in Safari with no styles.
+It seems that whatever CSS file is referred to in an HTML page must be present for the native importers in LibreOffice and MS Word to also recognise the p tag class attributes as semantic (style) information.   They do not make that connection from the HTML and then omit the style content; they fail to make it at all.
 
-![LibreOffice_Macbeth_Libre_NoStyles](LibreOffice_Macbeth_Libre_NoStyles.png)
+For example, if LibreOffice is asked to import the MacbethTest.html file without the pre-requisite CSS file being present, only a simple, readable plain text format is obtained, and no styles information is present.
 
-What is also apparent from the software's behaviour is that the data structures and semantic information are also not imported by LibreOffice if there is no CSS sheet, *<i>despite there being semantic information in the HTML itself</i>i>*
+![Macbeth_Libre_NoStyles](Macbeth_Libre_NoStyles.png)
 
-However, when a CSS file (referred to in the HTML) is present, then LibreOffice will simultaneously import the semantic information as styles, and link it to the appropriate paragraph of the text, simultaneously.  This is apparent by the naming of styles with Body Text suffixes that refer to the semantic class (e.g. 'Body Text.Quote').  Here are two screenshots of the same MessengerHTML file loaded into LibreOffice, the only difference being the presence of the stylesheet fnalstyle_new.css:
+However, when the CSS file referred to in the HTML is present, then LibreOffice will simultaneously import the semantic information as styles, and link it to the appropriate paragraph of the text.  In the picture below, you can see this from the style names (e.g. 'Body Text.Quote').  The only difference in process being the presence of the stylesheet fnlstyle_new.css when the HTML file was opened by LibreOffice:
 
 ![MacbethTest_LibreOffice_CSS](MacbethTest_LibreOffice_CSS.png)
 
 In summary, for a user-defined semantic encoding of HTML to be successful we need these conditions to be satisfied:
 
-- A disciplined approach to HTML so that we remove the semantic message from the tags themselves.  That is, we make HTML universal in the sense that a single tag, like the p tag, is used to partition units of information, but not to classify them semantically.  By choosing wisely, we accomodate the expectations of both the web and word processors by making this the p tag or the table tag: programs assume (correctly) that this is the fundamental unit of partitioning for both contexts.
-- Secondly, we need to consistently implement the writer's semantic scheme within the attribute tags of the p tags in HTML.  By choosing wisely (i.e. by using the 'class' attribute), we accomodate this semantic classification system in ways that are captured by the 'styles' channel of both the web and the word processors.  Not only is this something that has importance in both systems, but it also allows user choice (it is not prescriptive).  It also has the added benefit of allowing the writer to capture layout information as well, thereby fulfilling the original visual purposes in both these digital mediums.
-- Thirdly, retention of appropriate CSS file information to assist with native HTML import procedures in LibreOffice and MS Word (for example).
+- we have style(semantic) information in the 'class' attributes of p tags.
+- Secondly, we need to consistently implement the writer's semantic scheme within the attribute tags of the p tags in HTML.
+- appropriate CSS file information must be available when opening HTML files to assist with default HTML import procedures in LibreOffice and MS Word (for example).
 
 # Practical pipelines
 

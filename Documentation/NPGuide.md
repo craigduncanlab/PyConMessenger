@@ -5,7 +5,7 @@ This Guide (c) Craig Duncan 2024.
 
 # Licence
 
-See [Licence](LICENCE.MD)
+See [Licence](LICENCE.md)
 
 # Basic approach to writing .txt files
 
@@ -109,11 +109,36 @@ Raw data can be comma separated, space separated or even use a completely arbitr
 The variable name can be used in available functions.  A few of these are:
 
 - lprint(arg)  = print as a list
+- nprint(arg) = print as a sequentially numbered list.
 - tprint(arg) = print as a table (it tries to find the most common delimiter)
 - codeprint(arg) = print as code style
 - eprint(arg) = print as example style.  A tight font with coloured background.
 - qprint(arg) = print as quote style
 - cprint(arg) = a shortcut to cricket scoring tables (with sums).
+
+For example, include these lines in your .txt file and experiment:
+
+```
+d+
+(MyList)
+Here is something
+That I want
+To print in different ways
+d-
+
+This prints as a list:
+
+lprint(MyList)
+
+This prints as an 'explain' text box:
+
+eprint(MyList)
+
+This prints as numbered list:
+
+nprint (MyList)
+```
+
 
 Some of these shortcut the process of taking in raw data and then splitting it for table purposes.  For example, tprint() is a basic table maker that looks for the delimiter and then just puts numbers for row and columns, and doesn't wait for you to specify a heading.
 

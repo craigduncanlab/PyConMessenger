@@ -1,0 +1,96 @@
+T:MemoScriptScope
+A:Craig Duncan
+D:8 August 2024
+B:OptionalDataWithProgramming
+
+# Intro
+
+Scope is a paradigm from programming: define localised areas of information and classify them as local rule schemes.  Even a 'function' is distinguished from general text in programming.   This enables structured interpretation, and localised encoding schemes.  It enables the encoding to be much more suited to purpose, and for the general context to determine what local scope seems useful.
+
+In normal writing, having general scope could be useful for just getting up and writing quickly (and for labelling general things like the document itself).  However, the same kind of meta data that applies to a document might be useful for an image or a table.  By creating local scope, the same general meta-data commands can be re-used locally (this is a different knowledge scheme from that used in most code/writing notebooks where the scope of each doesn't really come with any attempt to apply some general approaches to a local context: rather each scope is considered completely different)
+
+The MemoScript blocks function the same way.  For example, in general scope, " " quotes may define a specific style, but in l+ (list tags) they will simply appear as normal quotes in the list.  Also the list can have a variable name attached (TO DO) which does not occur for general scope quotes.
+
+Human writing systems (on pages) are contextualised in terms of structure and intent.  This is only implied in software for word processing.
+
+If we can make intent/scope more explicit in our writing (outside of WP environment), it can help for introducing semantics and also linguistic research.
+
+# Writing scope
+
+Unlike general computer programs, writers might want to treat lists, blocks of text or other items in particular ways that rely on them being subsets of the main document.  If we think of these not only as data, but localised programming areas, then we distinguish them from being merely 'blocks' that are 'not ordinary text'.  A writer might want to define some characters in a play, so for that 'scope' that need to characterise that information (as a data-type e.g. list, which could be indicated by the l+, li block ends, and also a semantic type, which could be characters (indicated by a variable name or label?)).  Whether writers need scope to include meta-data like type etc remains to be seen.
+
+Formats like JSON are sometimes used to store key-value pairs.  However, if we have consistent meta-data for writing scope blocks, we might treat these keys as functions or labels which help find and partition the data (read it).
+
+The kind of meta-data that helps define an image might be similar to a document e.g. title, author, date etc might be a re-usable set of features that is simply used differently for HTML production, or searching for images etc.  A writer's text should be both database and the basis for choice of publishing format.
+
+The use of standard 'properties' of text blocks might seem to be heading toward an object-orientated writing paradigm.  In some ways, it is.  However, what matters just as much is how the interpretation or parsing system works with this.   In a java-programming workflow the aim is to translate text into a computable machine code.  However, in a normal writing environment, (i.e where the humanities is the goal), the purpose of this kind of structure is different: it is to stored, record, recall and sometimes publish.  It is also to enable conditional publishing.  Although these are not new issues, the desired workflows are often hacked on to existing word processing software in such a way that it always requires dependence on a proprietary software chain.
+
+If we re-imagine this workflow as computation (in general) rather than 'software', we can focus on the language conventions and interpretation programs for achieving the goal of preserving the author's semantic frameworks and intentions.  Offering software in a convenient graphical work environment often comes at the cost of reducing authors' ability to express their intelligent understanding of their subject matter.  On the other hand, allowing authors to become proficient in their own data organisation when writing allows that information to be prioritised and retained for computational benefits too.
+
+# Concepts of books and pages
+
+Physical books offer several benefits, including convenient size, partitioning of text, the ability to use divisions like Chapters and page numbers to index and return to a position in a long text and so on.  The functions and features of books are all part of an integrated design and realisation of a simple concept.
+
+Some of these things will transfer naturally to a digital environment, but we need to be careful not to adopt 'Cargo Cult digitisation' - namely, copying features that arose as a result of a physical set of circumstances that are not required, or not inherently repeatable with the same benefits in a different media, like digital screen-based readers.   (Folger Shakerspeare HTML that looks like a book, in HTML browsers, is an example of just repeating every thing so that it looks like a book, with page turning and so on).  The whole concept of an e-Reader attempts to repeat the experience of reading a book, with little consideration to functional aspects of texts and books, and thinking about how to achieve them.  We might also find that our notion of books, documents and formats needs to change.  On the flip side of that, 'portable document format' arose as a graphically-inspired facsimile of a printed document, which was designed to give up editing in favour of consistent production and readability across different machines and printers.
+
+A digital document does not need to be based around the concept of pages.  Many institutions (e.g. Courts) publish digital documents with readable book forms because it is convenient, and when printed, resembles a small book too.  The word processing software works with this paradigm by providing the book preview on the page immediately, to give certainty to those computer users who might not want to have a separate 'drafting' and 'engrossing' stage (ironically, lawyers had retained many of these steps in their internal law firm procedures, for some time).  
+
+# Paragraphs and referencing
+
+With legal documents in particular, paragraph numbering and referencing is also a convenient form of 'media-independent' indexing, that can be used for both partitioned data references inside the computer and also for human reference.  Because of its flexibility, however, this notion of 'number' has been restricted to adding a !!visible!! paragraph number (text/character) to the rendered form of a document.  It has been little more than a pictorial digital counter system - having no direct significance for indexing the set of text blocks inside an OOXML (docx) document, for example.  
+
+Internally, paragraph IDs within OOXML documents are not related at all to the numbers that a human sees on a document.  As a result, there are no easy lookups, linking or other schemes to these numbers that the author or readers can use.  Given the importance of references to things like paragraph numbers in the legal profession (everything from paragraphs of pleadings, to statutes), it is an area which has been overlooked.  It also indicates how little our focus on digital documents is based on designing to take into account how we use documents, rather than what features could be put to market most easily in the 1990's.   
+
+Conventions, and formats like OOXML and so on, are all based on design patterns that involve this focus only on what numbers can be easily updated for the abstract concept of 'rendered document', rather than some internal form of representation.  This inside/outside distinction of documents has been convenient for software developers (it even lends itself to design patterns like 'view' versus model/controller).  However, it is yet another conceptual division between means and ends, or appearances and mechanisms, between code and writing.   A certain degree of difficulty, if not loss, emerges when the human-visible encoding systems, some of which are numerical, do not translate into any mapped index that relates to the 'internal' mechanisms by which a document is encoded.  
+
+Graphical interfaces, which hide a lot of the mechanisms of software from authors, are prone to doing whatever works to deliver visible symbols that make sense to human readers, without basing internal reference systems on them.  Often the software is bound to whatever mechanisms and assumptions worked to produce satisfactory symbolic representations on screen in the first version of the software: this is now the paradigm for decades of updates.  As far as the computer is concerned, a symbolic 'paragraph number', as visible to a human reader, is not interpreted as a primary unit of identification for the internal program, and whatever identification is used is not a user-accessible variable.  A symbolic paragraph number may be nothing more than a dynamically updated visual symbol that appears consistently on screen and printer for the benefit of analogue human reading and interpretation only.  The way in which the properties of individual paragraphs are stored, in order to perform lookups of what kind of dynamic numbering systems are in place (often being woven in and around each other, but sometimes not being visible) is often hidden from the user.   In addition, there are not many instances where the program will audit the use of multiple styles/numbering schemes (by mistake) and prompt for correction.  Users often have to discover this themselves.
+
+With a little bit of difficulty, WP software tried schemes for dynamic updating of document number symbols.   The encoding of paragraphs with a parent list or sublist would guide the sequential counters that put successive symbols into the positions in each paragraph.  The properties of paragraphs are thus used in the simulation or preview of how a page will look, even if the numbers/symbols are not permanently stored.  
+
+These dynamic, style-based numbering schemes require readers to become familiar with the 'preview' rules in order to produce a numbered document.   Since the preview offers insight into the numbers in digital form, documents can be read and edited with the assumption that dynamical updating will occur whilst they are in progress.  The end result is that authors are free to choose to update their paragraphs and the numbering at any time, according to the schemes that are in place.  Inserting new paragraphs when using the GUI word processing software will assume that the same general symbolic schemes will apply to the new paragraph, and the preview will be updated accordingly.  Once a document is printed, then obviously the present state of the symbolic numbering is frozen in that version of the output, regardless of what happens to the digital version.
+
+On the other hand, numbering in some finalised documents would not need any dynamic updating, in the digital preview.  For example, a finalised Court judgment or submission does not need updated numbering.
+
+There are instances in Court procedures where some paper form documents will be filed (unchanged) and then updated in a new version later  (e.g. pleadings that are filed then updated later). Past practice required type-written documents to display the old text in some markup, and the new text inserted where applicable.   When Word processing was first introduced, digital re-enactment of these markups was also required (i.e. the computer was simply used to achieve the end, printed output in a different way: its utility was in the storing and editing, but none of the ways in which documents could be compared or versions could be controlled had any advanced consideration).  
+
+It is a fact that software and work procedures often evolve together.  The work procedures of lawyers regarding amendment of pleadings evolved in conjunction with the assumption that everyone would be using word processing software, as a kind of information/writing standard.  The commercial ownership of these writing standards ensured software companies became very economically profitable, but have also reinforced the continued production of monopolistic software for word processing without challenge.   Different operating systems (e.g. Apple) have had to allow for the introduction of Microsoft 'Office' products because they are ubiquitous.
+
+# Initial thoughts about solutions
+
+Many other items that are useful references, labels or waypoints in documents are frequently included in all sorts of institutional documents (memos, transcripts, reports), but because they are not considered as fundamental as 'numbering', at least in the word processing industry, there is little attention given to how to make the most of these in a digital context.   The only way to do this is to examine ways in which digital documents can, in general, provide forms of identification of content that is consistent between the human-readable form and the underlying digital form.  
+
+If human-readable information is captured as local, semantic data, for example, it not only provides a convenient record of human-readable information, but it also provides the digital data in a way that it can be made the subject of in-memory storage and referencing.  This is the minimum requirement for computability that is operating at the same level of abstraction as a human reader.  To clarify, if there is an opportunity to capture human-readable variables in such a way that computer functions and memory-related processes can refer to them, then:
+
+l+
+programming the computer can occur at the same level of abstraction as human readers (opening up the door to more intelligent, author-level programming scripts); and
+not all of this need be done manually - for example, paragraph numbering could adopt indexing schemes that are the same as what is shown to human readers (this can be done in HTML for example), something which is not part of the minimum specifications for word processing software at this stage
+l-
+
+One of the things that is notable about word processing software is how much the software has been the leader in specifying what information to pay attention to, and how much information-focussed professions have been followers.  In my view, this is because of a lack of information and software literacy amongst those professions.  There is a vast difference between thinking about information technology, and understanding how digital documents work in terms of the information that is stored and how it is captured in digital form.  Digital literacy must include understanding what the functional alternatives to traditional media are, without simply relying on  the simulation/facsimile paradigms to capture non-digital media (the 'cargo cult' digitisation process).  Many forms of scanning or reproduction of documents in digital form aim for little more than the resemblance of the old form in whatever visual output device is connected to a computer.  They aim to recreate analogue facsimiles in the digital medium, but which remain disconnected from intelligent intermediate functions and programming languages because the software developers are under no duty to, and not motivated to, capture the information relevant to the human reader/writers in a digital form that goes much beyond type-setting.  
+
+In summary, these digital forms are treated as resemblances rather than databases, and they are tweaked for appearance and style instead of being the subject matter for computing languages that can reason with, or logically use, the human-readable information.
+
+# Solutions
+
+The steps that can be taken toward improving the ability to use human-readable information with computing languages include ensuring that we more fully integrate the definition of human readable information with subsequent transformation of that information into digital form.   We can do this in more than one way, which are probably different ways of looking at the same integrated approach to writing/programming:
+l+
+create new forms of digital writing formats that are open to the author defining data for re-use and programming; and
+translating the simplest form of digital text into other forms (like HTML) with a conscious awareness of the importance of retaining human-readable information (like semantic categories, or discipline-specific labels or variables) so that it can be used in computing languages.
+as a corollary to the first point: not creating sharp divisions between writing (or templates) and data input/output (databases).  Texts themselves are always capable of being regarded as labelled data.  Authors can control what is done with that data, and use simple programs with it.
+l-
+
+# Paragraphs and partitioning
+
+The problem with regarding paragraph numbers as media independent is that they ought to be transferable and useful in digital media.  So, for example, an HTML document ought to be able to link to a paragraph in a way that a paper document cannot.  Thus, if any kind of information whether it be heading or paragraph number is capable of being used in human speech or writing to refer to something, then the HTML system ought to include a way to refer to it.  In HTML this is through the 'id' attribute of a paragraph tag, which can then be used as an anchor.
+
+Having well-thought-out schemes for partitioning digital documents that are independent of page size or printed form is useful, particularly if they are a kind of sequential counter system.More generally, the author should be able to specify which parts of their writing are going to be counted, if the computer is going to be able to selectively number some parts of the text (according to historical expectations?) like the line numbers of dialogue in plays, or the paragraphs in legal documents.  In some ways, this is less necessary if there were alternative ways of specifically identifying parts of digital texts that didn't use numbers.  For example, headings are sometimes a viable form of referencing and locating the relevant part or Chapter.  
+
+By ensuring the essayMaker pre-processing will carry this out, links can !!always!! be made.  Whether paragraph numbers appear in a document as published can be a separate and independent choice.  General settings can help define whether a specific document in bulk website departs from the basic assumptions (e.g. numbering could be the default in certain instances, or the exception). Allowing individual document authors to override the result might be a conveient way to deal with multiple formats.
+
+# Comparisons to R Markdown
+
+The code blocks in R Markdown have a meta-line {R} that enables the programming line to set the programming language.  This enables scope to determine language for interpretation.  However, scope there is not part of a variable/memory system the way it is with general programming languages.
+
+# Comparisons to TeX
+
+TeX has localised scope for its commands.  This is useful.

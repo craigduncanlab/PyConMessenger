@@ -1,0 +1,268 @@
+T:TranscriptEncodings
+D:30 July 2024
+A:Craig Duncan
+B:Goals
+
+# High Court of Australia transcripts
+
+The High Court has its own service and makes them available (unlike some other courts).
+
+L:HCAtrans,https://www.hcourt.gov.au/publications/judgments/transcripts,30 July 2024
+
+L:AustliiHCAtrans,http://www.austlii.edu.au/cgi-bin/viewdb/au/cases/cth/HCATrans/,30 July 2024
+
+This is an individual HTML transcript (available on web, but no separate download link).  The HCA offers download versions in PDF and RTF (neither of which are modern XML or semantic formats)
+
+L:2024TransHCA,http://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCATrans/2024/45.html,30 July 2024
+
+Some of the meta in the HTML section:
+
+e+
+  <?xml version="1.0" encoding="utf-8"?>
+  <!DOCTYPE html>
+  <html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="no-js" xml:lang="en">
+  <head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Solaris version 5.1.24" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <title>Plaintiff M19A/2024 &amp; Ors v Minister for Immigration, Citizenship and Multicultural Affairs [2024] HCATrans 45 (26 July 2024)</title>
+  <link media="screen" rel="stylesheet" href="/css/screen1.css" />
+  <link media="print" rel="stylesheet" href="/css/print.css" />
+  <meta name="theme-color" content="#ee3224" />
+  <meta name="description" content="Australasian Legal Information Institute (AustLII), a joint facility of UTS and UNSW Faculties of Law." />
+  <link rel="icon" sizes="192x192" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon-precomposed" href="/images/icon-shortcut.png" />
+  <meta name="msapplication-TileColor" content="#ee3224" />
+  <meta name="msapplication-TileImage" content="/images/icon/ms.png" />
+  <script src="/js/modernizr.min.js">
+  </script>
+e-
+
+You can see the generic form of the HTML here (minus semantic content):
+
+d+
+(Transcript)
+TranscriptEncodingHTML.png
+A:Craig Duncan
+C:A section of HTML from the web page in which the transcript of a HCA case is published for public browsing.
+D:30 July 2024
+d-
+
+image(Transcript)  
+
+When this is enclosed in an e+ and e- tag section, which is simple HTML, some of it survives being put through my 'script' parser: it will ignore the HTML but some of it will eventually find its way into the output and so be rendered as formatted HTML like the original:
+
+e+
+<p><b>HER HONOUR:</b>   May I deal with three
+preliminary matters first.  The plaintiffs require an order under
+section 486A(2) of the <i>Migration Act</i> extending the time for making
+the applications.  Mr Hill, the Minister did not oppose that order, do you
+oppose that order being
+made? 
+<p><b>MR HILL:</b>   No, we consent to that
+order being made, your Honour.
+<p><b>HER HONOUR:</b>   The order will
+be that: <br><br></p>
+<ol>
+<li style='' value='1' value="1">The
+period for the making of the applications by the first, second and third
+plaintiffs for a constitutional or other writ to this
+Court be extended to
+27 February 2024.</li></ol><p><br><br>The second preliminary matter is that the
+second plaintiff sought an order that she be appointed the litigation guardian
+for the third,
+fourth, and fifth plaintiffs.  That is also not opposed, Mr
+Hill?
+<p><b>MR HILL:</b>   That is right, your Honour, that is not
+opposed.
+<p><b>HER HONOUR:</b>   That order will also be made:<br><br></p>
+<ol>
+<li style='' value='2' value="2">The
+second plaintiff is appointed litigation for the third, fourth, and fifth
+plaintiffs, pursuant to rule 21.08.6 of the <i><a href="/cgi-bin/viewdoc/au/legis/cth/consol_reg/hcr2004170/" class="autolink_findacts">High Court Rules 2004</a>
+</i>(Cth).</li></ol><p>To the extent necessary, I will dispense with compliance
+with rule 21.08.7.  The third preliminary matter on my list, and there may
+very well be others, is this application by you, Ms Costello, to amend your
+reply.  I might hear from Mr Hill first as to what his
+reaction is to it
+because I have had no notification in writing or otherwise from the defendant. 
+Mr Hill.
+<p><b>MR HILL:</b>   Thank you, your Honour.  My
+instructions are neither to oppose nor consent to that
+application.
+e-
+
+There is one semantic class used there (inside an anchor, or 'a' tag):
+e+
+class="autolink_findacts"
+e-
+
+This gives some indication of what is prioritised, i.e. isolated references to legislation over the encoding of the actors, speakers and flow of communications.  Semantics is treated as an optional extra, not the foundation of the document's formatting.
+
+Final sign-offs are not encoded as they might be in a digital source:
+e+
+<p><b>HER HONOUR:</b>  
+Can I thank both of you for attending.  Adjourn the Court,
+please.
+<p>
+<p><b>AT 9.46 AM THE MATTER WAS ADJOURNED</b></p>
+e-
+
+Even if the RTF is generated using some kind of XML for parties, counsel etc it isn't obviously used in the same way for the HTML generation.
+
+# Federal Court transcripts
+
+I had a problem using this link today (no valid encryption):
+
+e+
+https://www.federalcourt.gov.au/__data/assets/pdf_file/0006/78324/Transcript-20200730.pdf
+e-
+
+Federal Court subcontracts out their transcripts to a company formerly known as Auscript and now known as VIQ:
+
+https://viqsolutions.com.au/court-transcripts/
+
+q+
+The Federal Court’s jurisdiction is broad, covering almost all civil matters arising under Australian Federal law, and some summary and indictable criminal matters.
+
+VIQ Solutions, formerly Auscript, has more than a 35-year relationship with the Federal Court. Our expert In-Court Monitors set up recordings and create log notes to capture essential information about the proceedings. Our skilled Audio Transcribers type proceedings within minutes of the spoken word – allowing for fast delivery of an accurate transcript. 
+q-
+
+Note:
+q+
+Can I share the transcript?
+No. Sharing transcripts is a direct breach of copyright. In instances where transcript sharing is suspected or admitted to, VIQ Solutions reserves the right to withhold services.
+q-
+
+They also have worked with most state Courts, including WA Court system:
+
+q+
+VIQ Solutions has served the WA Department of Justice for over 10 years, providing premium recording and transcription services. Our court monitors attend courtrooms throughout Western Australia to provide a detailed record of proceedings and have all transcripts hand-produced by our local audio transcribers.
+
+We are proud to work with the team at WA Justice as they lead the country in innovative technology integrations, bringing a new level of collaboration to our lengthy relationship.
+q-
+
+They sell these 'AI' assisted services (NLP mainly):
+
+e+
+aiAssist automatically converts audio to text securely quickly, with up to 95% accuracy.
+e-
+
+e+
+Automated transcriptions enable rapid search and indexing of audio content, easy identification of multiple speakers, recognition of non-speech noise and silence, and disambiguation of unclear audio
+e-
+
+L:VIQAI,https://viqsolutions.com.au/solutions/aiassist/,30 July 2024
+
+They are mainly servicing the speech capture market:
+
+e+
+FirstDraft, powered by aiAssist™, quickly converts audio files to text with up to 95% accuracy to provide access to interviews, testimonies, recorded calls and dictations in a timely, cost-effective manner when needed. Accuracy is dependent on audio quality; additional post-processing, custom language models and dictionaries can return even better results.  
+
+FirstDraft delivers the most comprehensive end-to-end workflow for single and multi-speaker environments where time and accuracy count.  
+
+With FirstDraft, the file is routed to an industry-specific, speech-to-text engine, powered byaiAssist, for quick delivery of a high-quality, editable document. Once the draft transcripts are generated, they can be securely accessed anywhere, which maximizes your efficiency to focus on the tasks that matter most.
+e-
+
+L:FirstDraft,https://viqsolutions.com.au/solutions/firstdraft/,30 July 2024
+
+They have 4,200 clients.  They say that manual processes are 'outdated'
+
+e+
+An efficient solution for management and distribution of recordings that are built specifically for courts to update current manual, outdated processes.
+e-
+
+L:VIQ_SolutionsAccess,https://viqsolutions.com.au/solutions/accesspoint/,30 July 2024
+
+They have a file management system so people can access transcript etc.
+
+e+
+AccessPoint is a secure online portal to simplify court recording management, playback, and distribution. AccessPoint provides streamlined access and management of audio recordings and increases the efficiency and traceability of court evidence. Unlike other file management solutions, our solution is tailored to courts’ workflow and needs.
+e-
+
+They capture audio/video from conferences (i.e. mediation etc):
+e+
+https://viqsolutions.com.au/solutions/capturepro/
+e-
+
+They have a transcription editing/distribution service:
+e+
+NetScribe transcription platform increases productivity and provides visibility into the entire transcription process – from dictation to document distribution. Adding aiAssist™, VIQ’s intelligent speech-to-text engine, turns single speaker and multi-speaker recordings into formatted draft documents for a transcriptionist to quickly review and edit, increasing productivity. Designed to support single and multi-channel recordings, including For The Record TRM files and JAVS OGG files, NetScribe has been proven to optimise documentation workflow and speed turnaround time.
+
+With NetScribe, you can provide secure access to audio recordings and formatted documents, more quickly accurately, securely, and economically than possible with traditional tools and processes.
+e-
+
+Although they say they are getting rid of outdated methods, what they have there as an example is an output publication that still has line numbers on the left and apparently just a text record as it would be for analogue.  The speaker identification may be there for the input, but how is it captured in the output format?  There are no stylistic changes or emboldig for each new speaker there.
+
+I:VIQ_NetScribeScreenshot_30July2024.png
+IC:Screenshot from the VIQ website
+IA:VIQ/Craig Duncan
+ID:30 July 2024
+image()
+
+# Queensland Transcripts
+
+They offer a transcripts guidebook:
+
+L:QldTranscripts,https://www.courts.qld.gov.au/services/transcripts-and-recordings,30 July 2024
+
+(That version 3: 17 July 2023: Transcript Format and Style Guide)
+
+which is available as a PDF:
+
+L:PDFTranscriptGuide,https://www.courts.qld.gov.au/__data/assets/pdf_file/0004/641245/guideline-transcript-format-style-guide.pdf,30 July 2024
+
+This is written as a style guide (i.e. for the finished result: the published document, as read in analogue form by a human being).  It also offers thoughts on how to filter the sounds of direct speech into an edited transcript.
+
+The way in which it deals with recording events is to refer to concepts like 'banner entries', e.g. "RECORDING PLAYED" .  Concepts like opening address banners, closing address banners etc.  These are the markings of a traditional document, something that is not really comprehended as something that can be both digital and analogue at the same time, interpretd differently, by different software, for different purposes.  In fact, there are even statements pushing back on the inclusion of explicit !!analogue!! information (without even considering digital processing):
+
+q+
+Let the transcript speak for itself.
+There is no need to include a WITNESS STOOD DOWN banner.
+(p167)
+q-
+
+There are examples of how transcript is laid out (and in this respect, a transcript does resemble a play, especially with the use of capitalised words to denote who is speaking).  Below is one of the examples from the transcript manual (Qld).  However, it has no direct reference to the semantics of the document, or how transcripts might be, alternatively, offered as a semantic document.  Example:
+e+
+HER HONOUR:
+MR B. BROWN: the accused.
+HER HONOUR:
+Thank you, Ms Green.
+Brown, your Honour, initial B., instructed by Legal Aid Queensland, for
+Thank you.
+MS TEMPLETON: I present an indictment against Joe Bloggs charging him with assault. I ask that he be arraigned upon that indictment.
+HER HONOUR: Yes. Joe Bloggs, would you stand up. Arraign the accused.
+ASSOCIATE: Joe Bloggs, you stand charged by that name that on the 18th day of October 2007 at Wacol in the State of Queensland you assaulted Jane Doe. How say you, are you guilty or not guilty?
+DEFENDANT: Not guilty.
+HER HONOUR: Inform the accused of his right of challenge and empanel the jury, please.
+.. .
+MS GREEN OPENED THE CASE FOR THE CROWN
+JANE JAYNE DOE, SWORN [9.50 am] EXAMINATION-IN-CHIEF BY MS GREEN
+e-
+
+The means of introducing auto-tagging information for plays can be adapted to the context of transcripts too (which are written with text-assist, no doubt).  There are other, explicit ways of including explanatory information that acts as a delimiter too.  For example, the milestone of the opening could be encoded so that it was easier to pick up (and this would be easy to train the transcript recording people (stenographers) to include as marker text):
+
+e+
+OPEN:CROWN
+OPENBY:Ms GREEN
+e-
+
+With some very small adjustments, local semantic encoding could be used for new witnesses, or they could be included in a data section. e.g. 
+
+e+
+W:JANE JAYNE DOE
+WS:9.50am
+WE:CHIEF
+WC:MS GREEN
+e-
+
+# NAMES
+
+On page 189/253 of the PDF it details how to set out names in the documents, especially those for the police force.  This is an example of how conventions start with the Court and then find their way into reports.  It's this kind of weighting of text that was then detected in the frequency counting process undertaken by Allison Whittaker in BlakWork.  
+
+see /WhittakerBlakwork/.

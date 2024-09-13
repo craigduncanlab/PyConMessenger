@@ -1,0 +1,67 @@
+T:UNDocuments
+A:Craig Duncan
+D:2 August 2024
+C:What we can say about their contents
+
+# Intro
+
+This is an attempt to answer these questions: 
+l+
+can we create new semantic tools that will enable better appreciation of the contents of these documents?
+can we introduce simple changes to the writing, or publication process, or both, that will ensure that there is a simple basis for making them computable documents?
+can we educate people about the discouragement of this in the common word processing tools?
+l-
+
+i.e not only is public information an illustration of computable documents, but so too would be literature like Shakespeare's plays etc.
+
+There is less need for customised hardware, software, data entry if we get the fundamental parameters right.
+
+L:GeneralUNAssemblyResolutions, https://research.un.org/en/docs/ga/quick/regular/78, 2 August 2024
+
+Even the delivery of these documents:
+l+
+Is it in simple HTML?
+Is it accessible to a wide audience?
+Is the data format easily readable?
+l-
+
+Create an alternative website illustrating the principles, the workflow etc.
+
+Look at the complexity of this internet request:
+L:RequestHTML,https://www.undocs.org/Home/Mobile?FinalSymbol=A%2FRES%2F78%2F317&Language=E&DeviceType=Desktop&LangRequested=False,2 August 2024
+
+URL form:
+e+
+	https://www.undocs.org/Home/Mobile?FinalSymbol=A%2FRES%2F78%2F317&Language=E&DeviceType=Desktop&LangRequested=False
+e-
+
+The form of the published document that can be downloaded is in PDF (not in HTML or some other simple semantic encoding). PDF is designed for interoperable 'reading' (by humans), and it is not easily computable in respect to its contents. 
+
+L:PDF,https://documents.un.org/doc/undoc/gen/n24/218/92/pdf/n2421892.pdf?token=KaO7tA5IvKOCTmLZqD&fe=true,2 August 2024
+
+# Obtaining raw data from the PDF
+
+What we see with word processed documents (and this was the same anomaly in the frequency count used by Allison Whittaker in BlakWork), that the page headers and footers are repetitive and appear on each page.  If it were merely semantic information, this would only need to appear once in the data (even if multiple times in the published format, like the 'book' form).
+
+If we select, copy and paste this text into a text editor we find that there is interruption of the text with the page headers (i.e the data is not available to readers in a way that reflects its pre-published/pre-book source information).  If we remove this from each page and put it into a simple data field (variable) we can remove the repetition, yet still make it available.
+
+Footnotes are also inconveniently located at 'bottom' of pages, which is only relevant ot the book paradigm, but the book paradigm shouldn't govern the data format (or if it does, then there should be sufficient basis, tagging etc for distinguishing the general flow of text from inserted footnotes, e.g. by bracketed sections etc)
+
+The main document is only one page.  Then there is a document with 'Annex' on a line which is both a delimiter and a categorical word.   With the right function, this could be used by the authors to differentiate data which could (optionally) be used to start new pages in publishable form (but the differentiation of the data should not be dependant on the book form: !!the general goal of semantic documents should be to define all data first, and then allow separate processes to decide on pagination etc for book forms!!)
+
+Can we use a general data list like this:
+e+
+	f+
+	(footnotes)
+	f-
+e-
+
+And then simply insert [f] or -f- tags inside the text to pick up each footnote in this list for the relevant insert place?  The processing of the file could then integrate it into the desired layout?
+
+The abstract concept of a page in a digital document is important if you are aiming to publish a book in an analogue representation, but less important for working with the contents. There are other ways to navigate digital documents.
+
+# Results of auto-tagging
+
+see now /n2421892_reformat/ for modification in a more semantic yet simple format. 
+
+I've taken the trouble of preparing an autotag.ats file as well: UNexample.ats

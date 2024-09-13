@@ -1,0 +1,27 @@
+T:CharacterDataTextProduction
+A:Craig Duncan
+D:6 August 2024
+B:MemoScript
+
+# Back to Whittaker again
+
+Refer to /WhittakerBlakwork/.
+
+What Whittaker attempted to do with word analysis and writing poetry required a third party app (perhaps one able to be used by sending data to a computer located overseas, on the internet, with commercial revenue from advertising).  There is no reason why, in the case of Ms Dhu, we couldn't examine the source text material (coroner's report), and explore its actual semantic composition, as data, and thus incorporate a more explicit awareness of what she only indirectly touched on in her use of frequency analysis and software.
+
+If we have a scholarly language that helps unravel semantic concepts for digital texts and where they start.  An example of this flow-on effect in Ms Dhu's case is as follows:
+l+
+Style manuals that encode transcript formulation of police references (i.e. criminal justice system, the giving of primacy to binary roles, the agents of prosecutors etc)
+the incorporation of the same terms from transcripts into official references to evidence given by people in those roles;
+incorporation of the same transcript references into official reports commenting on evidence.
+l-
+
+The confluence of these factors in terms of the weight of words is indirectly identified by the use of software to pick out frequency.  There is a certain serendipity of police names being repeated more often as well as them being long enough to appear multiple times when searching for 3 word patterns.  
+
+The social consequences and bias motivated Whittaker's work, but we might also question the way in which digital literature is now produced in such a way that some early regulation of semantic information is repeatedly linked across multiple areas of media production.
+
+In the case of the criminal justice system, the players (like in Shakespeare's plays) with the most authoritative names are the people will roles in the prosecution of crime.  The depersonalisation of these actors, and their transformation into agents of the State by these titles, are clearly relevant to scholars of text and literature.
+
+Structurally, we might compare Whittaker's process with the way in which references to roles in the Courts were repeated in Shakespeare's times.  Would a play, with its references to dialogue and characters, also emphasise words like 'Prince', and would it require serendipity in the choice of a long name so as to be ranked as most frequent in a 3-word pattern, rather than a single or two-word pattern?
+
+These considerations tie into to some aspects of how we isolate names/titles when we think about data defining the production of texts, and the formatting of plays, just as much as in a Coroner's report.

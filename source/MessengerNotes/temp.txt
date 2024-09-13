@@ -1,0 +1,37 @@
+
+d+
+(CourtForm)
+IN THE HIGH COURT
+d-
+
+d+
+(Parties)
+PLAINTIFF
+MINISTER
+d-
+
+d+
+(Speakers)
+HER HONOUR:
+MR HILL:
+MS COSTELLO:
+d-
+
+d+
+(Orders)
+The 
+d-
+
+d+
+(Notices)
+AT 
+TRANSCRIPT
+ON
+d-
+
+
+autotagline(Notices,concept)
+autotagsplit(Speakers,authorref,np)
+autotagline(CourtForm,intro)
+autotagline(Parties,intro)
+outertag(concept)

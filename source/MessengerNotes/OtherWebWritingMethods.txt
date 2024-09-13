@@ -1,0 +1,36 @@
+T:Other Web Writing Methods
+A:Craig Duncan
+D:24 July 2024
+
+# Intro
+
+Writers like Molly White (Crypto journalism, critic of Web3) use Ghost as a content management system.  The superficial result and functions are pretty good - a good news site, with icons, article links, social media links.  But the HTML code itself is full of a variety of spans, divs, and no underlying semantic structure.  The categories within the writing aren't captured in basic HTML classes. {Messenger HTML:the real point about it is to try and align HTML form and function for semantic content}
+
+This is what the makers of Ghost (over 590 contributors as at today) say:
+q+
+Ghost is the most popular open source, headless Node.js CMS which already works with all the tools you know and love.
+q-
+
+L:GhostGithub,https://github.com/TryGhost/Ghost,24 July 2024
+L:CitationNeeded,https://www.citationneeded.news,24 July 2024
+
+e+
+meta name="generator" content="Ghost 5.88"
+e-
+
+It uses no Python.  The Github code breakdown is:
+
+d+
+(stats)
+JavaScript,72.2%
+TypeScript,13.9%
+CSS,6.7%
+Handlebars,5.9%
+HTML,1.2%
+MDX,0.1%
+d-
+
+header(language,perc)
+splits(comma)
+datasplit(stats)
+tablecol(language,perc)

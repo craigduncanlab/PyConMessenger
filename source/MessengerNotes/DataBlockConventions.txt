@@ -1,0 +1,13 @@
+T:DataBlockConventions
+A:Craig Duncan
+D:6 August 2024
+C:Conventions for handling of data blocks
+F:MemoScript
+
+# Intro
+
+Writing text as markdown assumes immediate processing.  e.g. when we just enclose with l+,li it converts this immediately (upon reading in the block) into an HTML list.
+
+However, the d+ d- tags read in first, and then process later.
+
+We could introduce a convention in which something like an l+ l- tag is an immediate HTML block if it doesn't contain a first line (label) entry.  However, if it is named, then its conversion is deferred until there is a list(label) command in the file which inserts the data in the relevant place.  The named/un-named distinction helps defer the publication output; it also supplies the 'class' for the HTML output.

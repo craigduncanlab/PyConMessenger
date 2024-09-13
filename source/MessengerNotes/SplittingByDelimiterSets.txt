@@ -1,0 +1,26 @@
+T:SplittingByDelimiterSets
+A:Craig Duncan
+D:2 August 2024
+C:Approachs to data classification other than regular expressions and simple matching
+F:DataTagging
+F:EncodingInfoTools
+
+# Data-manipulation language as an alternative to converters
+
+Some of the pre-processing benefits of auto-scripts include not having to alter the original formats of the text - e.g. plays, transcripts.  There is a separation of concerns between writer's preferred format and the interpretation rules that are applied (as much as possible).  
+
+How is data manipulation separated from the original file (i.e. how is unnecessary markup avoided?).  So long as the class to be allocated post-split is mapped to the splitting function, no intermediate format is necessary.  
+
+Data transform functions replace the need for an intermediate format to be saved, and this saves labour too if it applies to any similar input file.  If the autoscript is saved it becomes, in effect, a transform algorithm written in a data-manipulation and classification grammar/language (i.e. transformation).  
+
+These sorts of customisable transformations, or even document specific transformations are not common where 'standard' converters are in use, and the conversion algorithms are hidden from the writer/author/user.
+
+# Tools for splitting by delimiter sets
+
+Even the archive format of something like ChatGPT could possibly be processed by a single function to split out some of the contents, although it may be another case of needing sequences of delimiters to do this.  
+
+Conversion algorithms are often based on the preferred delimiter systems favoured by computer scientists (i.e. one consistent delimiter).  For example, import formats for data in applications like MS Word assume the same consistent delimiter (like in CSV format) applies.
+
+There is an absence of intermediate tools and options.  When people implement something other than consistent delimiter situations, there is a common reaction involving use of regular expressions.  There isn't a common tool that will split data by reference to the next ocurrence of a pre-specified sequence of delimiters).
+
+What's needed is a tool that caters for different practical delimiter implementations.  

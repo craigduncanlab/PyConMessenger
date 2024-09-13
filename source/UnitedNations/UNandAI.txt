@@ -1,0 +1,14 @@
+T:United Nations and AI
+A:Craig Duncan
+D:30 July 2024, updated 12 September 2024.
+C:What is the UN verdict on AI technology?
+
+# UN agenda 2030 and AI
+
+UN is all in on AI (i.e. will exploit it where it can)
+
+"78/311	Enhancing International Cooperation on Capacity-building of Artificial Intelligence	A/78/L.86 adopted on 1 July 2024 without a vote (A/78/PV.97) under item 13."
+
+Where is the definition of artifical intelligence?  The entire premise/framing is based on a concept that is as malleable as they want it to be.  No one cares.  ??
+
+The way these resolutions are drafted with emphasises, affirms etc is so boring and probably pointless in many cases.  But it does provide an opportunity for text parsing.

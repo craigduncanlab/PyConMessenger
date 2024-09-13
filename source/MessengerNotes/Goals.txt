@@ -1,0 +1,253 @@
+T:Goals
+A:Craig Duncan
+D:30 July 2024
+C:Maybe the service offered is 'semantic publishing' (a layer of the applications level in computing)
+
+# Preface
+
+I am an exponent of dialects of markup/markdown which exist in relation to other programs that prepare and interpret these to achieve other goals, which do not exist in other software application 'ecosystems'.  In order to preserve semantic information throughout different software application ecosystems, it's necessary to think about how messages are passed around.
+
+In other words, I work with culture, digital formats, notions of word processing, information archiving, open formats, lean computing, and human-centric writing practices, to create new forms of writing and reading digital formats.   I try to not only overcome inaccessibility, but to encourage information to be stored in digital computable forms that are more useful, without detracting from the analogue representation of that information for normal human reading.  In some cases, it is able to improve that form of representation just by being stored in a more intelligent form.
+
+# Going Postal 
+
+Instead of trying to achieve a universal language for markup or semantic encoding, I've concentrated on both creating different ways of markup up text, and exploring the creation of a universal postal system.  My present thinking is along these lines: if the HTML can be used mainly as a postal system, instead of telling us how to structure the contents of our letters, then we can design message contents that are more unique to each author's wishes, or the wishes of a particular discipline.  We don't need a universally prescribed semantic system (as the authors of the semantic web proposed).  The semantic web as imagined by the web consortiums is a system that is really an extension of the prescriptive HTML system anyway.  Rather than tell people how to classify information, my approach is to think about how we can send messages around (even in documents themselves, which are really just packages), and keep the contents intact.
+
+# The goal of extending the layers of computing further into the application domain
+
+Another way of thinking about this is to think that we did authors and literary people a disservice when we modelled the internet and left 'applications' as the last layer, the one in which documents and other things would be passed around.  Since applications became the domain of corporate vendors, they each came up with their own systems and data formats which focussed on data formats and interpreters that existed in the siloes of each proprietary application.  These writers and readers were, in turn were based on paradigms like recreating the 'look and feel' of things from the non-digital age (though it was the post Gutenberg stage).  What they did not do was to imagine that like the internet, there was an opportunity to treat the facilitating software, in programs like browsers and word processors, as a package carrier, rather than a message coder.  However, no one had yet understood that even more agreement on how to send content or semantic information between applications (whether or not over a network) was just as much an important problem as how to send data between computers.   
+
+Software programs are each creating new languages for data, but they haven't really seen themselves as doing so as if they were still attached to the medium of communication.  That is, 'conversion' of information from one format to another is based loosely on the idea that a program will convert its data into something that when read by another software reader, will produce an analogue version of that information in the other context.  In both cases, the language of choice is one that is constrained to analogue representations in both software domains.  The alternative (the semantic database, or even semantic 'programs') hasn't really been considered.
+
+The creation of multiple software programs that individually created data formats and schemes of interpretation was yet another opportunity to separate concerns: the package and the authored content.  This separation allows separate consideration (in a more universal way) of not only what was written, but how authors wanted to access it, or how readers might want to access it.
+
+Taking this a step further, if we invent the concept (outside of LaTeX or TeX) for a programming language that can describe how an author wants their semantic content to be prepared in any program that works with that publication-level language, then there is a greater opportunity to have domain independent processing of both data and layout.  The separation of concerns means that we can preserve semantic content instructions explicitly.  This can be used both for the way in which information is turned into publishing layout (e.g. tables in HTML, or headings or styles), but also the way in which information is captured as data in the first place.  Thus, the way in which a person who is writing a text document wants to capture and self-reflectively refer to that data is a more explicit form of writing (but not in an inconvenient way) than non-digital media, but is nonetheless helpful to fully realising the potential of the digital realm.
+
+The applications of this include doing more to encode intention when typing text.  If a person who writes a play or writes a digital transcript can use an agreed programming language that is not merely markdown (i.e. something that is passively just preparing for HTML or some other publication format), but as a preliminary step defines what are the rules for classifying information, then the document can be formatted in a way which allows considerably more explicit attention to semantics in layout, as well as post-processing options (e.g. listing not only the styles of text, but then being able to summarise actual occurences e.g. exhibit numbers).
+
+Where would we get a look at transcript in 2024 (to see if it is much different from the 2003 version!).  Court stenographers generally haven't progressed very far.
+
+In a similar vein, rather than dropping in generic programming and conditional programming tools into customised contractual documents, it is better if we have a convention so that it doesn't matter what kinds of procedural software systems people choose.  i.e. rather than be bound to a Word-based timeline and proprietary formats, it's better if people can write in a particular way knowing that !!any!! interpreter of that language could assemble the text file and its semantic content in the same way.
+
+See /TranscriptEncodings/
+
+# Data processing language for the digital humanities
+
+The introduction of text-commands that can be integrated with text documents (to process the same file content and allow authors to be explicit about the kinds of data they are working with) paves the way for a digital humanities programming paradigm that has implications for semantic encoding for both web and word processing.
+
+Possible descriptions: the 'semantic programming langugage', 'semantic tagging language', web programming language.
+
+The unique focus of this is that it provides simple data splitting, merging and tagging options for general writers rather than programmers.  Programming can become a feature of the document in a digital realm (not literature programming per se but code-enabled writing).  
+
+Instead of there being the historic divide between the idea of a 'document model' (i.e. documents as passive data formats where the form is rigid), and a program, the code-enabled document can use the document to create an in-memory state, and manipulate it.  The document provides both the data and the code: this is traditionally how a program was understood in the sciences, but because the same concept didn't originate in the humanities, what a program looks like was never compared to literature.  
+
+The realisation of a form of digital literature which was both ingredients and recipe discouraged by assumptions that code operate on mathematical sets that were somehow not the same as partitioned text.  However, the natural (evolving) partitions for text in a digital realm (like line endings) are a sufficiently simple and well understood digital text format that it can be used for the basis of data ingestion and units for data processing.  
+
+To encode a digital document as a stream we can think of it in terms of three abstract ideas operating in parallel within the same document: 
+l+
+The text is divided into lines and characters (lines being the base unit)
+Analogue-inspired repetition of information (like character names) form sets of delimiters
+l-
+
+Consequences: Common public interest site publishing formats (for Courts, literature, legal information etc) can be easily reconfigured into a more distinct form of data that separately encodes content semantics (using HTML as a carrier medium, rather than the semantic layout medium).
+
+See /CategoricalDelimiters/
+
+# data separatation concepts
+
+Some useful data separatation concepts include these:
+
+Block paragraphs in plays, court proceedings are often small data formats (e.g. name and dialogue separated by a colon).  You can split this in at least two ways:
+l+
+Split on the colon; or
+Capture a list of names, each with a colon, and split on any of these being present at the start of a line.
+l-
+
+The advantage of the second is that you can tie a particular style to specific matches !!and!! set the classes for each of the splits.
+
+In one line, we can instruct the processor to use the data that has already been ingested as a variable to test.  In this way, the author is doing simple programming that results in not only splitting the semantics of the text format (e.g. an existing format produced by a contracted or internal transcription service), but enabling custom output from the same.
+
+Similar ideas might also enable ingestion of multiple references for things like web links, book references etc but the simplest example is one where the first entry is both the source for the match list (the dependent field) as well as the field used for splitting into two parts.
+
+# The framing of digital document in the professions
+
+An odd disconnect exists between framing media choices as between the paper copies and 'electronic' versions.  The binary in people's minds is between digital (for which 'electronic' is a synonym) and paper.  It seems to go back to the original 'electronic mail' (i.e. e-mail) ideas.
+
+e.g. HCA transcript from M19A (2024):
+
+e+
+HER HONOUR: I am happy if a book of materials is limited to that issue, but I do not want the expense incurred of putting together books of materials that I have electronically already or copies of authorities that I have already.
+e-
+
+It is not often, if ever, that we hear someone ask for a digital (rather than electronic) that is a 'semantic' rather than 'purely for presentation'.  The software of 'readers' (including e-book readers) is seen as the flipside to 'desktop publishing' instead of 'desktop text data processing'.  So we have this kind of frozen paradigm, in which 'electronic readers' are the thing that most people ask for in computers, rather than something that has more craft and nuance in how the data is prepared, by people who understand its long-term utility.
+
+# Rules for local styles (in-line styles) with semantics
+
+Use of italics for statutes and so on is equivalent to not only a replace, but, in effect, a 'style replace' or 'style setting'.
+
+It's useful to be able to encode these based on a lookup of the data (as if you were actually doing a select and replace of some sort), but also to set a specific semantic concept as well e.g. not only 'italics' but something like 'statute'.
+
+These encodings then allow the information to be retained and re-used, and could make a search, or computational search, easier.
+
+# Introduction to digital document form, content and structure
+
+One of the things we find with work put into creating a PDF is that the information is then sitting inside a document which can be read, but is still in digital form inside a computer.
+
+So ideally, we'd have that information in a digital form that is computable (e.g tables that are also capable of being found and used as 'data', or styles applied to certain sections so that if you are working with those sections you can extract them and computationally extract or search for translation word and the source word, even if they are in different languages.
+
+Whereas Project Gutenberg wanted to put documents on the web, my goals are more: to put digital documents on the web in forms that are better than PDF.  And with tools for enabling information to be used and extracted.  
+
+"If all text is data, then all documents are databases."
+
+This statement extends our thinking in the right direction: we do not need a separate 'application' to create databases, if we recognise that a database can exist in any form of data, in any application.  It is data in that context.  The real questions are: 
+l+
+can it be translated into data in another context; and 
+to what extent are the ways of working fitted to the author's and discipline's preconceptions and worldviews, rather than forcing them to work to software designed in ignorance of those things?
+l-
+
+The design of both the documents and the tools that work with it need some consideration, so that when people invest in learning how to write in different formats, it isn't just done for some arbitrary convenience (markdown was for the convenience of HTML, not the authors of documents).
+
+By converting plays and linguistic texts into different forms, the digital humanities can be demonstrated as a practical field of knowledge.
+
+There are a few obvious things I can convert, and provide tools for, which illustrate the benefits of being able to operate compatuationally with literature (in ways that those who are stuck on XML and semantic web do not undertanding):
+
+l+
+plays
+linguistic treatises, like vocabularies and dictionaries (learning Japanese etc)
+legal judgments and statutes
+legal documents (private contracts)
+legal transcript
+political narratives of the day
+trip diaries
+journals
+comic books and graphic novels (Sydney Padua, ACA etc).
+l-
+
+The first of these are more likely to be useful, beneficial and in public interest.
+
+The point is to ensure that knowledge is stored and accessed using a form of reflective publishing, which utilises technology but is not dictated by it.
+
+If a PDF is not searchable it reduces the ability to use it in digital form.  Even if it is, the searching is by word which captures no semantic structures, and doesn't relate the structure that an analogue representation will signify to a human reader.  That is, the structure has not been 'translated' into the digital domain. (!!nb: current version of Preview is locating even handwriting within the PDF; not sure if this is previous OCR or is being done dynamically when searches are requested!!).
+
+Translation into digital domains is a specific topic that requires its own terms so that we can distinguish between texts that could be semantically arranged, or are in fact structured by their authors, but not in a way that other people can utilise.
+
+# Databases in action
+
+Austlit (not austlii) works !_for subscribers_! with information and data a bit like a library information services.  It will allow a 'record' to be exported as text or CSV.
+
+e.g. 
+
+https://www.austlit.edu.au/austlit/page/9130579
+
+Auslit also provides full text access to some works.
+
+e.g. (even their link address is not semantic!)
+
+https://www.austlit.edu.au/austlit/page/5961938
+
+Their link to Frankenstein, by Mary Shelley is here:
+https://www.austlit.edu.au/austlit/page/C397872?mainTabTemplate=workPublicationDetails&jumptoemb=14070132
+
+This in turn has two links, one to internet archive, the other to Penguin Books.
+
+The internet archive is in its own 'viewer' which provides a visual (analogue) reference to this text:
+
+e+
+https://archive.org/details/ost-english-frankenstein_or_the_modern_prometheus
+e-
+
+This is a Google Book search copy, which has then been turned into a text version (somehow)
+
+e+
+https://archive.org/stream/ost-english-frankenstein_or_the_modern_prometheus/Frankenstein_Or_the_Modern_Prometheus_djvu.txt
+e-
+
+What are the features of that text file?  Is it a useful format?
+
+It's actually a very poor quality.  Here is an example of the text, with the deformed characters apparently based on some attempt at automatic character recognition?  The text is not even at the basic quality that Project Gutenberg would find useful.  In this way, is Austlit really exercising any attention to quality, or is it providing a library service with assumptions about what is held, and less care about whom, and to what standard? 
+
+e+
+4 FRANKENSTEIN ; OR, 
+
+embarks in a little bo^tj with his holi-* 
+day mates, on an expedition of discovery 
+up his native river. But, supposing all 
+these conjectures to be false, you cannot 
+contest the inestimable benefit which I 
+shall confer on all mankind to the last 
+generation, by discovering a passage 
+near the pole to those countries, to reach 
+which at present so many months are 
+requisite ; or by ascertaining the secret 
+o{ the magnet, which, if at all possible, 
+can only be effected by an undertaking 
+_ such as mine. 
+e-
+
+And another section shortly afterwards:
+
+e+
+^ ntiilCXSNSTEIH ; ORy 
+
+aad for one year lived in a Paradise Of 
+my t)wn creation ; I imay^ined tbat lalsb 
+might obtiiin a niche in the t^npieirheri 
+the names of Homer and Shaksj^are 
+are consecrated. You are well acquainted 
+with my failure, ismd bow heavily I bore 
+the disappointment. But judt a€ that 
+time I inherited the fortune of my cousin, 
+and my tbiAights were turned into the 
+channel of thetr eaiiier bent. 
+
+Six years have passed since I resolvedt 
+on my present undertaking. I can^ evfen 
+now, remember the hour from which i 
+dedicated myself to this great enterprise; 
+I codinienced by inuring my body to 
+hardship. I accompanied the whale^ 
+fishfers on several expeditiotis to the 
+North Sea ; I voluntarily endured cold, 
+famine, thirst, and want 6f sleep; I 
+often worked harder than the common 
+sailors during the day, and devoted tny 
+e-
+
+
+There is no simple way to suggest annotations (as there might be if you used git and version control, for example.
+
+Is the ePub version better?  ePub requires hitting a 'generate' button and then...(a few seconds later)...(eventually - you have to refresh the page to see the download link).
+
+Nicole Levine offered this 2023 advice on ePUb (aimed at people that just read, not digital format editors):
+
+q+
+Want to learn how to open and read an EPUB (also known as "e-book") file on your computer, phone, tablet, or E-Reader? You can open and view EPUB files using free software on nearly any platform, as well as on most E-Readers, such as Nook and Kobo readers. If you're using a Kindle, you'll need to use software like Calibre to convert the file first—luckily, it's super easy to do, and we'll show you how!
+q-
+
+L:wikiHow,https://www.wikihow.com/Open-EPUB-Files,30 July 2024
+
+# Outstanding questions
+
+How to come up with a generic and useful way of recording the 'thread' of conversations like chats.  Archiving formats do not preserve these.  One way, perhaps, is to have a relative (rather than absolute) reference back to the preceding comment it relates to (for replies).
+
+# Style searches
+
+To search through styles that are rule-generated (i.e. rules applied to the balance of the text that is data), in order to filter them, amounts to re-running the original classification rule (unless results are needed often, in which case persistent storage might be worthwhile).
+
+# Citations
+
+Some authors may wish to record their references in such a way that they can be processed out by not only themselves, but anyone else into whatever form they want.
+
+e.g. being able to just tag like this:
+references(MLA)
+might be enough to alter it.
+
+If references were encoded like images (IA,IC, IR etc) then they could be (a) stored ahead of the indexing and (b) output in whatever form was appropriate.  Also, by including an abbreviation (variable name) when putting the reference in, this can then be used subsequently for repeated referencing.
+
+This might also help with legal referencing.
+
+In word processors, the insertion of a reference prompts the author to put it into a footnote etc, but with motivation to prepare a database inside the document, footnoting and referencing can be generated, and some abbreviations can be included from the start.  e.g. [abbrev,14] within the text could pick up on whatever abbreviation scheme has been used for the references at the outset.
+
+# MetaComics for a MetaWeb
+
+If you can introduce a more informed type of writing that allows the author to encode what's important to them, then any comics that tries to make observations on such a topic would be a comic about information, which is quite meta.   This genre of meta-comics probably has a very small membership, but at the moment I'd place Scott Adams (comics about comics) and Sydney Padua (comics about historical computing and 'alternative' realities) in the club.  The art in Padua's work is that she uses a story device to insert characters who break the fourth wall just enough, and in fantastical ways, that it distances the observation from Padua hereself, and she can also have fun with the criticism (see /MetaComics/).

@@ -1,0 +1,63 @@
+d+
+(CourtForm)
+IN THE HIGH COURT
+d-
+
+d+
+(Parties)
+B e t w e e n -
+PLAINTIFF
+MINISTER
+d-
+
+d+
+(Meta)
+GORDON A‑CJ
+TRANSCRIPT OF
+BY VIDEO
+ON FRIDAY
+d-
+
+d+
+(Speakers)
+HER HONOUR:
+MR HILL:
+MS COSTELLO:
+d-
+
+d+
+(Counsel)
+MS G.A. COSTELLO, KC
+MS S.M.C. FINEGAN
+MR G.A. HILL, SC
+MR N.D.J. SWAN
+d-
+
+d+
+(Clients)
+Asylum Seeker Resource Centre
+Australian Government Solicitor
+d-
+
+d+
+(Statutes)
+Migration Act
+High Court Rules
+d-
+
+d+
+(Orders)
+MATTER WAS ADJOURNED
+d-
+
+//autotagline(Notices,concept)
+autotagsplit(Speakers,authorref,np)
+autotagline(CourtForm,intro)
+//autotagline(Parties,intro)
+autoformat(Parties,underline all,on)
+outertag(concept)
+autoformat(Statutes,italics,on)
+autoformat(Counsel,bold underline,on)
+autoformat(Clients,italics,on)
+autoformat(Meta,underline all,on)
+autoformat(Orders,bold all,on)

@@ -1,0 +1,24 @@
+T:Optional Data With Programming
+A:Craig Duncan
+D:6 August 2024
+C:Description of this kind of notebook
+B:CricketNotebooks
+B:MemoScript
+
+# Intro
+
+The difference between word processing and notebooks is the ability to insert code with the writing.  
+
+The difference between MemoScript and other notebooks is the ability to write code about the text, and to be free to choose whether to insert data or programming functions into a document or not.  The format is flexible enough that it doesn't have to feel different to normal text, and still create a blog type format.  Yet it is also capable of interpreting data and functions to add some additional useful features to the workflow.  These features could:
+l+
+assist with building more navigable web pages, or 
+could be ways of presenting information in tables, or 
+they could be data that allows automatic styling or categorisation of the text, or 
+even simple calculations.
+l-
+
+# Repetition
+
+One of the ideas in MemoScript is that you replace repetitive formatting with data and instructions.  Instead of making every single instance of a book title in italics (which in a word processor, requires selection, styling and so on: all manual commands), you instead write down a case-sensitive data variable, and a command to italicise every instance.  This is part of the setup.  Once setup, you can rely on it transforming every new instance of this in the same way.   In theory, you could also use abbreviations in your document and write down a standard replace so that they are consistently changed throughout prior to publication.  You could turn 'L&B' into an italicised !!Lovelace and Babbage!!, for example.
+
+see /LovelaceBabbagePadua/.

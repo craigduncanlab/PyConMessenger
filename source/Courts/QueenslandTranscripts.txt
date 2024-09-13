@@ -1,0 +1,66 @@
+T:Queensland Transcripts
+D:30 July 2024. Updated 12 September 2024
+A:Craig Duncan
+C:Commentary on Queensland Transcripts
+
+# Queensland Transcripts
+
+They offer a transcripts guidebook:
+
+L:QldTranscripts,https://www.courts.qld.gov.au/services/transcripts-and-recordings,30 July 2024
+
+(That version 3: 17 July 2023: Transcript Format and Style Guide)
+
+which is available as a PDF:
+
+L:PDFTranscriptGuide,https://www.courts.qld.gov.au/__data/assets/pdf_file/0004/641245/guideline-transcript-format-style-guide.pdf,30 July 2024
+
+This is written as a style guide (i.e. for the finished result: the published document, as read in analogue form by a human being).  It also offers thoughts on how to filter the sounds of direct speech into an edited transcript.
+
+The way in which it deals with recording events is to refer to concepts like 'banner entries', e.g. "RECORDING PLAYED" .  Concepts like opening address banners, closing address banners etc.  These are the markings of a traditional document, something that is not really comprehended as something that can be both digital and analogue at the same time, interpretd differently, by different software, for different purposes.  In fact, there are even statements pushing back on the inclusion of explicit !!analogue!! information (without even considering digital processing):
+
+q+
+Let the transcript speak for itself.
+There is no need to include a WITNESS STOOD DOWN banner.
+(p167)
+q-
+
+There are examples of how transcript is laid out (and in this respect, a transcript does resemble a play, especially with the use of capitalised words to denote who is speaking).  Below is one of the examples from the transcript manual (Qld).  However, it has no direct reference to the semantics of the document, or how transcripts might be, alternatively, offered as a semantic document.  Example:
+e+
+HER HONOUR:
+MR B. BROWN: the accused.
+HER HONOUR:
+Thank you, Ms Green.
+Brown, your Honour, initial B., instructed by Legal Aid Queensland, for
+Thank you.
+MS TEMPLETON: I present an indictment against Joe Bloggs charging him with assault. I ask that he be arraigned upon that indictment.
+HER HONOUR: Yes. Joe Bloggs, would you stand up. Arraign the accused.
+ASSOCIATE: Joe Bloggs, you stand charged by that name that on the 18th day of October 2007 at Wacol in the State of Queensland you assaulted Jane Doe. How say you, are you guilty or not guilty?
+DEFENDANT: Not guilty.
+HER HONOUR: Inform the accused of his right of challenge and empanel the jury, please.
+.. .
+MS GREEN OPENED THE CASE FOR THE CROWN
+JANE JAYNE DOE, SWORN [9.50 am] EXAMINATION-IN-CHIEF BY MS GREEN
+e-
+
+The means of introducing auto-tagging information for plays can be adapted to the context of transcripts too (which are written with text-assist, no doubt).  There are other, explicit ways of including explanatory information that acts as a delimiter too.  For example, the milestone of the opening could be encoded so that it was easier to pick up (and this would be easy to train the transcript recording people (stenographers) to include as marker text):
+
+e+
+OPEN:CROWN
+OPENBY:Ms GREEN
+e-
+
+With some very small adjustments, local semantic encoding could be used for new witnesses, or they could be included in a data section. e.g. 
+
+e+
+W:JANE JAYNE DOE
+WS:9.50am
+WE:CHIEF
+WC:MS GREEN
+e-
+
+# NAMES
+
+On page 189/253 of the PDF it details how to set out names in the documents, especially those for the police force.  This is an example of how conventions start with the Court and then find their way into reports.  It's this kind of weighting of text that was then detected in the frequency counting process undertaken by Allison Whittaker in BlakWork.  
+
+see /WhittakerBlakwork/.

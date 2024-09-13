@@ -1,0 +1,31 @@
+T:Programmable Publication Processor
+A:Craig Duncan
+D:28 July 2024
+
+# Intro
+
+A review of the history of word processors should support the conclusion that they uniquely gave writers the ability to easily style their writing for publication.  This was their major difference from a plain text editor, and it explains what drove their desire to hide the data format(s) by which this became possible (sometimes called a graphic user interface, sometimes also called a 'what you see is what you get' paradigm).   The ends (typing and publishing as if using a typewriter) were seen to justify the means.
+
+In the process, the programs took away the 'internals' of this process i.e. the computable categories of writing that made it seem like what happened on screen was the same as the product of a mechanical typewriter.  Word processing was an aid to simulation.
+
+Few saw a use case for the person that was both a writer and someone interested in writing as data; as a play as a structured form of information.  The computer scientists had defined data types but never really saw basic types of literature or text as an application deserving of a high-level language, that could work with the kinds of data types that a writer, or a publisher of literature, might work with.
+
+On the other hand, some writers might have preferred the ability to program, in some way, the relationship between categories of information and publication; i.e. to allow some intermediate manipulation of data before publication.  
+
+They might also have wanted some flexibility in how a text they had written was able to be conditionally or optionally formatted for different purposes.  This kind of conditional logic is not part of the base assumptions of word processors.  In order for it to occur, some more fundamental changes in how those programs are designed needs to occur.  This includes introducing a higher-level appreciation of the kinds of information that writers might like to work with, some practical data types for writers (e.g. lists in a text format, not a programming format), the ability to assign variables to that information, and then functions that can provide useful time-saving.
+
+# New paradigms
+
+In some applications (like template-based workflows), conditional logic has been introduced using a general programming language tha tthen interfaces with a word processing application.  [I'm thinking of HOTDOCS etc] The superficial addition of the ability to code data occurs outside the conceptual layer of what a 'word processing document' is, thereby not interfering with existing technological assumptions.  There is no real desire to operate independently of 'Word', but to add features to that workflow.  In that way, existing software defines the interfaces, and what the data format is, rather than the data.  
+
+This negates any scrutiny of the ways that we can pay close attention to how HTML and word processor formats themselves can be added to with an abstract layer. 
+
+The software engineers who designed word processing applications for hiding details when publishing have set the agenda for what the goal of this logic is.  However, in order to strip away these rigid distinctions, it is necessary to think about the process of publication, and the application of styles to data, as an independent process, one that isn't dependent on a particular software application (though it may be consistent with them).
+
+[TO BE CONTINUED: WHAT IS THE DIFFERENCE IN BEING ABLE TO "PROGRAM" WITH FUNCTIONS THAT AID THE APPLICATION OF STYLING?  IT REMOVES THE NEED TO CONSTRUCT TEMPLATES WHERE STYLING IS DONE MANUALLY, AND DATA IS INSERTED.  Manual styling assumes dependency of the word processing aplication, hence the "Word Template" persists in many of these workflows, even with pandocs etc.  Freeing ourselves of this assumption by looking at HTML enables us to ask what we really want to help writers with, and how.]
+
+# Automation of styling
+
+Another change that can result from looking at this situation differently is that data can be used to partially automate some of what has traditionally been a manual process.  The setting of individual paragraphs as styles is assumed to be the first step.  The 'time saving' in the frame of word processors includes making indexes and so on, for content that already exists.  This assumes the content has been typed or copied into the application, then painstakingly styled as appropriate (hence markup, to do this same task).
+
+Whereas, for the writer, the content is already there, in a familiar structure, but there is already a pattern to it.  So the true time saving should occur in saving the marking up of paragraphs (or in applying different styles and names to the data).  The new paradigm is having the computer automatically assign data types to data based on rules that are implicit in the writing. (This requires no expensive AI, only insight).  !!Unfortunately, those solely interested in profit will want to expropriate and exploit these kinds of ideas, without understanding why the reframing has occurred, and why they were prevented from seeing it by their own profit-making.!!  In many areas of business, people who are primarily interested in advocating in self-interest, or their business client's interests, will try to immediately exploit an idea, rather than take a patient, longer-term look at what is in the best interests of everybody, or what ethical values underpinned the new idea (or new knowledge) and which may, in fact, be inconsistent with the values of those who seek immediate exploitation.

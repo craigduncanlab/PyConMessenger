@@ -1,0 +1,229 @@
+T:Notes on Macbeth
+A:Craig Duncan
+D:23 July 2024.  Revised 12 September 2024
+C:How Macbeth can be stored in markup, allowing for Messenger HTML etc
+
+# Intro
+
+The source for this HTML is here:
+
+L:MacBeth_Gutenberg,https://www.gutenberg.org/files/1533/1533-h/1533-h.htm,23 July 2024
+
+The eBook form is not in fully semantic encoding:
+l+
+it does use p tags !*and*! a few semantic classes, but not for all kinds of relevant information
+it excludes character names, stage directions : these are not distinct p tag classes. 
+(character names are highlighted through layout-based span, in introductory sections, but are not captured there as one of the principle data types). 
+l-
+
+The use of a single field 'drama' for all the text, without identifying the speakers in the body of the document is also an oversight.
+
+d+
+(example1)
+ExampleHTMLMacbeth_Gutenberg.png
+C:Extract of HTML page source from Gutenberg
+d-
+
+image(example1)
+
+d+
+(example2)
+ExampleHTMLMacbeth_Dramatis_Gutenberg.png
+C:Extract of HTML page source: Dramatis Personae from Gutenberg Macbeth
+d-
+image(example2)
+
+# Notes on layout of text
+
+The 'table' form of the Dramatis Personae is useful, since it sets out the capitalised names that will appear in the play, and then a description.  However, there are some abiguities in the data in that table which could be easily clarified to help with the computational tasks and preprocessing HTML.
+
+# Data table cleaning for HTML  
+
+For example, the references to a Scottish doctor and an English doctor are clear enough int he descriptions, but they are not named.  The word 'DOCTOR' in the play is clear from context, but for the purposes of data, we'd probably need to distinguish them by their region, or call them DOCTOR1 and DOCTOR2 or suchlike.
+
+There is also reference to three witches but they are not named.  In the play, they are distinguished.
+
+# NP (Nice Processor) upstream processing language
+
+We can use computation to help with the automated application of styles.
+
+To do this, we need a function that can take a list of possible values ('Character' variable) and then apply the 'authorref' style to it, like this:
+
+e+
+autotagline(Character,authorref)
+e-
+
+Consequences:
+l+
+we can make use of our previous definition of data variables.
+We can tag any lines matching these conditions with a particular class at the time of making HTML
+l-
+
+# Latest approach to auto-tagging
+
+This is the macbeth.ats file that will be imported into the main text file and auto-format the file using the fnlstyle.css
+
+e+
+	d+
+	(Act I)
+	Scene I. An open Place.
+	Scene II. A Camp near Forres.
+	Scene III. A heath.
+	Scene IV. Forres. A Room in the Palace.
+	Scene V. Inverness. A Room in Macbeth’s Castle.
+	Scene VI. The same. Before the Castle.
+	Scene VII. The same. A Lobby in the Castle.
+	d-
+
+	d+
+	(Act II)
+	Scene I. Inverness. Court within the Castle.
+	Scene II. The same.
+	Scene III. The same.
+	Scene IV. The same. Without the Castle.
+	d-
+
+	d+
+	(Act III)
+	Scene I. Forres. A Room in the Palace.
+	Scene II. The same. Another Room in the Palace.
+	Scene III. The same. A Park or Lawn, with a gate leading to the Palace.
+	Scene IV. The same. A Room of state in the Palace.
+	Scene V. The heath.
+	Scene VI. Forres. A Room in the Palace.
+	d-
+
+	d+
+	(Act IV)
+	Scene I. A dark Cave. In the middle, a Cauldron Boiling.
+	Scene II. Fife. A Room in Macduff’s Castle.
+	Scene III. England. Before the King’s Palace.
+	d-
+
+	d+
+	(Act V)
+	Scene I. Dunsinane. A Room in the Castle.
+	Scene II. The Country near Dunsinane.
+	Scene III. Dunsinane. A Room in the Castle.
+	Scene IV. Country near Dunsinane: a Wood in view.
+	Scene V. Dunsinane. Within the castle.
+	Scene VI. The same. A Plain before the Castle.
+	Scene VII. The same. Another part of the Plain.
+	Scene VIII. The same. Another part of the field.
+	d-
+
+	header(Scene,Location)
+	splits(dot)
+
+	datasplit(Act I)
+	tablecol(Scene,Location)
+	.
+	datasplit(Act II)
+	tablecol(Scene,Location)
+	.
+	datasplit(Act III)
+	tablecol(Scene,Location)
+	.
+	datasplit(Act IV)
+	tablecol(Scene,Location)
+	.
+	datasplit(Act V)
+	tablecol(Scene,Location)
+
+	# Dramatis Personæ
+
+	//This data will be split in order to create the "Character" data type
+	d+
+	(dramatis)
+	DUNCAN, King of Scotland.
+	MALCOLM, his Son.
+	DONALBAIN, his Son.
+	MACBETH, General in the King’s Army.
+	BANQUO, General in the King’s Army.
+	MACDUFF, Nobleman of Scotland.
+	LENNOX, Nobleman of Scotland.
+	ROSS, Nobleman of Scotland.
+	MENTEITH, Nobleman of Scotland.
+	ANGUS, Nobleman of Scotland.
+	CAITHNESS, Nobleman of Scotland.
+	FLEANCE, Son to Banquo.
+	SIWARD, Earl of Northumberland, General of the English Forces.
+	YOUNG SIWARD, his Son.
+	SEYTON, an Officer attending on Macbeth.
+	BOY, Son to Macduff.
+	DOCTOR,An English Doctor.
+	DOCTOR,A Scottish Doctor.
+	SOLDIER,A Soldier.
+	PORTER,A Porter.
+	OLD MAN,An Old Man.
+	LADY MACBETH.
+	LADY MACDUFF.
+	SON,
+	LORD
+	LORDS,
+	GENTLEWOMAN,Gentlewoman attending on Lady Macbeth.
+	HECATE, and three Witches.
+	FIRST WITCH,
+	SECOND WITCH,
+	THIRD WITCH,
+	MESSENGER,
+	SERVANT
+	OFFICER,
+	ATTENDANT,
+	Lords, Gentlemen, Officers, Soldiers, Murderers, Attendants and Messengers.
+	The Ghost of Banquo and several other Apparitions.
+	ALL
+	APPARITION
+	MURDERER
+	FIRST MURDERER
+	SECOND MURDERER
+	THIRD MURDERER
+	BOTH MURDERERS
+	d-
+
+	d+
+	(ScenesTag)
+	Scene
+	d-
+
+	d+
+	(EnterTag)
+	Enter
+	Thunder
+	Alarum
+	Retreat.
+	d-
+
+	d+
+	(ActTitle)
+	ACT I
+	ACT II
+	ACT III
+	ACT IV
+	ACT V
+	d-
+
+e-
+
+e+
+	header(Character,Description)
+	splits(comma)
+	datasplit(dramatis)
+	tablecol(Character,Description)
+e-
+
+e+
+	autotagline(EnterTag,stageentry,on)
+	autotagline(ScenesTag,scene,off)
+	pagelinks(scene)
+e-
+
+e+
+	autotagline(Character,authorref,on)
+	defaultpara(playline)
+	outertag(stagedir)
+e-
+
+e+
+	autotagline(ActTitle,title,on)
+e-

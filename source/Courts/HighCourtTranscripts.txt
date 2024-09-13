@@ -1,0 +1,116 @@
+T:High Court Transcripts
+D:3 July 2024.  Separated 12 September 2024
+A:Craig Duncan
+C:Memo on High Court transcripts and auto formatting to Messenger HTML
+
+# High Court of Australia transcripts
+
+The High Court has its own service and makes them available (unlike some other courts).
+
+L:HCAtrans,https://www.hcourt.gov.au/publications/judgments/transcripts,30 July 2024
+
+L:AustliiHCAtrans,http://www.austlii.edu.au/cgi-bin/viewdb/au/cases/cth/HCATrans/,30 July 2024
+
+This is an individual HTML transcript (available on web, but no separate download link).  The HCA offers download versions in PDF and RTF (neither of which are modern XML or semantic formats)
+
+L:2024TransHCA,http://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCATrans/2024/45.html,30 July 2024
+
+Some of the meta data that appears in the HTML meta tag section:
+
+e+
+  <?xml version="1.0" encoding="utf-8"?>
+  <!DOCTYPE html>
+  <html lang="en" xmlns="http://www.w3.org/1999/xhtml" class="no-js" xml:lang="en">
+  <head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Solaris version 5.1.24" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <title>Plaintiff M19A/2024 &amp; Ors v Minister for Immigration, Citizenship and Multicultural Affairs [2024] HCATrans 45 (26 July 2024)</title>
+  <link media="screen" rel="stylesheet" href="/css/screen1.css" />
+  <link media="print" rel="stylesheet" href="/css/print.css" />
+  <meta name="theme-color" content="#ee3224" />
+  <meta name="description" content="Australasian Legal Information Institute (AustLII), a joint facility of UTS and UNSW Faculties of Law." />
+  <link rel="icon" sizes="192x192" href="/images/icon-192.png" />
+  <link rel="apple-touch-icon-precomposed" href="/images/icon-shortcut.png" />
+  <meta name="msapplication-TileColor" content="#ee3224" />
+  <meta name="msapplication-TileImage" content="/images/icon/ms.png" />
+  <script src="/js/modernizr.min.js">
+  </script>
+e-
+
+You can see the generic form of the HTML here (minus semantic content):
+
+d+
+(Transcript)
+TranscriptEncodingHTML.png
+A:Craig Duncan
+C:A section of HTML from the web page in which the transcript of a HCA case is published for public browsing.
+D:30 July 2024
+d-
+
+image(Transcript)  
+
+When this is enclosed in an e+ and e- tag section, which is simple HTML, some of it survives being put through my 'script' parser: it will ignore the HTML but some of it will eventually find its way into the output and so be rendered as formatted HTML like the original:
+
+e+
+<p><b>HER HONOUR:</b>   May I deal with three
+preliminary matters first.  The plaintiffs require an order under
+section 486A(2) of the <i>Migration Act</i> extending the time for making
+the applications.  Mr Hill, the Minister did not oppose that order, do you
+oppose that order being
+made? 
+<p><b>MR HILL:</b>   No, we consent to that
+order being made, your Honour.
+<p><b>HER HONOUR:</b>   The order will
+be that: <br><br></p>
+<ol>
+<li style='' value='1' value="1">The
+period for the making of the applications by the first, second and third
+plaintiffs for a constitutional or other writ to this
+Court be extended to
+27 February 2024.</li></ol><p><br><br>The second preliminary matter is that the
+second plaintiff sought an order that she be appointed the litigation guardian
+for the third,
+fourth, and fifth plaintiffs.  That is also not opposed, Mr
+Hill?
+<p><b>MR HILL:</b>   That is right, your Honour, that is not
+opposed.
+<p><b>HER HONOUR:</b>   That order will also be made:<br><br></p>
+<ol>
+<li style='' value='2' value="2">The
+second plaintiff is appointed litigation for the third, fourth, and fifth
+plaintiffs, pursuant to rule 21.08.6 of the <i><a href="/cgi-bin/viewdoc/au/legis/cth/consol_reg/hcr2004170/" class="autolink_findacts">High Court Rules 2004</a>
+</i>(Cth).</li></ol><p>To the extent necessary, I will dispense with compliance
+with rule 21.08.7.  The third preliminary matter on my list, and there may
+very well be others, is this application by you, Ms Costello, to amend your
+reply.  I might hear from Mr Hill first as to what his
+reaction is to it
+because I have had no notification in writing or otherwise from the defendant. 
+Mr Hill.
+<p><b>MR HILL:</b>   Thank you, your Honour.  My
+instructions are neither to oppose nor consent to that
+application.
+e-
+
+There is one semantic class used there (inside an anchor, or 'a' tag):
+e+
+class="autolink_findacts"
+e-
+
+This gives some indication of what is prioritised, i.e. isolated references to legislation over the encoding of the actors, speakers and flow of communications.  Semantics is treated as an optional extra, not the foundation of the document's formatting.
+
+Final sign-offs are not encoded as they might be in a digital source:
+e+
+<p><b>HER HONOUR:</b>  
+Can I thank both of you for attending.  Adjourn the Court,
+please.
+<p>
+<p><b>AT 9.46 AM THE MATTER WAS ADJOURNED</b></p>
+e-
+
+Even if the RTF is generated using some kind of XML for parties, counsel etc it isn't obviously used in the same way for the HTML generation.

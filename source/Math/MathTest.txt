@@ -1,0 +1,121 @@
+T:Math Test
+A:Colin
+D:28 August 2024
+C:This is a test file.
+
+I have some data
+
+d+
+(Accounts)
+SavingsAccount 3 $301.85 interest
+SavingsAccount 4 $111.10 interest
+HighInterest 5 $65.19 interest
+SavingsAccount 3 $137.87 interest
+d-
+
+colnames(AccountName,AccountNumber,Gross,Description)
+dlim(space all)
+rip(Accounts)
+tablecol(AccountName,AccountNumber,Gross,Description)
+
+List test
+
+lprint(Accounts)
+
+Code:
+
+codeprint(Accounts)
+
+Numbered:
+
+nprint(Accounts)
+
+A quote:
+
+qprint(Accounts)
+
+Here's another version of this table, with totals using the tablecoltotals() function.  This uses a verbose format in which you specify the column data you want (previously prepared from the above data), and it is combined into the table:
+
+tablecoltotals(AccountName,AccountNumber,Gross,Description)
+
+
+ripacross(Accounts)
+sum(Gross)
+
+Just row totals:
+
+rowtotals(Accounts)
+tablecol(auto_ref,auto_total)
+
+# Cricket
+
+d+
+(CricketMad)
+Mick 1 45 2 2w 2 4b
+Homer 0 0 54 3 2lb 3
+d-
+
+sumacross(CricketMad)
+
+Sam: red helmet
+
+
+d+
+(Bowlers)
+Jack,2,x,4,3,x,4
+Tom,1,0,0,2,x,3nb,0
+Evan,lb,nb,3w,0,1,0
+d-
+
+
+d+
+(CricketMad2)
+Mick,1,4,2,2,6,0,2,1,4w,2,0,4,3,2,1,6,0,0,0,1,4,2,3,2,4,6,0,0,0,4
+Homer,0,0,3,4
+Colin,0,0,3,4w,x
+Mick2,5
+d-
+
+This is the raw data:
+
+eprint(CricketMad2)
+
+Same data split for table
+
+e+
+delim(comma all)
+rip(CricketMad2)
+tablecol(CricketMad2)
+e-
+
+This is the same data as a list print (lprint):
+
+lprint(CricketMad2)
+
+This is a summary of the player scores (rowtotals):
+
+rowtotals(CricketMad2)
+tablecol(auto_ref,auto_total)
+
+Same data with tprintrows
+tprintrows(CricketMad2)
+
+Summary with extra stats: same data with cprintrows()
+cprintrows(CricketMad2)
+
+Now some bowlers data.  eprint()
+eprint(Bowlers)
+
+And with cricket print cprintrows()
+
+cprintrows(Bowlers)
+
+Last (tablecoltotals)
+
+d+
+(CricketMad3)
+1,45,2
+0,0,54
+d-
+
+tablecoltotals(CricketMad3)

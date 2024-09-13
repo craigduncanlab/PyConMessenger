@@ -1,0 +1,40 @@
+T:WhittakerBlakwork
+A:Craig Duncan
+D:4 August 2024
+C:Some musings that combine several areas of discourse
+F:ScienceWritingNotation
+
+# Intro
+
+
+# Whittaker's work in Blakwork.
+
+Alison Whitakkers' analysis of Court decisions by which she transformed other texts into 'poetry' (whatever she means by that, or whatever she is invoking by that phrase) reflected some of these decisions.  In her deconstructive manner, Whittaker might be asking whether she is creating poetry that is aesthetically pleasing or is performing an educational purpose in drawing attention to patterns within language, rather than conjuring images.  It represents a kind of gravitational pull towards those things that white language is invested in.
+
+# The flow of white characterisation of the world
+
+The technique Whittaker used to produce the words in her poems was frequency analysis (probably using some off the shelf software, or an internet program).  This isolated the most common examples of speech patterns (triads; three word phrases) within the chosen source piece.  This was in a normal narrative report (a coroner's report),  but the use of full names to refer to members of the police in that document may actually be downstream of somem earlier policy decision, including the cascading effect from the designation of these full titles in the source transcripts, which have their own formal requirements that Court stenographers are required to attend to.  
+
+In a way, it was less poetry in the form of aesthetically pleasing sounds, than it was text analysis (except to the extent she exercised discretion in the way things were chosen).  On a more general level, the content of the poetry reflects the process of transforming sound and oral text into words - not a value free, neutral exercise but one that involves cultural decisions about what is important, and involves patterns of use that emphasise titles and authority positions.  
+
+The same 'textualisation' process is occurring in relation to the manner in which previously oral languages of the indigenous (Aboriginal) people of Australia are converted into not only roman letters, but into certain patterns of letters that become associated with particular sounds.  The ordering of letters into sound also follows particular rules about what to give priority to (e.g. consonants only, like in Abjads, or both consonants and vowels).  The intellectual exercise of deciding whether vowels have semantic meaning also influences how much attention is paid to them and whether they are to be recorded by diacritic marks or roman letters.
+
+# Creative projects
+
+What if I used the thesaurus I have built from analysis of the Bates database to create poetry that writes back in the connotations of single Noongar words.
+
+e.g.
+malga
+Lightning, forked trees, shrubs
+moorn
+black
+
+I'm not sure how interesting this is to people but it involves a new kind of textual analysis which might be worth some discussion within English classes and Aboriginal language projects.
+
+# Textual adventures
+
+A web site that mixes essays, poetry, ideas and cartooning.  It's a project in and of itself that might attract attention and be the source of outside commentary.
+
+Writing a programming language to make this creative project possible, easier or unique is also a way of advertising not only the end result, but the means.  It would make it easier to describe and demonstrate what semantic programming and stylisation is; it would make it easier to illustrate what a 'humanities programmer' can do: by moving programming tools further toward being 'native' to a humanities person; an artist.  It would be closer to what I imagine is that recentering of computing to the arts that Rosemary Huisman referred to in !!The Scholar and the Machine: Computer Technology and the Humanities.!!  
+
+See /ScienceWritingNotation/

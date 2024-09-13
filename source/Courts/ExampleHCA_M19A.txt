@@ -1,0 +1,230 @@
+T:Example M19A
+C:The source for this text (without local encoding) is http://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/cth/HCATrans/2024/45.html.  This version with import command included.
+D:30 July 2024
+A:Craig Duncan (via HCA)
+
+import(M19A)
+
+Plaintiff M19A/2024 & Ors v Minister for Immigration, Citizenship and Multicultural Affairs [2024] HCATrans 45 (26 July 2024)
+
+Last Updated: 26 July 2024
+
+[2024] HCATrans 045
+
+
+IN THE HIGH COURT OF AUSTRALIA
+
+
+Office of the Registry
+
+Melbourne No M19 of 2024
+
+B e t w e e n -
+
+PLAINTIFF M19A/2024
+
+First Plaintiff
+
+PLAINTIFF M19B/2024
+
+Second Plaintiff
+
+PLAINTIFF M19C/2024
+
+Third Plaintiff
+
+PLAINTIFF M19D/2024
+
+Fourth Plaintiff
+
+PLAINTIFF M19E/2024
+
+Fifth Plaintiff
+
+and
+
+MINISTER FOR IMMIGRATION, CITIZENSHIP AND MULTICULTURAL AFFAIRS
+
+Defendant
+
+GORDON A‑CJ
+
+TRANSCRIPT OF PROCEEDINGS
+
+AT BRISBANE BY VIDEO CONNECTION
+
+ON FRIDAY, 26 JULY 2024, AT 9.28 AM
+
+Copyright in the High Court of Australia
+
+____________________
+
+HER HONOUR: In accordance with the protocol for remote hearings, I will announce the appearances for the parties.
+
+MS G.A. COSTELLO, KC appears with MS S.M.C. FINEGAN for the plaintiffs. (instructed by Asylum Seeker Resource Centre)
+
+MR G.A. HILL, SC appears with MR N.D.J. SWAN for the defendant. (instructed by Australian Government Solicitor)
+
+HER HONOUR: May I deal with three preliminary matters first. The plaintiffs require an order under section 486A(2) of the Migration Act extending the time for making the applications. Mr Hill, the Minister did not oppose that order, do you oppose that order being made?
+
+MR HILL: No, we consent to that order being made, your Honour.
+
+HER HONOUR: The order will be that: 
+
+[The period for the making of the applications by the first, second and third plaintiffs for a constitutional or other writ to this Court be extended to 27 February 2024.]
+
+The second preliminary matter is that the second plaintiff sought an order that she be appointed the litigation guardian for the third, fourth, and fifth plaintiffs. That is also not opposed, Mr Hill?
+
+MR HILL: That is right, your Honour, that is not opposed.
+
+HER HONOUR: That order will also be made:
+
+[The second plaintiff is appointed litigation for the third, fourth, and fifth plaintiffs, pursuant to rule 21.08.6 of the High Court Rules 2004 (Cth).]
+
+To the extent necessary, I will dispense with compliance with rule 21.08.7. The third preliminary matter on my list, and there may very well be others, is this application by you, Ms Costello, to amend your reply. I might hear from Mr Hill first as to what his reaction is to it because I have had no notification in writing or otherwise from the defendant. Mr Hill.
+
+MR HILL: Thank you, your Honour. My instructions are neither to oppose nor consent to that application.
+
+HER HONOUR: All right, that is not very helpful, to be blunt, for a couple of reasons. At least on my preliminary reading, I do not know whether it does not require an amendment. If it is to be permitted, does it not require amendment to the constitutional writ?
+
+MR HILL: Yes, exactly, your Honour. If your Honour would like a little bit of an elaboration.
+
+HER HONOUR: Yes, please.
+
+MR HILL: It is much more than just amending the reply. The arguments, particularly expanded arguments for grounds 1, 2 and 4, in my submission should require an amendment to the grounds on which the writ is sought, not just simply amending the reply. But these all seem to be procedural matters that could be remedied, your Honour. We would submit it would be desirable if the grounds of the writ matched the arguments being put in written submissions, but we could handle that.
+
+Just to cut to the chase, your Honour, our only objections to leave being granted would relate to the merit or otherwise of the argument, and it may be that the Court would say, well, if that is the only objection to the amendment being made then your Honour would rather allow leave to be given and then argue about the merits or to have those two applications served at the same time to have a single argument on the merits. One thing the defendant would seek, though, your Honour, if leave were to be granted to amend the grounds and to incorporate the new arguments in reply, the defendant would seek an opportunity to respond to those new arguments in writing, your Honour.
+
+HER HONOUR: Just so I am clear, Mr Hill, my present view, subject to hearing from Ms Costello, is it does require an amendment to the writ, which is what is what I raised at the outset. Second, I understand that you do not oppose those amendments being made; you neither consent nor oppose them, you have neutral position in relation to them. Third, that they are objections as to merits and that if they were to be put then they should be put substantively as well in the amended application. Finally, that you would seek to make additional submissions, both in writing and orally, in relation to those new grounds.
+
+MR HILL: Yes, your Honour.
+
+HER HONOUR: Does that mean that I should adjourn this?
+
+MR HILL: That would be our preferred course, your Honour, but we are in the Court’s hands. We would prefer to be given a short adjournment to respond in writing and then reconvene at a later date.
+
+HER HONOUR: I understand, thank you. Ms Costello.
+
+MS COSTELLO: Your Honour, yes, I adopt your Honour’s observations with respect that it is necessary to amend the Form 12 constitutional writ, and if your Honour is minded to make an adjournment then I would propose that the plaintiffs amend their Form 12. In addition, your Honour, perhaps because initially this matter was not listed for an oral hearing, there have not been the usual orders in respect of books of authorities and an application book.
+
+HER HONOUR: We do not need one. We have the materials, they are filed. We do not need an application book. Just to make it clear, I have in front of me the application for constitutional or other writ filed on 27 February 2004, the response filed on 3 April, the reply filed on 2 April and your amended reply filed on 25 July, the plaintiff’s affidavit sworn by Plaintiff M19/B on 8 February – I will put aside the Milton affidavit because I do not think that is relevant to the substantive hearing – and then I have the Stone affidavit affirmed on 27 March. So, I have the materials, I do not need any more. I do not need books of authorities, I just want to deal with the substantive matters.
+
+MS COSTELLO: Yes, your Honour, there is just one thing. I am not sure yet whether the Minister agrees that there was no prescribed method of notification pursuant to section 119 as at the date of notification of the notice of intention to cancel.
+
+HER HONOUR: I do not know about that. I mean, I think that is a legal argument.
+
+MS COSTELLO: It is, your Honour.
+
+HER HONOUR: For my part, the way I had understood it was that there was a regulation that applied at the relevant time, and that was regulation 2.55, and I think that is the Commonwealth’s position. Now, I might have that wrong but when I worked through it that is a legal argument between the two of you about which you do not agree. Your contention is there is no prescribed method and, as I understand, the Commonwealth’s position is regulation 2.55 applies, but they had made an error in their submissions.
+
+MS COSTELLO: In fairness to my learned friend, I am not sure what the position of the Minister will be to the ground as put. The only reason I mention the potential of a book of authorities is that it may be of assistance to your Honour to see the explanatory memorandums in respect of the amendments made to both section 119 and regulation 2.53A, your Honour, but we can provide those to the Court.
+
+HER HONOUR: Regulation 2.53A, at what point in time are these amendments made?
+
+MS COSTELLO: Footnote 18 of the Minister’s response cites 2.53A, which was an amendment made subsequently to the notification in this case.
+
+HER HONOUR: I know, that is what I said to you. I think it is an error.
+
+MS COSTELLO: Yes, your Honour. I am not sure what the Minister’s position is, but thought it might be ‑ ‑ ‑
+
+HER HONOUR: Can I suggest this, Ms Costello: why do you not have a chat to Mr Hill and work it out amongst yourselves? You can agree, if there are additional materials that should be provided to me then you can give me a book of them, but I do not want massive materials and great cost incurred. We have the materials electronically, and if there is something particular that has to be handed up then it can be provided to me.
+
+MS COSTELLO: May it please the Court. Just in terms of the form, wanting to be of most assistance and the most efficient as I can be at this stage with apologies that this new ground 5 has arisen late ‑ ‑ ‑
+
+HER HONOUR: It is very unfortunate, I must say. It is very late.
+
+MS COSTELLO: Yes, your Honour, I do apologise. Would it be of most assistance to provide an additional document, or would your Honour prefer a marked‑up version of the Form 12 that has been filed?
+
+HER HONOUR: I think it has to be an amendment. You have to propose amendments consistent with your reply to the current initiating document.
+
+MS COSTELLO: Yes, your Honour, so we will show those amendments by way of underlining then, in that case.
+
+HER HONOUR: I think that the really important thing from my perspective, having looked at it, is that we have, as I understand it – and this is my summary of it, and I may have misunderstood it, Ms Costello – we have five additional factual matters to ground 1 on your amended reply, we have an additional complaint under ground 2 as I read it, I do not perceive any amendment to ground 3, we have two additional complaints in relation to ground 4, and then we have the addition of ground 5.
+
+MS COSTELLO: May it please the Court.
+
+HER HONOUR: I may have that wrong, Ms Costello, and I am happy to go through what I perceive to be the amendments, but they are substantive and they are varied, and they are of different character as I understand them. As I said, I think the first ones I identified in relation to grounds 1, 2 and 4 are additional. They might be described in the old language of particulars, but they are additional things relevant to that head, whereas ground 5 is new completely.
+
+MS COSTELLO: Yes, your Honour. I am not able to say whether I have any difference in terms of which ones are new, et cetera, but I agree that there are departures in the way that the reply puts the case and seek to make any changes transparently by mending the Form 12, your Honour.
+
+HER HONOUR: Thank you. Mr Hill, do you wish to say anything about that?
+
+MR HILL: I do, your Honour. I would ask that the amendments to ground 1 make clear the basis on which it is said that these matters must be considered. If I could put it colloquially, it seems as though their reply was having a bet each way as to what the source for any obligation to consider the matters that were considered, in my submission, would be appropriate for the plaintiff in the instituting document to say what the obligation was to consider those matters. While I am here, your Honour ‑ ‑ ‑
+
+HER HONOUR: Can I just drill down on that for a moment. Do you mean it would have been mandatory considerations or not?
+
+MR HILL: Why is it that these matters must be considered? A new matter that is raised in reply is that they say – the plaintiffs say that there is a general principle that a decision‑maker must consider the mandatory legal consequences of the decision, and as a matter of principle the defendant would accept that, but that in our mind is the appropriate frame for analysis and that leads to certain results as to whether certain matters do or do not have to be considered. Whereas the way it was first put, it seems to be a generalised submission relying on Plaintiff M1 which we say is not relevant to this context.
+
+Your Honour, could I seek to be heard on authorities, and I know it is a matter of detail but I actually would join my learned friend in saying this disagreement between the parties on whether a method was or was not prescribed back in 2019 I certainly found most helpful by being able to look at the relevant part of the Act and the relevant part of the regs at the time, look at the amendments made in 2023 and their extrinsic materials to then form a view as to what the position was in 2019. I found that helpful and I would hope that that might be of assistance to your Honour, as well, to have those materials.
+
+HER HONOUR: I am happy if a book of materials is limited to that issue, but I do not want the expense incurred of putting together books of materials that I have electronically already or copies of authorities that I have already.
+
+MR HILL: I see. Yes, of course, your Honour.
+
+HER HONOUR: It is just not very helpful to get another bundle, given I have already marked up all of the documents already. If there is a little bundle relevant to that issue then I agree between you you can agree a bundle and provide that electronically.
+
+MR HILL: Thank you, your Honour.
+
+HER HONOUR: Now, that means there are, I think, four steps to be taken. Ms Costello, you will have to file an amended constitutional writ which takes into account the matters I have raised as well as those of Mr Hill. How long do you need to do that?
+
+MS COSTELLO: We can do that within just a matter of days, your Honour. So, by say Wednesday we could do that. That is 31 July.
+
+HER HONOUR: Right. Do you seek to file or reserve the right to file additional submissions, or are your submissions done?
+
+MS COSTELLO: Well, because this is – what Form 12 does is it is the one document where you put in your grounds and your submissions and so I was anticipating that I would mark up the Form 12 so that the grounds are clear and the submissions are clear, but if your Honour ‑ ‑ ‑
+
+HER HONOUR: They are in the constitutional writ itself?
+
+MS COSTELLO: Yes, that is what I had anticipated, your Honour.
+
+HER HONOUR: Well then, I think you are probably going to need more than 31 July to do that, are you not?
+
+MS COSTELLO: Your Honour, I was planning to do it today since I anticipate that we will adjourn shortly.
+
+HER HONOUR: All right. I will leave you then 31 July. Mr Hill, you are going to file an amended response?
+
+MR HILL: Yes, your Honour.
+
+HER HONOUR: How long do you need?
+
+MR HILL: If the amended application is merely to regularise what we have already seen, we would only ask a week to respond, your Honour.
+
+HER HONOUR: I think if, as I expect, Ms Costello is going to direct her attention to detail consideration of the basis upon which these matters are to be considered, especially in relation to ground 1, for example, then it may be that there is additional material – I do not know – that you will have to address, because you will be beyond the reply. In other words, it will address the things about which you have raised. Do you still just need a week?
+
+MR HILL: I understand what your Honour says. Perhaps we should seek two weeks, then, which I think is the 14th.
+
+HER HONOUR: 14 August. Do you want another week, Ms Costello, to do the reply?
+
+MS COSTELLO: Yes, yes please, your Honour.
+
+HER HONOUR: 21 August. Is 28 August convenient to both of you for the matter to be relisted for hearing?
+
+MR HILL: I could do the 28th, your Honour.
+
+HER HONOUR: Ms Costello, could you check your diary for me, please.
+
+MS COSTELLO: Yes, your Honour. Yes, your Honour, it is convenient.
+
+HER HONOUR: If I list it for 9.30 am on 28 August, I will make orders for the plaintiffs to file an amended application for constitutional writ by 31 July, for the defendant to file the amended response by 14 August and the plaintiffs to file a reply by 21 August, and the matter relisted for hearing on 28 August at 9.30 am. I will not make an order for the filing of the book that you agree I should have; so long as I have it at least a few days before the hearing so I can look at it.
+
+MS COSTELLO: Yes, your Honour. Just one other thing, I am here in my chambers with my clients who do require an interpreter, is it possible that we could, if it is a remote hearing, log in from two places so that the sound of interpretation is not a disruption to the Court.
+
+HER HONOUR: Of course.
+
+MS COSTELLO: Alternatively, given that Mr Hill, at least, and I are in Melbourne, and perhaps it is of judicial notice your Honour is Victorian, if we could appear in person in Melbourne that would be an alternative, your Honour.
+
+HER HONOUR: We will try. At the moment we have physical difficulties in Melbourne. I will not go into what those are, but they are physical difficulties. Ms Costello, we will take that on notice and I will arrange for the Registry office to speak to both you and Mr Hill’s solicitors and tell you what the outcome of that is. It may be that the solution is we might be able to hear it in a federal court, but as I said we have some physical difficulties here but we will take that on notice and make arrangements.
+
+MS COSTELLO: May it please the Court.
+
+HER HONOUR: Anything else, Ms Costello?
+
+MS COSTELLO: No, your Honour, except to say that as foreshadowed in the application, we would seek an order that any costs thrown away by reason of the adjournment and amended be reserved.
+
+HER HONOUR: They are reserved. Mr Hill, anything else?
+
+MR HILL: No, your Honour.
+
+HER HONOUR: Can I thank both of you for attending. Adjourn the Court, please.
+
+AT 9.46 AM THE MATTER WAS ADJOURNED

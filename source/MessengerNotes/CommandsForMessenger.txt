@@ -1,0 +1,74 @@
+T:Commands for Messenger HTML
+A:Craig Duncan
+D:24 July 2024
+C:This could be called 'text programming' or 'literature programming'.
+
+# Prologue
+
+The mission of libraries and archiving foundations like the Utah-based Project Gutenberg is to make literature available in a readable form.  It's not a requirement for this kind of project that literature be made available in a particular format, or even a semantic one.  However, thinking about semantics means that we can also think more explicitly about the relationship between traditional components of literature, human readability and semantic significance. 
+
+A collection of Michael Hart's writings is available at the next link.  Michael was the creator of Project Gutenberg, back in the early 1970's.
+
+L:MichaelHartWriting,https://hart.pglaf.org,25 July 2024
+
+In particular, some of his views on the priority for making literature available in different formats, any readable format, is here:
+
+L:MichaelHartInternetBooks,https://hart.pglaf.org/media.07.txt,25 July 2024
+
+I don't disagree with those general ideas, but I like to think about how the infrastructure for digital writing was taken for granted, and so, like many things that seem uncontroversial, it can be quietly changed to make it harder to do things that once seemed free, and simple.  
+
+My interest in semantics is mainly about explicit recognition in digiral literature of the same things that were in pre-digital literature, or taken for granted when we read something, and making them a little bit more explicit.  It is not intended to shut down people's ability to be creative about how they do that.  In fact, I want writers and publishers to be able to choose whatever semantic scheme seems right, and not to prevent others from having a different view.
+
+We are now in an age where people are baffled by how to keep modifying HTML to put in more semantic content, and also how to insist on semantic categories in web pages.  These are, in many ways, leading to an authoritative way of encoding for the internet.  In my view, they are too prescriptive.  The kinds of tags for microformats are designed to work with corporate search engines.  They are tools for the system.  On the other hand, there are a lot of crazy entrepreneurs and conspriacy theorists trying to make a buck out of Web3 by putting everything on a blockchain, which is far from the simplest web you can imagine.  
+
+Semantic categories of literature are still relevant to presentation, so an effort to understand document semantics is not wasted when it comes to how we publish in digital formats.  By encoding and retaining semantic information, we ensure readability for both humans and computers.   This is because semantics is often the basis for style, but not described as such.  
+
+# Where markup and HTML got it wrong
+
+The assumption of markup is that a human being would hand-craft the individual, line by line styles for subsequent transformation into HTML.  This made people slaves to HTML.  There are some situations where this is useful (where they only want to use a small set of categories), but it mainly caters for people who want to fit within some HTML convention.  The more people want to say what they want, the more HTML has felt the need to expand, by adding more tags.  This is too prescriptive, and it will never be enough.  You can't have one system of classification for the world with stifling freedom of expression and thought.
+
+What we can do is think more deeply about providing computer assistance to both semantic categories and layout.  This requires some data to let the computer know what sorts of things are going to appear in a document, perhaps several times, and will still be the same kind of information.  This then allows the computer to do what it is good at: rule-based saving of effort. In formal areas of literature, law, where there are often word formulas and patterns like "Enter Romeo" or "In these particulars,...", then rule-based semantic classification is even easier.
+
+It is relatively easy to demonstrate that rule-based styling can be in addition to or substitute for markup.  As such, it is relevant to both reading and computation.  
+
+The way that rule-based classification of text can be implemented is an example of constructive multiplication of data.  For example, it can leverage the fact that summary sections, or table of contents are, in fact, the basis for describing the styling of similar information in the remainder of the document (i.e. they are independent data, which is then used to automate styling).  
+
+On the other hand, word processing often implies reductive inference, to create a table of contents from a serious of headings.  Rather than save the writer the effort of classifying and styling the contents, it actually requires the writer to make go to a lot of effort to style each and every paragraph heading (even if this involves selecting from pre-formatted styles), just to get a table of contents.  
+
+# Rule-based auto-tagging of styles
+
+We accept for now that there is a structure within publishing formats, that allows for rule-based processing of text.  This allows the introduction of relevant data encoding and functions that can help with automatically tagging (or annotating) literature (like plays) with particular categories of text, and styles.
+
+This is achievable because we can notice patterns and consistency in syntax or line formatting, and use this to create functions that will apply those rules when we want to use them.  These functions can achieve this in many ways, often by detecting the occurrence of a word from a specific set, or a pattern, and also by distinguishing between an entire line that is a match from features within that line, like matched text.
+
+This approach is no different to ordinary programming, but by making a small set of functions it simplifies the kind of 'programming' that an ordinary writer needs to do.
+
+Once sets of functions seem to be working, they might even be able to be converted to generalised functions, or simplified further.
+
+# HTML features that leverage semantic classes
+
+Page links can be generated for information that belongs to certain headings (e.g. scenes, acts etc).  These only need to be first classified, by the text/markup parser, then they can be separately the subject of a writer instruction to make page links based on those.  In those ways, even the layout of the web/document can be more easily handled by the writer than using a content management system.
+
+Content management systems make many choices about what types of information, including content, are important to a theme, but disguised as questions of layout.
+
+# A domain-specific programming language in this context
+
+Being able to use simple functions to program text and use it as data based on semantic categories (sets, groupings) can assist a writer who wants to publish. We can make implicit structure explicit by using commands that are regular and consistent.  
+
+It also means that texts can be effectively 'programmed' into layout as a secondary stage: we do not have to markup if we have a sensible basis for classifying text, as we do in plays.  
+
+The design of a programming language that helps frame a text in terms of semantic sets (e.g. by reference to sets of data that are of importance to someone in a particular field) is also an aid to communication of what information is being structured, and how.  This will help overcome the impression that literature is somehow not structured.  It is mainly because it requires an additional step to make implicit structure explicit for computation that computer scientists have regarded ordinary writing, even forms of literature, as unstructured.
+
+# Files for programming and literature
+
+By allowing text and commands to co-exist in the same file we can achieve data and function separation whilst also recognising that visible text is data, and so we can deal with it as visible data (in a text editor) and then separately confirm it is to be published.  
+
+Our working text does not need to immediately become publishable text.  This is an overlooked constraint of word processing: word processing doesn't allow us to use text files as sandboxes or allow us to play with data that may or may not be intended to be published in that form.  Where the text is partly data (as in tabular data, or lists etc) then we can use it in several ways, including:
+
+l+
+As the basis for a table;
+As a list of data to be turned into another format;
+As data for a function for preprocessing text (e.g. lists of characters, or verbs etc that we want to use to tag lines of text or individual words).
+l-
+
+There is a time saving in being able to write rules that will instruct the computer to apply the same rule to marking up a file thousands of lines long.   This is not only more efficient than markup, but it enables the classification of files suitable for XML and overcomes the stated objections to using that format because data 'entry' is too time inefficient.

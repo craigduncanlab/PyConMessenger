@@ -1,0 +1,49 @@
+T:ePUB
+A:Craig Duncan
+D:30 July 2024
+
+# Intro
+
+Jim Hall on how the ePUB works
+
+L:ePUB,https://opensource.com/article/22/8/epub-file,30 July 2024
+
+Also note this (from 2018-2020):
+
+e+
+Unzip it! An epub file is just a bunch of HTML, CSS, images (& maybe fonts) in a zip file. You could extract it to a folder and just remove the (.xhtml) files you don’t want, then zip up the structure and rename to .epub.
+Use an editor. You could use an epub editor. Calibre comes with its own editor. Once it’s installed you should have an Open with E-book Editor option in your right-click menu in your file manager AND Edit book from Calibre’s right-click menu. Sigil is another excellent editor.
+e-
+
+L:Source,https://superuser.com/questions/1337407/how-to-slice-an-epub-into-smaller-volumes,30 July 2024
+
+For an eBook management tool see:
+
+L:Calibre,https://calibre-ebook.com,30 July 2024.
+
+L:DemoCalibre,https://calibre-ebook.com/demo,30 July 2024
+
+He has created a database style application.
+
+L:KovidGoyal,https://lwn.net/Articles/456076/,30 July 2024
+
+It also has a lookup for metadata
+
+It is 79% python 
+L:GithubKovid,https://github.com/kovidgoyal/calibre,30 July 2024
+
+# Sigil
+
+This application was based on editing the HTML format, and eBooks.  It did have WYSIWYG support, which is now separated into the companion app PageEdit, but otherwise still continues with a mainly text based editing environment.
+
+see :
+
+L:Sigil,https://en.wikipedia.org/wiki/Sigil_(application),30 July 2024
+L:SigilGithub,https://github.com/Sigil-Ebook,30 July 2024
+L:PythonRelocatableOSX,https://github.com/Sigil-Ebook/Sigil,30 July 2024
+
+The demo pictures suggest that Sigil uses p class approach for a substantial part of its formatting, but it is layout (publication) focussed and not semantics.
+
+L:SigilHome,sigil-ebook.com,30 July 2024
+
+It can download news, converts it to eBook format etc.  These are still an HTML-style presentation (with scroller to go up/down).

@@ -1,0 +1,14 @@
+T:Import Scripts
+A:Craig Duncan
+D:1 August 2024
+C:Auto tag semantics, auto tag scripts
+
+# Intro
+
+I introduced the import() command as a way of importing various data definitions and autotagging commands into a text document, and allowing for some re-use of existing scripts/code.
+
+As it turns out, the import command is a useful way of importing specific image information, or tables etc into a plain text file without interrupting the text flow too much.
+
+It could even be a sensible basis for importing notes or other information.  These import commands are, in effect, similar to a code block inserted into an R Markdown document.  The only difference is that they work on things like data variables and tagging state that affect the look of the output (i.e. /CategorialDelimiters) and it's semantic styling.
+
+See /AutoTagScripts/

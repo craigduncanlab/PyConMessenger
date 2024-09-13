@@ -43,6 +43,26 @@ The 'intro' paragraph type is indicated by a hash (#) like this:
 # This is a heading or 'intro' paragraph
 ```
 
+# Commands availale (data processing functions and HTML output)
+
+Default paragraphs in your text file are always processed to HTML output.  You do not need any markup for them.
+
+If you wish to add data, a command, or call a function basaed on a variable defined in a data block, you then use any of the commands provided by the NP software.
+
+The full list of commands is in commands.py and they are broadly grouped as follows:
+
+- AutoTag 
+- Table
+- Image
+- Code
+- Data
+- ParagraphOptions
+- Math
+- Cricket (for fanatics only)
+- Print
+
+some variation of a 'print()' command (see below) can be used to output a datablock to HTML, but there are also block shortcuts that enable you to define a block of text which is both a data block (usually defined by d+ and d- end codes) and an instruction to send it to HTML in a particular form.  See 'Shortcut Blocks' below.
+
 *Default paragraphs*
 
 Any text that is not in a data block, or uses a command or reserved prefix is treated as the default paragraph style/code (np).  
@@ -94,22 +114,50 @@ d-
 
 A unique feature of data blocks is that the text will never appear as output without a helper function.  i.e. they are not immediately part of HTML.  They are also not 'code'.  Think of them as raw data, or provisional text.
 
-Raw data in a data block can be text, a list (line separated).  Each line is treated as a new entry.
+Raw data in a data block can be text, or a list (line separated), or some other ad hoc format where each line is potentially a 'row' of data.  
 
-The philosophy of data blocks is that they are raw data with no expectations.
+The philosophy of data blocks is that they are raw data with no expectations except that each line after the variable name in is treated as a new entry for the first stage of data processsing, whatever that may be.
 
-The default use is that you put all your data in a data block into the system using a single variable.  You then create new variables by splitting the raw data.  
+The default use is that you put all your data in a data block into the system using a single variable.  You can then create new variables, if you need to, by splitting the raw data that is already in the row entries.  To do this, you have a range of options for specifying headers and delimiters.  You will need to use the header() function and the rip() function in succession.   The 'NotesOnGutenbergMacbeth.txt' in the source/Plays folder has more detail. 
 
 *Delimiter selection for raw data*
 
 Raw data can be comma separated, space separated or even use a completely arbitrary but regular set of symbols for each column.  For example, you might have data separated with a colon (:), then a slash (/) and then a comma.  You can set it up for data splitting to recognise the first instance of these.  This means that any commas before the first colon will be ignored, but those after a slash will be used as a delimiter.
+
+The function that will carry out splitting for you is dlim() or splits().  You have these basic options, that can be combined:
+
+- dlim(comma) = split on the first comma
+- dlim(comma,comma) = split on the first two commas etc
+- dlim(comma all) = split on all commas, like CSV format (each line)
+- dlim(comma,colon) = split on the first commas, then on the first colon.
+
+The range of delimiter options is catered for in datafunctions.py.  They are entered using a keyword as argument to dlim(keyword).  These include:
+
+```
+space
+equals (=)
+bar (|)
+lcurly   = (
+rcurly = )
+lsquare = [
+rsquare = ]
+csv, comma = ,
+colon = :
+dot = .
+semicolon, scolon = ;
+
+The keyword 'all' added to any of these key word options will allow any number of the delimiter in each row to split the data.  e.g.
+
+dlim(comma all)
+```
 
 *Using data block variables*
 
 The variable name can be used in available functions.  A few of these are:
 
 - lprint(arg)  = print as a list
-- nprint(arg) = print as a sequentially numbered list.
+- nprint(arg) = print as a sequentially numbered list
+- qprint(arg) = print as a quote block
 - tprint(arg) = print as a table (it tries to find the most common delimiter)
 - codeprint(arg) = print as code style
 - eprint(arg) = print as example style.  A tight font with coloured background.
@@ -137,8 +185,11 @@ eprint(MyList)
 This prints as numbered list:
 
 nprint (MyList)
-```
 
+This prints as a quote block:
+
+qprint(MyList)
+```
 
 Some of these shortcut the process of taking in raw data and then splitting it for table purposes.  For example, tprint() is a basic table maker that looks for the delimiter and then just puts numbers for row and columns, and doesn't wait for you to specify a heading.  There are some examples of this in the MathTest.txt file in the source folder.
 
@@ -207,6 +258,8 @@ pagelinks(scene)
 
 One of the real practical benefits of making web sites with NP is that you can simple enclose /SomePageName/ with angled brackets and it will create a link to it (regardless of where the .txt file is in source, because all htmlpages are flat links).
 
+*Internal Page Links*
+
 You can extend this to linking to a heading (intro) paragraph in a page with: /SomePageName#IntroHeadingText/
 
 Also, because every paragraph (and heading) has an in-built numbering scheme, you can link to a specific paragraph in any page in the web site like this:
@@ -226,10 +279,6 @@ E:LinkText,www.linkaddress.com,23 April 2024
 The date is optional but by including it you get words indicating when last accessed.
 
 There is a parsing method that will ignore any additional commas in URL between the first LinkText and the date.  This means links to sites like Google Maps with location information separated by commas will be interpreted correctly.
-
-*Internal links*
-
-
 
 # Example of commands used to process Literature
 
@@ -263,6 +312,10 @@ header(Character,Description)
 Then we specify the splits.  This is a single comma.  To specify multiple commas you can list them (comma, comma, comma) or just (comma all).
 ```
 splits(comma)
+
+or 
+
+dlim(comma)
 ```
 
 Now perform the split.  You can use the keyword 'datasplit' or 'rip'.  This will create two new column variables, based on the header.

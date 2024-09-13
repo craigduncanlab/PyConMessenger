@@ -303,10 +303,16 @@ csv, comma = ,
 colon = :
 dot = .
 semicolon, scolon = ;
+```
 
-The keyword 'all' added to any of these key word options will allow any number of the delimiter in each row to split the data.  e.g.
+The keyword 'all' added to any of these key word options will allow any number of the same delimiter in each row to split the data.  e.g.
 
+```
 dlim(comma all)
+
+or 
+
+dlim(colon all)
 ```
 
 # Example of commands used to process Literature

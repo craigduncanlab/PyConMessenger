@@ -85,13 +85,12 @@ In summary, for a user-defined semantic encoding of HTML to be successful we nee
 - Secondly, we need to consistently implement the writer's semantic scheme within the attribute tags of the p tags in HTML.
 - appropriate CSS file information must be available when opening HTML files to assist with default HTML import procedures in LibreOffice and MS Word (for example).
 
-# Auto-tagging
+# Resources
 
-There are still opportunities for customising the way in which semantic information is pre-processed into HTML, and for automating the build of static web sites that follow the semantic guidelines.  
+I have included a diagram that summarises the conceptual layers I use for the Messenger HTML model here:
 
-For example, by taking a Project Gutenberg document, such as Macbeth, and adopting some of the functions I have created for the New Processor, it is possible to achieve the styling illustrated above using a rule-based, pattern-matching approach, rather than having to encode each line.   This achieves the goals of Markdown but does so using a simple programming language approach, which can easily be integrated into a file, or by using the <i>import()</i> command.
+![DigitalSignalLayers](ShakespeareMessengerHTML.png)
 
-In this way, the advantages of this system for individual literary documents can be extended to blog-style writing, research, or even to a wiki-style encyclopaedia of information.  This has already been implemented successfully in Python.
 
 # Practical pipelines
 
@@ -103,9 +102,7 @@ Implementing these ideas is where Python comes in.  I have used Python to write 
 - a means by which the labels attached to class attributes can be labelled to reflect whatever semantic scheme that is important to the author
 completion of the HTML preprocessing system by writing the author's custom classes into the subclasses of p tags, so that the layout layer styles are seamlessly integrated with the semantic scheme.
 
-The entire toolchain, written in Python (&lt; 200kB) produces HTML output for browsers that is also compatible with the usual word-processing environments, and requiring no third party file converters (simply open as HTML and styles are imported as well as semantic categories as style names).  Other toolchains, including those using pandocs, often do not do this.  
-
-By needing to balance the author's semantic categories, on one side, and the demands of word processors, on the other, the toolchain required a holistic design and a cleaner, semantically-orientated HTML.   The author has used R Studio and similar applications to build markdown based HTML, but at over 1 GB those applications are far bigger than necessary for the task at hand, and not as focussed on semantics.
+See [NP Guide](NPGuide.md) and [How it Works](HowItWorks.md)
 
 The software design specifications for producing MessengerHTML as standard output include : 
 
@@ -118,11 +115,15 @@ The software design specifications for producing MessengerHTML as standard outpu
 
 The application is easily processing over 800 source notes and essays into an integrated, indexed static web site.  It has also been used to prepare a small travel diary website, with annotated images that are automatically resized using the Python scripts.  
 
-# Resources
+# Auto-tagging and semantic customisation
 
-I have included a diagram that summarises the conceptual layers I use for the Messenger HTML model here:
+The project so far has identified a method for working with semantic information, but in the diagram produced above, there was an assumption that an enclosing block like d+/d- blocks would be focussed on a specific semantic category.  This is also too narrow for general use.  The actual implementation is now using these blocks as general data blocks, and a general set of standard layout blocks in the CSS that can be paired with function calls to determine what kind of layout is required.  By using the data variables as arguments to the function calls, we have opportunities to configure the semantics and the layout.  This is still in a process of development, but creating new CSS content linked to new semantic categories seems to be a viable option.
 
-![DigitalSignalLayers](ShakespeareMessengerHTML.png)
+There are still some more general opportunities for customising the way in which semantic information is pre-processed into HTML, and for automating the build of static web sites that follow the semantic guidelines.  
+
+For example, by taking a Project Gutenberg document, such as Macbeth, and adopting some of the functions I have created for the New Processor, it is possible to achieve the styling illustrated above using a rule-based, pattern-matching approach, rather than having to encode each line.   This achieves the goals of Markdown but does so using a simple programming language approach, which can easily be integrated into a file, or by using the <i>import()</i> command.
+
+In this way, the advantages of this system for individual literary documents can be extended to blog-style writing, research, or even to a wiki-style encyclopaedia of information.  This has already been implemented successfully in Python.
 
 # Conclusion
 

@@ -40,9 +40,9 @@ These options are some of the reasons why I now prefer working in NP in preferen
 
 All paragraphs are numbered with sequential IDs in the HTML files, even if the paragraph numbers are not shown on screen.
 
-If paragraph numbering is on, default paragraphs will be display hard-coded numbers. 
+If paragraph numbering is on, default paragraphs will display hard-coded numbers. 
 
-You can setup paragraph numbering options using either config.py (general option) or use the paragraph() command in your file. (see overrides.py)
+You can setup paragraph numbering options using either config.py (the default option) or use the paragraph() command in a specific file for a local option. (see overrides.py)
 
 The paragraph command has three basic options:
 
@@ -59,6 +59,8 @@ The essay option will indent the first few characters of every default paragraph
 This is a portion of MessengerHTML generated for the play 'Macbeth', showing both paragraph numbers and semantic categories within the p tags:
 
 ![Macbeth_Messenger](Macbeth_Messenger.png)
+
+This will enable anyone to create a URL link to a specific line number as it appears there.
 
 # Essay or blog metadata and reserved header prefixes
 

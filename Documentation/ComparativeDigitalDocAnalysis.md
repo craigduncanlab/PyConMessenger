@@ -30,7 +30,7 @@ To help illustrate the computing path analysis, the following diagram represents
 - black (a conventional path where the analogue document is presented immediately), and
 - red (with more explicit interaction with multiple stages, including programs, before the end of the process). 
 
-![Digital Document Definitions](DigitalDocumentDefinitions.md)
+![Digital Document Definitions](DigitalDocumentDefinitions.png)
 
 # Interpretation of the diagram
 

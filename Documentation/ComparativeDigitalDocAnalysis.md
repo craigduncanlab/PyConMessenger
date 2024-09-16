@@ -34,7 +34,7 @@ To help illustrate the computing path analysis, the following diagram represents
 
 # Interpretation of the diagram
 
-The red and black paths can be seen as two alternative computing paths, as if there were two possible time-histories for reaching the point (B).  The software programs that are operating in each path look for and interpret the digital documents differently:
+The red and black paths can be seen as two alternative computing paths, as if there were two possible time-histories for reaching the analogue document representation, or at least, point (B).  The software programs that are operating in each path look for and interpret the digital documents differently:
 -  The GUI software interprets information primarily for analogue output in the yellow docoument above.  The production of any other analogue text at (A) and (B) is entirely optional, and if a text at (B) is produced by the black arrow process, it is not designed for open data.  Those analogue outputs would be discontinuous snapshots in that process.
 - On the other hand, in the interpretation software along the red arrow path, the text at (A) is treated as both an input and an instruction list (or in other words, a program).  The programs that interpret the document at (A) will influence memory and functions that lead to a secondary document being created at (B).  
 

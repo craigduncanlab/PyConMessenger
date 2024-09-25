@@ -1,6 +1,6 @@
-# ext links 17 July 2024
+# ext links 17 July 2024.  Updated 24 September 2024.
 
-from np import semantics, dateparser
+from np import semantics,dateparser
 
 def replaceLinks(mystring):
 	#print("input:")
@@ -88,8 +88,37 @@ def getExternalLink(mylink):
 	return output
 
 """
-# This may need to get rid of the related part?
-def getExternalLink(ext1):
+# Called by npmake handleCodePrefix().  PGFlag may be set by page level gutenberg override.
+# Conversion of extlink tags takes place in handleNPlinks in streamprocess.py
+def getExternalLink(ext1,PGFlag):
+	if PGFlag==True:
+		output=getTextOnlyLink(ext1)
+	else:
+		output=getFullHTMLExtLink(ext1)
+	return output
+
+def getTextOnlyLink(ext1):
+	sda=semantics.getMainParaTagMarkup()
+	#sda=sd["defaultpara"] # wrapper for links
+	output="<"+sda+">External Link:"
+	mylist=handleDataSplit(ext1)
+	if (len(mylist)>1):
+		mylabel=mylist[0] # not used here
+		mylink=mylist[1]
+		mydate=""
+		if (len(mylink)<1 or type(mylink)==None):
+			abortOnError("fault in external link (extlinks.py)")
+		if ("www"==mylink[0:3]):
+			mylink="http://"+mylink # needed for browser links.  Not https?
+		if len(mylist)==3:
+			mydate=" (accessed "+mylist[2]+")"
+		b='('+mylink+')'+mydate
+		output=output+b
+	output=output+"</"+sda+">\n"
+	# <>ExtLink:[VIQAI (accessed 30 July 2024)]https://viqsolutions.com.au/solutions/aiassist/</>
+	return output
+
+def getFullHTMLExtLink(ext1):
 	sd=semantics.getReservedXML()
 	sda=sd["related"] # wrapper for links
 	output="<"+sda+">ExtLink:"

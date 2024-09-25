@@ -64,6 +64,8 @@ def main(child,lcnum):
 	# myclass can be any XML tag in document
 	myclass=child.tag
 	utfText=getTextFromTag(child)
+	# overrides: non printable XML like <override> to specify Gutenberg output? if myclass !=override process line...
+	# This would, in effect, be asking the XML to hold metadata i.e a 'state' relevant to the XML parser and output.
 	line=streamprocess.main(child,myclass,utfText)
 	# this was once in utfText, now just handle CR replace for each line
 	wordcount.updateWordCount(line)

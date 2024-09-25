@@ -8,9 +8,20 @@ def getIndexName():
 	indexname="SiteMap" 
 	return indexname
 
+# set to True to include Site Map link on each page (and also the licence)
+def getSiteMapLink():
+	return True
+
+def getGutenberg():
+	return True
+
 def getIndexFolder():
 	indexfolder="AA_Indexes"
 	return indexfolder
+
+def getGutenbergStyleSheetName():
+	output="fnlstyle_PG21.css"
+	return output
 
 def getMainStyleSheetName():
 	output="fnlstyle_new.css"

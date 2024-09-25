@@ -348,6 +348,7 @@ def getMasterTagDict():
 	b["pagelinkinserttag"]=[pagelinkinserttag]
 	b["revnumbers"]=revnumbers
 	b["codetags"]=codetags
+	b["defaultpara"]=dpclass
 	b["defaultoption"]=dpclass+tagclass
 	return b
 

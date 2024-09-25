@@ -2,10 +2,14 @@
 # Designed to allow writer to override settings in current document
 
 global isNumbering
+global isGutenberg
 
+# should be reset each document
 def initialise():
 	global isNumbering
+	global isGutenberg
 	isNumbering=False
+	isGutenberg=False
 
 def setNumberingOn(myinput):
 	global isNumbering
@@ -43,3 +47,13 @@ def handleParagraphCommands(myargs):
 			isNumbering=False # indent = on
 		case "number":
 			isNumbering=True
+
+# gutenberg setting is used only to constrain outputs (XML interpretation)
+def isGutenbergOn():
+	global isGutenberg
+	return isGutenberg
+
+def setGutenbergOn():
+	global isGutenberg
+	isGutenberg=True
+

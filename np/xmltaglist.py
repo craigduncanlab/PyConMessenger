@@ -112,14 +112,18 @@ def processAllPageLinks(homepage):
 			count=count+1
 	# 
 
-	# Site Map link
-	urllink=homepage
-	if ("." and "htm" not in urllink):
-		urllink=urllink+".html"
-	linklabel=homepage
-	innertag=htmltagmaker.getURLlink(urllink,myclass,linklabel)
-	SiteMaplink=', '+innertag
-	linktext=linktext+SiteMaplink
+	# Site Map link (set in config)
+	PGFlag=config.getGutenberg()
+	SiteMapFlag=config.getSiteMapLink()
+	if SiteMapFlag==True and PGFlag==False:
+		urllink=homepage
+		if ("." and "htm" not in urllink):
+			urllink=urllink+".html"
+		linklabel=homepage
+		innertag=htmltagmaker.getURLlink(urllink,myclass,linklabel)
+		SiteMaplink=', '+innertag
+		linktext=linktext+SiteMaplink
+
 	wrapperclass=semantics.getPageLinkRelatedClass()
 	output=htmltagmaker.convertToHTMLParaTag(wrapperclass,linktext)+"\n"
 	return output

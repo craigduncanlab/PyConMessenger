@@ -1,19 +1,6 @@
-# XML parsing for gloss/terms first created 29 August 2023. 
-#
-# The main role of this module now (8.5.2024) is to manage :
-# 1. translation of a scripty markdown file into HTML (via the XMLtoHTML function)
-# 2. some web page integration (word counts, cross-links etc)
-#
-# The 'recursion' module handles most of the exploration of the Element Tree (XML)
-# 
-# The production of HTML is in conjunction with style sheets such as fnlstyle.css
-#
-# Use UTF 16 in header to ensure special characters are recognised in browsers.
-#
-# Static Site Generator 16 November 2023 (C) Craig Duncan
-# This version 17.12.23; 7-8 May 2024
-# https://docs.python.org/3/library/xml.etree.elementtree.html#module-xml.etree.ElementTree
-# Useful discussion of ElementTree: https://lxml.de/tutorial.html
+# XML parsing for gloss/terms first created 29 August 2023.  Revised.
+# (c) Craig Duncan 2024
+
 import xml.etree.ElementTree as ET
 import string
 from pathlib import Path # for reading directory
@@ -22,12 +9,6 @@ import os.path as OPath
 import shutil #shell utilities e.g. file copy
 from datetime import date
 from np import localinfo,recursion,imagelister as IM,config,xmltaglist,semantics,CSSmappings,streamprocess
-
-# the expcounter is a way of numbering each paragraph
-# this assumes you want a formal, essay style
-# it is equivalent to auto-numbering the OOXML in a Word document.
-# Once it is written into the HTML, a search for paragraph number could find it by looking
-# for the characters up to the . at the start of the paragraph.
 
 def resetTotalWordCount():
 	global totalwordcount
@@ -79,14 +60,6 @@ def opentxt(fn):
 	output=f.read()
 	return output
 
-# In some ways, there is no home page, especially if the index.html landing page
-# is always set to a copy of the latest article (by date).
-# in that case, what you want to do is go to the index page.
-# notice how the web was built with the idea your landing page would be an index of some kind.
-# This was pre-search engines, and made a lot of sense, especially if you thought of web pages as a kind of book, not as a magazine, a television site or something else.
-# Two elements of the footer are needed: (a) Index (b) Feedback link
-# The feedback should be a form, so I am not giving out my email.
-
 def addKeySiteLinks():
 	linklist=["#Top"]
 	output=""
@@ -101,8 +74,12 @@ def addKeySiteLinks():
 def getPageFooter():
 	siteLinks=True
 	indexname=config.getIndexName()
+	SiteMaps=config.getSiteMapLink()
+	PGFlag=getGutenberg()
 	mainauthor=localinfo.getMainAuthor()
-	signoff='<p class="footer"><a href="'+indexname+'.html" class="footer">Site Map</a>'
+	signoff='<p class="footer">'
+	if SiteMaps==True and PGFlag==False:
+		signoff=signoff+'<a href="'+indexname+'.html" class="footer">Site Map</a>'
 	if (siteLinks==True):
 		signoff=signoff+addKeySiteLinks()
 	signoff=signoff+"</p>"
@@ -177,6 +154,14 @@ def getHTMLfromXML(myinput,root,pagelinkclass):
 	# update css for custom
 	# updateCSS()
 
+
+def getCSS():
+	print("RETRIEVE GUTENBERG CSS...")
+	fname1=config.getGutenbergStyleSheetName()
+	fname1="htmlpages/"+fname1
+	output=opentxt(fname1)
+	return output
+
 def updateCSS(newfilename):
 	print("UPDATING...")
 	fname1=config.getMainStyleSheetName()
@@ -188,45 +173,65 @@ def updateCSS(newfilename):
 	#fname="htmlpages/semantics.css"
 	writehtml(output,fname1)
 	print("Finished writing out CSS update",fname1)
+	return output
 
-
-def getPageHeader(shortname):
-	htmloutput='<html><head><title>'+shortname+'</title>'
+def getHTMLMeta(PGFlag):
 	yearlatest=getTodayYear()
 	mainauthor=localinfo.getMainAuthor()
 	mainkeywords=localinfo.getMainKeywords()
 	mainDescription=localinfo.getMainDescription()
-	a='<meta name="copyright" content="© '+mainauthor+' '+yearlatest+'" />'
-	b='<meta name="author" lang="en" content="" />'
-	c='<meta name="robots" content="Index,Follow" />'
-	# preloader scripts are useful
-	# <link rel="preload" href="/assets/fonts/open-sans-regular.woff2" as="font" type="font/woff2" crossorigin="">
-    #<link rel="preload" href="/assets/fonts/open-sans-bold.woff2" as="font" type="font/woff2" crossorigin="">
-    #<link rel="preload" href="/assets/fonts/roboto-slab-variable.woff2" as="font" type="font/woff2" crossorigin="">
-	d='<meta name="description" content="'+mainDescription+'" />'
-	e='<meta name="keyword" content="'+mainkeywords+'" />'
+
+	a='<meta name="copyright" content="© '+mainauthor+' '+yearlatest+'" >'
+	b='<meta name="author" lang="en" content="" >'
+	c='<meta name="robots" content="Index,Follow" >'
+	d='<meta name="description" content="'+mainDescription+'" >'
+	e='<meta name="keyword" content="'+mainkeywords+'" >'
 	f='<meta name="theme-color" content="darkorange">'
 	g='<meta http-equiv="content-type" content="text/html; charset=utf-16" />'
-	htmloutput=htmloutput+a+b+c+d+e+f+g
-	htmloutput=htmloutput+'</head><body id="Top">'
+	if PGFlag==True:
+		g='<meta charset="UTF-8">' # May require further checks on the files
+	output=a+b+c+d+e+f+g
+	return output
+
+# This checks for project-wide setting
+# page specific overrides are handled upstream in npmake.
+def getGutenberg():
+	output=False
+	output=config.getGutenberg()
+	"""
+	if (PGFlag==False):
+		if overrides.isGutenberg()==True:
+			output=True
+	"""
+	return output
+
+def getPageHeader(shortname):
+	#htmloutput='<html><head><title>'+shortname+'</title>'
+	#HTML5:
+	PGFlag=getGutenberg()
+	doctypedeclaration='<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">'
+	if PGFlag==True:
+		doctypedeclaration='<!DOCTYPE html>' # HTML5
+	htmloutput=doctypedeclaration+'<html lang="en"><head><title>'+shortname+'</title>'
+	# Make meta declarations early (inside first 1024 bytes: W3C standards)
+	htmloutput=htmloutput+getHTMLMeta(PGFlag)
 	# style
 	stylesheetname=config.getMainStyleSheetName() # fnlstyle.css
+	"""
 	secondsheetname=config.getModifiedStyleSheetName() # semantics.css
 	# check second source of tags
 	semtagdict=CSSmappings.getPlayMappings()
-	updateCSS(stylesheetname)
-	htmloutput=htmloutput+'<link rel="stylesheet" href="'+stylesheetname+'">'
+	
+	# Make inline style sheet for each page
 	"""
-	if len(semtagdict.keys())>0:
-		updateCSS(shortname)
-		stylesheetname=shortname+"_styles.css"
+	if PGFlag==True:
+		inlinestyle=getCSS()
+		htmloutput=htmloutput+'<style>'+inlinestyle+'</style>'
+	htmloutput=htmloutput+'</head><body id="Top">'
+	# Gutenberg only uses inline style sheets
+	if PGFlag!=True:
 		htmloutput=htmloutput+'<link rel="stylesheet" href="'+stylesheetname+'">'
-	else:
-		htmloutput=htmloutput+'<link rel="stylesheet" href="'+stylesheetname+'">'
-		#htmloutput=htmloutput+'<link rel="stylesheet" href="'+secondsheetname+'">' # cumulative
-		# Nav
-	# htmloutput=htmloutput+getPageNav()
-	"""
+		updateCSS(stylesheetname)
 	return htmloutput
 
 def getPageNav():

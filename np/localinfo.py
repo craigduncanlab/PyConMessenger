@@ -1,5 +1,7 @@
 # separate code for local/private information
-# Craig Duncan 12.7.24
+# Craig Duncan (c) 12.7.2024 and beyond
+
+from np import config
 
 def getMainAuthor():
 	output='Digital Languages'
@@ -14,7 +16,7 @@ def getMainAuthor():
 	return output
 	
 def getMainDescription():
-	output="This contains work created, researched and published by Craig Duncan.  Credits to third party sources appear where appropriate."
+	output="This HTML is in the MessengerHTML format.  It contains work created, researched and published by Craig Duncan.  Credits to third party sources appear where appropriate."
 	return output
 
 def getMainKeywords():
@@ -32,7 +34,11 @@ def getLicence(myinput):
 	ld=dict()
 	ld["MIT"]="licensed under a MIT Licence:"
 	linkCCND='https://creativecommons.org/licenses/by-nc-nd/4.0/'
-	ld["CC_NDNC"]='licensed under a Creative Commons Licence: <a href="'+linkCCND+'"class="footer">CC BY-NC-ND 4.0</a>'
+	PGFlag=config.getGutenberg()
+	if PGFlag==True:
+		ld["CC_NDNC"]='licensed under a Creative Commons Licence CC BY-NC-ND 4.0 ('+linkCCND+')'
+	else:
+		ld["CC_NDNC"]='licensed under a Creative Commons Licence: <a href="'+linkCCND+'" class="footer">CC BY-NC-ND 4.0</a>'
 	output=""
 	if (myinput in ld.keys()):
 		output=ld[myinput]

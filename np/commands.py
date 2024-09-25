@@ -120,12 +120,17 @@ def getMaxCommandsList():
 	output7=getMathCommands()
 	output8=getCricketCommands()
 	output9=getPrintCommands()
-	output=output1+output2+output3+output4+output5+output6+output7+output8+output9
+	output10=getEBookCommands()
+	output=output1+output2+output3+output4+output5+output6+output7+output8+output9+output10
 	return output
 
 # to do: wordcounts info, or stats option
 def getAutoTagCommands():
 	output=["autotagline","autotagsplit","autoformat","defaultpara","outertag","pagelinks"]	
+	return output
+
+def getEBookCommands():
+	output=["gutenberg"]
 	return output
 
 def getParagraphOptionCommands():

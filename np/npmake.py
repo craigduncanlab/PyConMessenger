@@ -222,7 +222,8 @@ def handleCodePrefix(child):
 	elif codeMatch=="R:":
 		output=output+getInternalRelated(cleanstr)
 	elif codeMatch=="L:":
-		output=output+extlinks.getExternalLink(cleanstr)
+		PGFlag=getGutenberg()
+		output=output+extlinks.getExternalLink(cleanstr,PGFlag)
 	elif codeMatch in imageoptionlist:
 		txtpath=getCurrentFilePath() # this is for .txt file
 		#print("Found image prefix")
@@ -231,6 +232,14 @@ def handleCodePrefix(child):
 		handleImageOptions(codeMatch,cleanstr,txtpath)
 		#print("Current image (if any):",imagelister.getCurrentImage())
 		
+	return output
+
+def getGutenberg():
+	output=False
+	output=config.getGutenberg()
+	if (output==False):
+		if overrides.isGutenberg()==True:
+			output=True
 	return output
 
 # set any one of the current image attributes
@@ -588,12 +597,15 @@ def processCommandForLine(child):
 		paracommands=commands.getParagraphOptionCommands()
 		mathcommands=commands.getMathCommands()
 		printcommands=commands.getPrintCommands()
+		ebookcommands=commands.getEBookCommands()
 		if (presentcom=="import"):
 			output=output+handleImportCommand(presentcom,child)
 		elif presentcom in paracommands:
 			handleParagraphCommands(child)
 		elif presentcom in datacommands:
 			handleDataCommands(child)
+		elif presentcom in ebookcommands:
+			handleEBookComands(child)
 		elif presentcom in mathcommands:
 			handleMathCommands(child)
 		elif presentcom in printcommands:
@@ -780,6 +792,14 @@ def handleMathCommands(child):
 			datafunctions.handleSumAcross(myargs)
 		case "rowtotals":
 			datafunctions.handleRowTotals(myargs)
+
+def handleEBookComands(child):
+	activecommands=commands.getActiveCommand()
+	if len(activecommand)>0:
+		myargs=commands.processArgsForCommand(child)
+	match activecommand:
+		case "gutenberg":
+			overrides.setGutenbergOn()
 
 def handlePrintCommands(child):
 	output=""

@@ -1,0 +1,496 @@
+body {
+  background-color: white; 
+  margin-left :10%;
+  margin-right: 10%; 
+  width:85%;
+  padding-top: 70px;
+  background-position: center top; 
+}
+
+nav{    
+  width: 50px;
+  float: left;
+  display: inline; 
+  margin: 0%;
+  padding: 0;
+  margin-right: 10px;
+}
+
+ table,th {
+  border: 2px solid black;
+  border-collapse: collapse; 
+  margin:0;
+  table-layout: fixed;
+  width:90%
+}
+
+td {
+  border: 2px solid black;
+}
+
+td {
+  font-family: Arial,Arial,Times New Roman;
+  text-align: center;
+  color: black; 
+  font-size: 0.8em; 
+  font-weight: normal;
+}
+
+td.vert{
+  text-align: left;
+}
+
+table.glossary {
+  background-color:  lightgrey;
+  position: relative;
+  left: 20%;
+}
+
+p.pretty {
+  width:100%;
+}
+p.col1 {
+  background: lightgrey;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+p.header {
+  text-align: center;
+  font-weight: bold;
+  font-size:  1.0em;
+}
+
+p.footer,a.footer,p.caption, p.figcaption {
+  font-weight: bold; 
+  font-family: Arial,Times New Roman;
+  line-height: 1.5;
+  font-size: 12px;
+  font-weight: 300;
+  color: red;
+}
+
+p.caption {
+    margin-left: 10px;
+}
+
+p.figcaption {
+    margin-left: 40px;
+}
+
+p.footer {
+  text-align: center;
+}
+
+p.link,a.link {
+  font-weight: bold;
+  font-family: Arial,Times New Roman;
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 300;
+  color: blue
+}
+
+a.indexlink {
+  font-family: Arial,Times New Roman;
+  font-size: 15px;
+}
+
+p.Reference, p.WebDateAside, p.HomeLink, p.OutsideLink {
+  color: white;
+  border: 2px solid red; 
+  border-radius: 5px;
+  background-color:  black;
+  font-size:  0.9em;
+  position: absolute; 
+  right: 10%;
+  left: 70%;
+  width: 20%;
+  padding: 10px;
+}
+
+p.Reference {
+  position: relative;
+  right: 15%;
+  left: 40%;
+  width: 45%; 
+  padding: 10px;
+}
+
+p.origin {
+  color: black;
+  max-width: 70em;
+  padding: 1em 2em; 
+  border: 2px black; 
+  border-radius: 20px;
+  background-color:  white;
+  font-style: italic;
+  font-size: 1.2em; 
+  line-height:  1em;
+  margin-left:  10px;
+  right: 70%;
+  left: 10%;
+  width: 80%;
+  padding: 10px;
+}
+
+p.concept {
+  right: 10%;
+  left: 10%;
+  width: 77%;
+  color: black;
+  margin-bottom: 20px;
+  margin-right: 20%;
+  padding: 20px;
+  border: 1px solid #edf2f5;
+  border-radius: 10px;
+  background-color:#f1f5f7;
+  font-family: Arial,Times New Roman
+}
+
+p.Aside a, p.OutsideLink a {
+   color:yellow;
+}
+
+p.Reference, p.HomeLink a {
+   color:green;
+}
+
+p.default,p.playline,p.dialogue, p.np_ss,p.list,p.list_ss,a.list_ss,p.numlist,p.numlist_ss,p.explanation, p.authorref, p.np, p.navlink, p.related, p.image,p.code,a.list, a.listlink, p.revlist, p.comment, p.item, p.note, p.l,p.new,p.old,p.conn,p.engl,p.bates {
+  color: #222222; 
+  max-width: 90%;
+  border: 2px darkgrey; 
+  border-radius: 3px;
+  background-color: white;
+  font-size: 1.2em; 
+  margin-left:  10px;
+  font-family: Arial,Times New Roman;
+  font-size: 16px;
+  line-height: 1.8em; 
+  font-weight: 300;
+  font-style: normal;
+  text-align: justify;
+  }
+
+p.np_ss,p.list_ss,a.list_ss {
+  line-height:1;
+}
+
+p.playline {
+  margin:0;  
+  line-height:1.1;
+  color:black;
+  font-size:12px;
+}
+
+p.dialogue {
+  color: black;
+  font-size: 1em; 
+  line-height:  0.5em;
+  margin-left:  10px;
+}
+
+p.related {
+  font-size: 0.8em; 
+}
+
+p.image {
+  font-style: italic;
+}
+p.smallnote{
+  font-size: 0.9em; 
+}
+
+p.code, p.example, p.scene {
+    line-height:  1.3em;
+    font-size: 12px;
+    color: black;
+    width: 85%;
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 20px;
+    border: 1px solid #edf2f5;
+    border-radius: 10px;
+    background-color:#f1f5f7;
+    font-family: Monaco,Menlo,monospace
+}
+
+p.example {
+    font-family: Menlo;
+    font-size: 14px;
+}
+
+p.list,a.list,p.list_ss,a.list_ss,p.numlist,p.numlist_ss {
+  width: 84%;
+  display: list-item;   
+  list-style-type: disc; 
+  list-style-position: outside; 
+  margin-left:  28px;
+  padding-left: 1cm;
+  padding-right:1cm;
+}
+
+p.numlist {
+  list-style-type: none; 
+}
+
+p.revlist {
+  font-family: Monaco,Menlo,monospace;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-left:  60px;
+}
+
+p.date,p.file,p.author {
+  color: black; 
+  font-size: 1.2em; 
+  font-weight: bold;
+  font-family: Arial,Times New Roman;
+  margin-left: 10px;
+}
+
+p.intro,p.title {
+  font-weight:  bold; 
+  font-family: Arial,Times New Roman;
+  line-height: 1.5;
+  font-weight: 300;
+  color: black;
+}
+
+p.title {
+font-family: Arial,Times New Roman;
+font-size: 60px;
+letter-spacing: -.025em;
+margin: 32px 0 32px -1px;
+}
+
+p.authorref {
+  color: green; 
+  font-size: 1.0em; 
+  font-weight: bold;
+  font-family: Arial,Times New Roman;
+  margin-left: 10px;
+}
+
+p.intro {
+ font-size: 18px;
+}
+
+p.ctran {
+  background-color: lightsalmon;
+}
+
+p.term, p.w {
+  font-weight: bolder;
+  font-size: 1.2em;
+  background-color: lightblue;
+}
+
+p.Introduction {
+  color: black;
+  font-style: italic;
+  font-size: 1em; 
+  line-height:  1.2em;
+  margin-left:  10px;
+}
+
+p.PageUpdate {
+  color: black;
+  font-style: italic;
+  font-size: 0.7em; 
+  line-height:  1.0em;
+  margin-left:  10px;
+  text-align: right;
+}
+
+p.LastCreated,p.URLsource {
+  color: darkblue;
+  font-size: 0.8em; 
+  line-height:  0.5em;
+  margin-left:  10px;
+}
+
+p.PlayScene {
+  color: green;
+  font-size: 1.5em; 
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+p.Quote {
+  color: black;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  border-radius: 20px;
+  border: 1px solid #edf2f5;
+  padding: 1em 2em; 
+  font-style: italic;
+  font-size: 1em; 
+  line-height: 1.2em;
+  margin-left: 20px;
+}
+
+p.PlayTitle {
+  color: green;
+  font-family: Georgia,serif; 
+  font-size: 2em; 
+  margin-left: 10px;
+}
+
+p.StageDirection {
+  color: blue;
+  font-size: 1em; 
+  margin-left:  10px;
+  text-align: right; 
+}
+
+p.WebSubtitle {
+  color: black;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  padding: 1em 2em; 
+  font-style: italic;
+  font-size: 1em; 
+  line-height:  1.2em;
+  margin-left:  10px;
+}
+
+p {
+  color: black;
+  font-size: 1em; 
+  margin-left:  10px;
+  font-family: Times;
+}
+
+img.intext,img.small {
+  width:30%;
+}
+
+img.medium{
+  margin-left:  10px;
+  margin-right: auto;
+  width: 60%;
+  border: 1px solid black
+}
+
+img.medlge{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border: 1px solid black
+}
+
+img.fullwidth,img.large {
+  width:95%;
+  border: 1px solid black; 
+}
+
+p.example, p.explanation, p.image, p.code, p.authorref, p.comment, p.scene,p.stagedir {
+  color: black;
+  max-width: 90%;
+  border: 2px darkgrey; 
+  border-radius: 3px;
+  background-color: white;
+  font-size: 1.0em; 
+  line-height:  1.3em;
+  margin-left:  10px;
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+  color: #5E5E5E;
+  font-style: normal;
+  text-align: justify;
+  }
+
+p.authorref {
+  font-size: 12px;
+  color: black;
+  font-weight: bold;
+}
+
+p.code, p.example, p.scene,p.stagedir,p.stageentry {
+  line-height:  1.3em;
+  font-size: 12px;
+  color: black;
+  width: 85%;
+  text-align: left;
+  margin-bottom: 15px;
+  padding: 20px;
+  border: 1px solid #edf2f5;
+  border-radius: 10px;
+  background-color:#f1f5f7;
+  font-family: Monaco,Menlo,monospace
+}
+
+p.stagedir {
+  font-style: italic;
+  color: black;
+  width: 50%;
+  text-align: left;
+  text-align: right; 
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #edf2f5;
+  border-radius: 1px;
+  background-color:#f7f7f7;
+  font-family: Monaco,Menlo,monospace
+}
+
+p.stageentry {
+  font-style: italic;
+  color: black;
+  width: 50%;
+  text-align: center;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 1px solid #edf2f5;
+  border-radius: 1px;
+  background-color:#f7f7f7;
+  font-family: Monaco,Menlo,monospace
+}
+
+p.scene {
+  width:50%;
+  font-size: 14px;
+  font-style: italic;
+  font-weight:bold;
+  color: black;
+}
+
+p.example {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+p.list,a.list {
+  display: list-item;   
+  list-style-type: disc; 
+  list-style-position: outside; 
+  margin-left:  28px;
+}
+
+p.Quote {
+  color: black;
+  max-width: 35em;
+  background-color: #FFE5D4;
+  border-radius: 20px;
+  border: 1px solid #edf2f5;
+  padding: 1em 2em; 
+  font-style: italic;
+  font-size: 1em; 
+  line-height:  1.2em;
+  margin-left:  20px;
+}
+
+p.intro {
+  font-weight: bold; 
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: black;
+  font-size: 18px;
+}

@@ -1,5 +1,5 @@
 ---
-title: 'Gala: A Python package for galactic dynamics'
+title: 'MessengerHTML and a workflow for semantic Shakespeare'
 tags:
   - Python
   - XML
@@ -18,12 +18,7 @@ affiliations:
    
 date: 25 September 2024
 bibliography: paper.bib
-
-MessengerHTML and a workflow for semantic Shakespeare 
-
-Craig Duncan
-
-The author is an independent computer scientist and software developer with interests in the digital humanities, languages and literature.  He has degrees in Law, Computer Science, and Literature and previously worked as a professional lawyer and law teacher for twenty years.
+---
 
 # Summary
 

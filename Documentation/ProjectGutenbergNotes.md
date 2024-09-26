@@ -67,5 +67,5 @@ The checking process is run on the server and the output is a web link to a cach
 
 There will be an images and no images version of the book.
 
-Read the output.txt to diagnose errors in the submission.  If there are errors, you need to repeat the process.
+Read the `output.txt` to diagnose errors in the submission.  If there are errors, you need to repeat the process.
 

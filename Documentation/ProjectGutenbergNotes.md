@@ -39,7 +39,9 @@ Tight tests, higher bar:
 
 # Submission process
 
-The HTML for the web and eBook versions is is submitted via the upload portal at (https://upload.pglaf.org), and meets the requirements there for formatting and for proofreading accuracy.
+The HTML for the web and eBook versions is ultimately submitted via the upload portal at (https://upload.pglaf.org), and meets the requirements there for formatting and for proofreading accuracy.
+
+However, you can test your information checks out by uploading to this site first: (https://ebookmaker.pglaf.org)
 
 This is basically a quality control process.
 

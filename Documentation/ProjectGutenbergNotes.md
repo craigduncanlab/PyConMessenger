@@ -2,6 +2,7 @@
 Author:Craig Duncan
 
 Date: 26 September 2024
+
 ---`
 
 # Summary of Gutenberg e-Book submission and validation process
@@ -14,13 +15,9 @@ In general, Project Gutenberg assumes that any book will be packaged in a single
 
 # Reference pages
 
-(https://www.gutenberg.org/help/file_formats.html#htmlhtm-format)
-(https://upload.pglaf.org)
-(https://ebookmaker.pglaf.org/index.php)
+(https://www.gutenberg.org/help/file_formats.html#htmlhtm-format) | (https://upload.pglaf.org) | (https://ebookmaker.pglaf.org/index.php)
 
-(https://www.pgdp.net/wiki/DP_Official_Documentation:PP_and_PPV/Post-processing_HTML5)
-(https://www.gutenberg.org/help/file_formats.html)
-(https://www.gutenberg.org/help/public_domain_ebook_submission.html):
+(https://www.pgdp.net/wiki/DP_Official_Documentation:PP_and_PPV/Post-processing_HTML5) | (https://www.gutenberg.org/help/file_formats.html) |(https://www.gutenberg.org/help/public_domain_ebook_submission.html):
 
 
 Validators:
@@ -52,7 +49,7 @@ In general, these are the assumptions Project Gutenberg works with for submissio
  - It should be HTML5 (ensure there is at least a `<!DOCTYPE html>` tag at the start)
  - You cannot have external links (convert these to text not HTML if you have to)
  - You cannot have an externally linked style sheet (follows from above)
- - All CSS must be included within `<style>` tags within the `<head>`` section.
+ - All CSS must be included within `<style>` tags within the `<head>` section.
  - If you specify `<meta charset = utf-8>` it must be within first 1024 blocks so put it before a large block of CSS if you have it.  
  - It uses only recommended W3C CSS.  Currently this is CSS2.1.  So do not include grids in your CSS etc.
  - You need images inside an images folder.  If you want a cover image for the book you must include an image cover.png or similar.
@@ -64,9 +61,9 @@ There may be an assumption that the title to the book is coded with an `<h1>` ta
 
 # After your submission checks are run
 
-When this is run from the web is runs this on the server and the output is a web link to a cache of the e-book, kindle, HTML and `output.txt` file.
+The checking process is run on the server and the output is a web link to a cache of the e-book, kindle, HTML and `output.txt` file.
 
 There will be an images and no images version of the book.
 
-Read the output.txt to diagnose errors in the submission.
+Read the output.txt to diagnose errors in the submission.  If there are errors, you need to repeat the process.
 

@@ -24,6 +24,7 @@ This document contains the basic install and setup information.  As it is a larg
 - [ComparativeDigitalDocAnalysis](Documentation/ComparativeDigitalDocAnalysis.md) - a theoretical examination of digital documents
 - [MessengerHTML](Documentation/MessengerHTML.md)
 - [ShakespeareAndMessengerHTML](Documentation/ShakespeareAndMessengerHTML.md)
+- [Draft paper (software)](Documentation/paper.md)
 
 # Pre-requisites
 

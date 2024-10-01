@@ -15,7 +15,7 @@ Please provide attribution in the form of : Craig Duncan, of Perth, Western Aust
 
 It is my intention to host explanatory documents on a separate server (outside Github) on the same terms.
 
-# MODIFIED MIT LICENCE
+# MODIFIED MIT LICENCE - THE ONE I NEARLY WENT WITH
 
 <h2>The Licence</h2>
 
@@ -70,7 +70,7 @@ Above is an extract from [BeautifulSoup_Zine](https://www.crummy.com/software/Be
 
 My views on ethical behaviour by rich people differ from Laurents.  In my view, it is not conducive to ethical practices to allow other, unspecified people to commercially exploit software without royalty payment if the developer of the software is left disappointed and unrewarded.  Exploitation is also more likely to occur if the same developer consciously allows this to happen by a permissive licence.  In that sense, Laurent's view of the 'power we have as computer programmers' is probably too dismissive of the power we have to control the terms upon which we interact and deal with other people.  It is sensible practice to create rules in the world, especially fair ones, and not leave the future to chance.  
 
-It is implicit in the MIT Licence that 'dealing' is a recognised activity, but it misses an opportunity to have a say in both ethical and commercial dealings that are endorsed by the developer.  Sure, Google said they wouldn't do evil, and perhaps not everyone wants to think that evil is a purely subjective opinion.  In fact, some of these things are going to be defined by what we say and how we act, taken together.  That doesn't mean we shouldn't start by proactively demonstrating what we mean by good or bad behaviour in these licences, or reserving judgment to deal with things on a case by case basis.  These licences are a form of private law where we ought not give away powers that help ourselves and like-minded people make a better world.  This is the basis for our democracy and the rule of law.  We are not a rule-less civil society, nor are we required to adopt rules that are ignore human nature.
+It is implicit in the MIT Licence that 'dealing' is a recognised activity, but it misses an opportunity to have a say in both ethical and commercial dealings that are endorsed by the developer.  Sure, Google said they wouldn't do evil, and perhaps not everyone wants to think that evil is a purely subjective opinion.  In fact, some of these things are going to be defined by what we say and how we act, taken together.  That doesn't mean we shouldn't start by proactively demonstrating what we mean by good or bad behaviour in these licences, or reserving judgment to deal with things on a case by case basis.  These licences are a form of private law where we ought not give away powers that help ourselves and like-minded people make a better world.  This is the basis for our democracy and the rule of law.  We are not a rule-less civil society, nor are we required to adopt rules that ignore human nature.
 
 In my case, I do not believe that we should passively allow unconditional commercial exploitation of software by third parties by silence or non-consent, especially if there is an imbalance of power and this is at the expense of the software developer (a form of unjust enrichment).  The fact is, that there are unconscionable people in the world who allow themselves to be knowingly enriched by the ethical work of others, if they can get away with it.  This is generally regarded as a bad idea. 
 

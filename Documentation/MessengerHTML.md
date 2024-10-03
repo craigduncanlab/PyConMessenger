@@ -17,7 +17,7 @@ In saying this, we must distinguish this 'semantic content' in the form of Messe
 
 The theoretical potential of Messenger HTML, and an entire workflow from a markup language to the production of web pages has been fully explored and implemented in Python, so that we can discuss both the theory and practical software implementation of these ideas.
 
-See also my draft [paper](paper.md).
+See also my draft [paper](../paper.md).
 
 # General description
 
